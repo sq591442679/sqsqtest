@@ -20,6 +20,7 @@ if __name__ == '__main__':
     when the simulation ends, there will be:
         1. a dropPacketRaw.csv, which contains the information about the dropped packet
             header: 'config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop'
+            REMEMBER: this csv may contains repeated lines
         2. a controlOverhead.csv
             header: config, hop, module, helloOverhead, DDOverhead, LSROverhead, LSUOverhead, LSACKOverhead, total
         3. a successPacket.csv
