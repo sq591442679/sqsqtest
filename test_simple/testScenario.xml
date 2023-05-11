@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<scenario>
+
+	 
+	<at t="22s">
+		<disconnect src-module="ospfRouter_4_3" src-gate="ethg[0]"/>
+	</at>
+	<at t="23s">
+		<connect src-module="ospfRouter_4_3" src-gate="ethg[0]" dest-module="ospfRouter_3_3" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	
+	
+	<!-- 
+ 	<at t="22s">
+		<disconnect src-module="ospfRouter_3_3" src-gate="ethg[0]"/>
+	</at>
+	<at t="27s">
+		<connect src-module="ospfRouter_3_3" src-gate="ethg[0]" dest-module="ospfRouter_2_3" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>	
+	 -->
+
+	 
+	<!--
+	<at t="22s">
+		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[0]"/>
+	</at>
+	<at t="22s">
+		<disconnect src-module="ospfRouter_3_2" src-gate="ethg[0]"/>
+	</at>
+	<at t="22s">
+		<disconnect src-module="ospfRouter_3_3" src-gate="ethg[0]"/>
+	</at>
+	<at t="22s">
+		<disconnect src-module="ospfRouter_3_4" src-gate="ethg[0]"/>
+	</at>
+	<at t="22s">
+		<disconnect src-module="ospfRouter_3_5" src-gate="ethg[0]"/>
+	</at>
+	<at t="27s">
+		<connect src-module="ospfRouter_3_1" src-gate="ethg[0]" dest-module="ospfRouter_2_1" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="27s">
+		<connect src-module="ospfRouter_3_2" src-gate="ethg[0]" dest-module="ospfRouter_2_2" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="27s">
+		<connect src-module="ospfRouter_3_3" src-gate="ethg[0]" dest-module="ospfRouter_2_3" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="27s">
+		<connect src-module="ospfRouter_3_4" src-gate="ethg[0]" dest-module="ospfRouter_2_4" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="27s">
+		<connect src-module="ospfRouter_3_5" src-gate="ethg[0]" dest-module="ospfRouter_2_5" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	-->
+	
+</scenario>	
