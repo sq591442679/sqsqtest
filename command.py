@@ -18,17 +18,18 @@ if __name__ == '__main__':
     README
     before running this script, change the SQSQ_HOP in Ospfv2Common.h, then build the omnet++ project
     when the simulation ends, there will be:
-        1. a dropPacket.csv, which contains the information about the dropped packet
-            dropPacket.csv header:  config name in ini, SQSQ_HOP, module name, no entry number, loop number, total
-            it is Ipv4.cc who prints into thr dropPacket.csv
+        1. a dropPacketRaw.csv, which contains the information about the dropped packet
+            header: 'config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop'
         2. a controlOverhead.csv
             header: config, hop, module, helloOverhead, DDOverhead, LSROverhead, LSUOverhead, LSACKOverhead, total
+        3. a successPacket.csv
+            header: 'config', 'hop', 'module', 'packetCnt', 'avgDelay'
 
     after running this script, remember to rename the "results" folder, or it will be covered the next time this script is run
     """
 
-    with open('dropPacket.csv', 'w') as f:
-        print('config', 'hop', 'module', 'noEntryCnt', 'loopCnt', 'total', file=f, sep=',')
+    with open('dropPacketRaw.csv', 'w') as f:
+        print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', file=f, sep=',')
     with open('controlOverhead.csv', 'w') as f:
         print('config', 'hop', 'module', 'helloOverhead', 'DDOverhead', 'LSROverhead', 'LSUOverhead', 'LSACKOverhead', 'total', file=f, sep=',')
     with open('successPacket.csv', 'w') as f:
@@ -52,7 +53,7 @@ if __name__ == '__main__':
         th.start()
         th.join()
 
-    shutil.move('./dropPacket.csv', './results')
+    shutil.move('./dropPacketRaw.csv', './results')
     shutil.move('./controlOverhead.csv', './results')
     shutil.move('./successPacket.csv', './results')
     print('-------------------END----------------------')

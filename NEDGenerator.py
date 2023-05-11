@@ -1,10 +1,7 @@
 import math
-import random
 from xml.etree import ElementTree as et
 import xml.dom.minidom
 import numpy
-import os
-import shutil
 
 X = 11  # 行 即每个轨道上的卫星数量
 Y = 6  # 列 即轨道数
