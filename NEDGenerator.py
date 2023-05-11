@@ -391,8 +391,8 @@ def buildScenarioFile(link_failure_rate: float, file_name: str):
         link: DirectionalInterSatelliteLink
         for link in allISLSet:
             if link.__lt__(link.generateBackwardLink()):
-                if link.srcSatelliteID.__eq__(deliverySrcID) or link.srcSatelliteID.__eq__(deliveryDestID) or \
-                        link.destSatelliteID.__eq__(deliverySrcID) or link.destSatelliteID.__eq__(deliveryDestID):
+                if (link.srcSatelliteID.__eq__(deliverySrcID) and link.destSatelliteID.__eq__(deliveryDestID)) \
+                    or (link.srcSatelliteID.__eq__(deliveryDestID) and link.destSatelliteID.__eq__(deliverySrcID)):    
                     continue
                 print(link.__str__())
                 event_time: float = WARMUP_PERIOD
