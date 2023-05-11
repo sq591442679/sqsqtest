@@ -2,6 +2,8 @@ import math
 from xml.etree import ElementTree as et
 import xml.dom.minidom
 import numpy
+import os
+import shutil
 
 X = 11  # 行 即每个轨道上的卫星数量
 Y = 6  # 列 即轨道数
@@ -158,8 +160,8 @@ class ScenarioEvent:
 
 
 allISLSet = set()
-deliverySrcID = SatelliteID(6, 3)
-deliveryDestID = SatelliteID(3, 3)
+deliverySrcID = SatelliteID(9, 3)
+deliveryDestID = SatelliteID(5, 5)
 
 
 # 其中的每个元素都是DirectionalInterSatelliteLink, 存储着卫星网络中所有的ISL  注意双向都保存
@@ -190,6 +192,20 @@ def generateISLDelay():
         #     ISLDelay[x] = (H + R) * abs(math.sin(latitude)) * math.sin(delta_altitude / 2) / C
         ISLDelay[x] = 2 * (H + R) * abs(math.sin(latitude)) * math.sin(delta_altitude / 2) / C
         latitude += delta_latitude
+
+
+def generateLinks():
+    # 生成连接
+    for x in range(1, X + 1):
+        for y in range(1, Y + 1):
+            # ethg[0~3]分别对应上下左右
+            if ISLDelay[x] < 1:  # 轨间链路存在
+                allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(x, rescale(y + 1, Y))))
+                allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(x, rescale(y + 1, Y)), SatelliteID(x, y)))
+                # 与其右边的建立双向连接
+            allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(rescale(x + 1, X), y)))
+            allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(rescale(x + 1, X), y), SatelliteID(x, y)))
+            # 与其下边的建立双向连接
 
 
 def buildNEDFile():
@@ -251,13 +267,9 @@ def buildNEDFile():
                 if ISLDelay[x] < 1:  # 轨间链路存在
                     print("\t\tospfRouter_%d_%d.ethg[%d] <--> ISL%d <--> ospfRouter_%d_%d.ethg[%d];" % (
                         x, y, 3, x, x, rescale(y + 1, Y), 2), file=f)
-                    allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(x, rescale(y + 1, Y))))
-                    allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(x, rescale(y + 1, Y)), SatelliteID(x, y)))
                     # 与其右边的建立双向连接
                 print("\t\tospfRouter_%d_%d.ethg[%d] <--> ISL0 <--> ospfRouter_%d_%d.ethg[%d];" % (
                     x, y, 1, rescale(x + 1, X), y, 0), file=f)
-                allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(rescale(x + 1, X), y)))
-                allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(rescale(x + 1, X), y), SatelliteID(x, y)))
                 # 与其下边的建立双向连接
 
         print('}', file=f)
@@ -490,21 +502,22 @@ def buildIniFile(link_failure_rate_array):
 
 def run():
     generateISLDelay()
-    buildNEDFile()
-    buildNetworkConfigFile()
-    buildASConfigFile()
+    generateLinks()
+    # buildNEDFile()
+    # buildNetworkConfigFile()
+    # buildASConfigFile()
 
     # buildScenarioFile(0.15, 'test.xml')
 
-    # link_failure_rate_array = numpy.arange(0.000, 0.201, 0.01)
-    # for i in range(1, NUM_OF_TESTS + 1):
-    #     if os.path.exists('./test%d' % i):
-    #         shutil.rmtree('./test%d' % i)
-    #     os.mkdir('./test%d' % i)
-    #     for fr in link_failure_rate_array:
-    #         buildScenarioFile(fr, './test%d/sqsqScenario%s.xml' % (i, "{:.3f}".format(fr)))
+    link_failure_rate_array = numpy.arange(0.000, 0.201, 0.01)
+    for i in range(1, NUM_OF_TESTS + 1):
+        if os.path.exists('./test%d' % i):
+            shutil.rmtree('./test%d' % i)
+        os.mkdir('./test%d' % i)
+        for fr in link_failure_rate_array:
+            buildScenarioFile(fr, './test%d/sqsqScenario%s.xml' % (i, "{:.3f}".format(fr)))
 
-    # buildIniFile(link_failure_rate_array)
+    buildIniFile(link_failure_rate_array)
 
 
 # 按间距中的绿色按钮以运行脚本。
