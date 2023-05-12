@@ -4,8 +4,8 @@ from NEDGenerator import deliverySrcID, deliveryDestID
 from command import fr_names, test_names
 
 
-# folder_list = ['./results_n=1/', './results_n=2/', './results_n=3/', './results_n=4/', './results_n=5/', './results_OSPF/']
-folder_list = ['./results_n=5/', './results_OSPF/']
+folder_list = ['./results_n=1/', './results_n=2/', './results_n=3/', './results_n=4/', './results_n=5/', './results_OSPF/']
+# folder_list = ['./results_n=1/', './results_n=2/','./results_n=3/', './results_n=5/', './results_OSPF/']
 config_list = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 
 
@@ -116,7 +116,7 @@ if __name__ == '__main__':
     for i in range(len(avg_packet_delivery_failure_rates)):
         print(experiment_names[i], "'s PDR:", 1 - avg_packet_delivery_failure_rates[i])
         ax.annotate(experiment_names[i], (avg_control_overheads[i], avg_packet_delivery_failure_rates[i]))
-    ax.set_title('Avg. Packet Delivery Failure Rate & Control Overhead \n on Different Mechanisms, End-to-end Hop = 3')
+    ax.set_title('Avg. Packet Delivery Failure Rate & Control Overhead \n on Different Mechanisms, End-to-end Hop = 5')
     ax.set_xlabel('Avg. Control Overhead(Bytes)')
     ax.set_ylabel('Avg. Packet Delivery Failure Rate')
     matplotlib.pyplot.legend()
