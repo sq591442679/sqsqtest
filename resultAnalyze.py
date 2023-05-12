@@ -3,7 +3,7 @@ import matplotlib.pyplot
 from NEDGenerator import deliveryDestID
 from command import arg_names
 
-hops = ['10']
+hops = ['1', '2', '3', '4', '5', '10']
 # folder_list = ['./results_n=1/', './results_n=2/','./results_n=3/', './results_n=5/', './results_OSPF/']
 
 
@@ -146,7 +146,7 @@ if __name__ == '__main__':
     ax.set_title('Avg. Packet Delivery Failure Rate & Control Overhead \n on Different Mechanisms, End-to-end Hop = 5')
     ax.set_xlabel('Avg. Control Overhead(Bytes)')
     ax.set_ylabel('Avg. Packet Delivery Failure Rate')
-    ax.set_ylim([0.0, 0.12])
+    ax.set_ylim([0.0, 0.02])
     matplotlib.pyplot.legend()
     fig.savefig('lineChart.png')
     matplotlib.pyplot.close()

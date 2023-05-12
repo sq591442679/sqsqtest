@@ -6,7 +6,7 @@ import os
 fr_names = ["10"]
 test_names = ["1", "2", "3", "4", "5"]
 arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
-SQSQ_HOP = 10
+SQSQ_HOP = 5
 
 def execute(command: str) -> None:
     try:
@@ -22,7 +22,9 @@ def execute(command: str) -> None:
 if __name__ == '__main__':
     """
     README
-    before running this script, change the SQSQ_HOP in Ospfv2Common.h and SQSQ_HOP in this script, then build the omnet++ project
+    before running this script:
+        1. change the SQSQ_HOP in Ospfv2Common.h and SQSQ_HOP in this script, then build the omnet++ project
+        2. make sure there is no ./results/$SQSQHOP repository
     when the simulation ends, there will be:
         1. a dropPacketRaw.csv, which contains the information about the dropped packet
             header: 'config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop'
