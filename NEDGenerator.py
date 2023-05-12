@@ -391,7 +391,7 @@ def buildScenarioFile(link_failure_rate: float, file_name: str):
     生成剧本文件
     :param link_failure_rate: 对任一链路，其故障时间占总时间的比例的期望
     """
-    events = []
+    events: list[ScenarioEvent] = []
 
     if link_failure_rate > 1e-6:
         poisson_lambda = link_failure_rate / (LINK_DOWN_DURATION * (1 - link_failure_rate))
@@ -400,10 +400,13 @@ def buildScenarioFile(link_failure_rate: float, file_name: str):
         link: DirectionalInterSatelliteLink
         for link in allISLSet:
             if link.__lt__(link.generateBackwardLink()):
-                if (link.srcSatelliteID.__eq__(deliverySrcID) and link.destSatelliteID.__eq__(deliveryDestID)) \
-                    or (link.srcSatelliteID.__eq__(deliveryDestID) and link.destSatelliteID.__eq__(deliverySrcID)):    
+
+                if (link.srcSatelliteID.__eq__(SatelliteID(rescale(deliveryDestID.x - 1, X), deliveryDestID)) \
+                        and link.destSatelliteID.__eq__(deliveryDestID)) \
+                    or (link.srcSatelliteID.__eq__(SatelliteID(rescale(deliverySrcID.x - 1, X), deliveryDestID)) \
+                        and link.destSatelliteID.__eq__(deliverySrcID)):
                     continue
-                print(link.__str__())
+
                 event_time: float = WARMUP_PERIOD
                 while event_time <= SIMULATION_END_TIME:
                     event_time_interval = numpy.random.exponential(scale=exponential_lambda, size=1)[0]
@@ -447,6 +450,12 @@ def buildScenarioFile(link_failure_rate: float, file_name: str):
     # if len(time_map) != 0:
     #     avg /= len(time_map)
     # print("avg duration of link-down-time for a single link: ", avg)
+
+    for event in events:
+        if event.eventType == LINK_DISCONNECT_TYPE:
+            if (event.link.srcSatelliteID.__eq__(deliverySrcID) and event.link.destSatelliteID.__eq__(deliveryDestID)) \
+                or (event.link.srcSatelliteID.__eq__(deliveryDestID) and event.link.destSatelliteID.__eq__(deliverySrcID)):
+                raise Exception('')
 
     root = et.Element('scenario')
     for event in events:

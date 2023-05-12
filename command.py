@@ -26,8 +26,8 @@ if __name__ == '__main__':
             REMEMBER: this csv may contains repeated lines
         2. a controlOverhead.csv
             header: config, hop, module, helloOverhead, DDOverhead, LSROverhead, LSUOverhead, LSACKOverhead, total
-        3. a successPacket.csv
-            header: 'config', 'hop', 'module', 'packetCnt', 'avgDelay'
+        3. a successPacketRaw.csv
+            header: 'config', 'hop', 'module', 'simtime', 'delay'
 
     after running this script, remember to rename the "results" folder, or it will be covered the next time this script is run
     """
@@ -36,8 +36,8 @@ if __name__ == '__main__':
         print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', file=f, sep=',')
     with open('controlOverhead.csv', 'w') as f:
         print('config', 'hop', 'module', 'helloOverhead', 'DDOverhead', 'LSROverhead', 'LSUOverhead', 'LSACKOverhead', 'total', file=f, sep=',')
-    with open('successPacket.csv', 'w') as f:
-        print('config', 'hop', 'module', 'packetCnt', 'avgDelay', file=f, sep=',')
+    with open('successPacketRaw.csv', 'w') as f:
+        print('config', 'hop', 'module', 'simtime', 'delay', file=f, sep=',')
     
     arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
     cmds = ["opp_run -m -u Cmdenv -c " + i + " --cmdenv-express-mode=true -n " + 

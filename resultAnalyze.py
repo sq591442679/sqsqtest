@@ -121,6 +121,7 @@ if __name__ == '__main__':
     ax.set_title('Avg. Packet Delivery Failure Rate & Control Overhead \n on Different Mechanisms, End-to-end Hop = 5')
     ax.set_xlabel('Avg. Control Overhead(Bytes)')
     ax.set_ylabel('Avg. Packet Delivery Failure Rate')
+    ax.set_ylim([0.0, 0.12])
     matplotlib.pyplot.legend()
     fig.savefig('lineChart.png')
     matplotlib.pyplot.close()
