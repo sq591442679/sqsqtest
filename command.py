@@ -2,6 +2,9 @@ import threading
 import shutil
 import subprocess
 
+fr_names = ["10"]
+test_names = ["1", "2", "3", "4", "5"]
+
 def execute(command: str) -> None:
     try:
         # os.system("gnome-terminal -e 'bash -c \" source ~/omnetpp-6.0/setenv; " + command + "; exit; exec bash \"'")
@@ -36,8 +39,6 @@ if __name__ == '__main__':
     with open('successPacket.csv', 'w') as f:
         print('config', 'hop', 'module', 'packetCnt', 'avgDelay', file=f, sep=',')
     
-    fr_names = ["20"]
-    test_names = ["1", "2", "3", "4", "5"]
     arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
     cmds = ["opp_run -m -u Cmdenv -c " + i + " --cmdenv-express-mode=true -n " + 
             "../..:../../../showcases:../../../src:../../../tests/validation:../../../tests/networks:../../../tutorials  " + 

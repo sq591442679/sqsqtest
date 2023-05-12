@@ -1,10 +1,12 @@
 import pandas
 import matplotlib.pyplot
 from NEDGenerator import deliverySrcID, deliveryDestID
+from command import fr_names, test_names
 
 
-folder_list = ['./results_n=1/', './results_n=2/', './results_n=3/', './results_n=4/', './results_n=5/', './results_OSPF/']
-config_list = ['fail20_test%d' % i for i in range(1, 6)]
+# folder_list = ['./results_n=1/', './results_n=2/', './results_n=3/', './results_n=4/', './results_n=5/', './results_OSPF/']
+folder_list = ['./results_n=5/', './results_OSPF/']
+config_list = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 
 
 def cookDropPacketRaw(folder_name:str):
@@ -23,6 +25,22 @@ def cookDropPacketRaw(folder_name:str):
             hop = df['hop'].to_list()[0]
 
             print(config_name, hop, no_entry_count, stub_cnt, loop_cnt, total, file=f, sep=',')
+
+
+def cookSuccessPacketRaw(folder_name:str):
+    with open(folder_name + 'successPacketCooked.csv', 'w') as f:
+        print('config', 'hop', 'successRatio', 'avgDelay', file=f, sep=',')
+        df = pandas.read_csv(folder_name + 'successPacket.csv')
+
+        for config_name in config_list:
+            success_count = df[(df['module'] == 'Network.ospfRouter_%d_%d' % (deliveryDestID.x, deliveryDestID.y)) \
+                        & (df['config'] == config_name) \
+                        & (df['avgDelay'] > 0)]['packetCnt'].to_list()[0]
+            avg_eed = df[(df['module'] == 'Network.ospfRouter_%d_%d' % (deliveryDestID.x, deliveryDestID.y)) \
+                        & (df['config'] == config_name) \
+                        & (df['avgDelay'] > 0)]['avgDelay'].to_list()[0]
+            hop = df['hop'].to_list()[0]
+            print(config_name, hop, success_count / 1000, avg_eed, file=f, sep=',')
 
 
 
@@ -84,6 +102,9 @@ if __name__ == '__main__':
     # cookDropPacketRaw('./results/')
     # drawDropRatioPie('./results/')
     for folder_name in folder_list:
+        cookDropPacketRaw(folder_name)
+        cookSuccessPacketRaw(folder_name)
+        drawDropRatioPie(folder_name)
         experiment_name = folder_name.split('_')[-1][:-1]
         experiment_names.append(experiment_name)
         avg_packet_delivery_failure_rates.append(1 - getAvgPacketDeliveryRate(folder_name))
@@ -91,8 +112,9 @@ if __name__ == '__main__':
 
     fig, ax = matplotlib.pyplot.subplots()
     ax.plot(avg_control_overheads, avg_packet_delivery_failure_rates, 
-            marker='.', label='with loop avoidance, link failure rate = 0.2')
+            marker='.', label='with loop avoidance, link failure rate = 0.1')
     for i in range(len(avg_packet_delivery_failure_rates)):
+        print(experiment_names[i], "'s PDR:", 1 - avg_packet_delivery_failure_rates[i])
         ax.annotate(experiment_names[i], (avg_control_overheads[i], avg_packet_delivery_failure_rates[i]))
     ax.set_title('Avg. Packet Delivery Failure Rate & Control Overhead \n on Different Mechanisms, End-to-end Hop = 3')
     ax.set_xlabel('Avg. Control Overhead(Bytes)')
