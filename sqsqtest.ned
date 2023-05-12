@@ -75,6 +75,12 @@ channel ISL11 extends ThruputMeteringChannel
     datarate = 100Mbps;
     thruputDisplayFormat = "#N";
 }
+channel selfLink extends ThruputMeteringChannel
+{
+    delay = 0.009209s;
+    datarate = 100Mbps;
+    thruputDisplayFormat = "#N";
+}
 network Network
 {
     @display("bgb=1024,1400");
@@ -95,7 +101,7 @@ network Network
             hasStatus = true;
             ipv4.routingTable.routerId = "0.0.1.1";
             gates:
-                ethg[4];
+                ethg[6];
         }
         ospfRouter_1_2: SqsqRouter {
             @display("p=395.46,107.65299");
@@ -553,6 +559,7 @@ network Network
                 ethg[4];
         }
     connections:
+        // ospfRouter_1_1.ethg[5] <--> selfLink <--> ospfRouter_1_1.ethg[4];
         ospfRouter_1_1.ethg[3] <--> ISL1 <--> ospfRouter_1_2.ethg[2];
         ospfRouter_1_1.ethg[1] <--> ISL0 <--> ospfRouter_2_1.ethg[0];
         ospfRouter_1_2.ethg[3] <--> ISL1 <--> ospfRouter_1_3.ethg[2];

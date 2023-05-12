@@ -401,10 +401,12 @@ def buildScenarioFile(link_failure_rate: float, file_name: str):
         for link in allISLSet:
             if link.__lt__(link.generateBackwardLink()):
 
-                if (link.srcSatelliteID.__eq__(SatelliteID(rescale(deliveryDestID.x - 1, X), deliveryDestID)) \
-                        and link.destSatelliteID.__eq__(deliveryDestID)) \
-                    or (link.srcSatelliteID.__eq__(SatelliteID(rescale(deliverySrcID.x - 1, X), deliveryDestID)) \
-                        and link.destSatelliteID.__eq__(deliverySrcID)):
+                if (
+                        (link.srcSatelliteID.__eq__(deliverySrcID) and link.destSatelliteID.__eq__(deliverySrcID.getNeighborOnDirection(0))) \
+                    or  (link.destSatelliteID.__eq__(deliverySrcID) and link.srcSatelliteID.__eq__(deliverySrcID.getNeighborOnDirection(0))) \
+                    or  (link.srcSatelliteID.__eq__(deliveryDestID) and link.destSatelliteID.__eq__(deliveryDestID.getNeighborOnDirection(0))) \
+                    or  (link.destSatelliteID.__eq__(deliveryDestID) and link.srcSatelliteID.__eq__(deliveryDestID.getNeighborOnDirection(0)))
+                ):
                     continue
 
                 event_time: float = WARMUP_PERIOD
@@ -451,11 +453,11 @@ def buildScenarioFile(link_failure_rate: float, file_name: str):
     #     avg /= len(time_map)
     # print("avg duration of link-down-time for a single link: ", avg)
 
-    for event in events:
-        if event.eventType == LINK_DISCONNECT_TYPE:
-            if (event.link.srcSatelliteID.__eq__(deliverySrcID) and event.link.destSatelliteID.__eq__(deliveryDestID)) \
-                or (event.link.srcSatelliteID.__eq__(deliveryDestID) and event.link.destSatelliteID.__eq__(deliverySrcID)):
-                raise Exception('')
+    # for event in events:
+    #     if event.eventType == LINK_DISCONNECT_TYPE:
+    #         if (event.link.srcSatelliteID.__eq__(deliverySrcID) and event.link.destSatelliteID.__eq__(deliveryDestID.getNeighborOnDirection(0))) \
+    #             or (event.link.srcSatelliteID.__eq__(deliveryDestID) or event.link.destSatelliteID.__eq__(deliverySrcID)):
+    #             print(event.link.__str__())
 
     root = et.Element('scenario')
     for event in events:
@@ -500,7 +502,7 @@ def buildIniFile(link_failure_rate_array):
         for link_failure_rate in link_failure_rate_array:
             for test in range(1, NUM_OF_TESTS + 1):
                 print('[Config fail%s_test%d]' % (str(int(link_failure_rate * 100)).zfill(2), test), file=f)
-                print('**.scenarioManager.script = xmldoc(\"./test%d/sqsqScenario%s.xml\")' %
+                print('**.scenarioManager.script = xmldoc(\"./scenarios/test%d/sqsqScenario%s.xml\")' %
                       (test, "{:.3f}".format(link_failure_rate)), file=f)
                 print('**.ospfRouter_%d_%d.app[0].destAddresses = "ospfRouter_%d_%d"' 
                       % (deliverySrcID.x, deliverySrcID.y, deliveryDestID.x, deliveryDestID.y), 
@@ -520,11 +522,8 @@ def run():
 
     link_failure_rate_array = numpy.arange(0.000, 0.201, 0.01)
     for i in range(1, NUM_OF_TESTS + 1):
-        if os.path.exists('./test%d' % i):
-            shutil.rmtree('./test%d' % i)
-        os.mkdir('./test%d' % i)
         for fr in link_failure_rate_array:
-            buildScenarioFile(fr, './test%d/sqsqScenario%s.xml' % (i, "{:.3f}".format(fr)))
+            buildScenarioFile(fr, './scenarios/test%d/sqsqScenario%s.xml' % (i, "{:.3f}".format(fr)))
 
     buildIniFile(link_failure_rate_array)
 
