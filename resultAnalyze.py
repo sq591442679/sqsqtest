@@ -4,7 +4,8 @@ from NEDGenerator import deliverySrcID, deliveryDestID
 from command import fr_names, test_names
 
 
-folder_list = ['./results_n=1/', './results_n=2/', './results_n=3/', './results_n=4/', './results_n=5/', './results_OSPF/']
+folder_list = ['./results_n=0/', './results_n=1/', './results_n=2/', './results_n=3/', 
+               './results_n=4/', './results_n=5/', './results_OSPF/']
 # folder_list = ['./results_n=1/', './results_n=2/','./results_n=3/', './results_n=5/', './results_OSPF/']
 config_list = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 
@@ -67,9 +68,10 @@ def drawDropRatioPie(folder_name: str):
         explode = [0.1, 0]
         fig, ax = matplotlib.pyplot.subplots()
         ax.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', 
-            startangle=90, wedgeprops=dict(width=0.4, edgecolor='w'))
+            startangle=45, wedgeprops=dict(width=0.4, edgecolor='w'))
         ax.axis('equal')
-        matplotlib.pyplot.text(0, 0, 'avg dropped packet=' + str(total_sum), ha='center')
+        ax.set_title('no-entry failure vs. loop failure in ' + folder_name.split('_')[-1][:-1])
+        matplotlib.pyplot.text(0, 0, 'avg dropped packet:\n' + str(total_sum), ha='center')
         fig.savefig(folder_name + 'dropRatioPie.png')
         matplotlib.pyplot.close()
 
@@ -120,5 +122,6 @@ if __name__ == '__main__':
     ax.set_xlabel('Avg. Control Overhead(Bytes)')
     ax.set_ylabel('Avg. Packet Delivery Failure Rate')
     matplotlib.pyplot.legend()
-    matplotlib.pyplot.show()
+    fig.savefig('lineChart.png')
+    matplotlib.pyplot.close()
             
