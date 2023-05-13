@@ -3,7 +3,7 @@ import matplotlib.pyplot
 from NEDGenerator import deliveryDestID
 from command import arg_names
 
-hops = ['1', '2', '3', '4', '5', '10']
+hops = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 # folder_list = ['./results_n=1/', './results_n=2/','./results_n=3/', './results_n=5/', './results_OSPF/']
 
 
@@ -148,6 +148,14 @@ if __name__ == '__main__':
     ax.set_ylabel('Avg. Packet Delivery Failure Rate')
     ax.set_ylim([0.0, 0.02])
     matplotlib.pyplot.legend()
-    fig.savefig('lineChart.png')
+    fig.savefig('./results/overhead and PDR.png')
+    matplotlib.pyplot.close()
+
+    fig, ax = matplotlib.pyplot.subplots()
+    ax.plot(hops, avg_control_overheads, marker='.')
+    for i in range(len(avg_packet_delivery_failure_rates)):
+        print(experiment_names[i], "'s LSU overhead:", avg_control_overheads[i])
+        ax.annotate(experiment_names[i], (hops[i], avg_control_overheads[i]))
+    fig.savefig('./results/overhead on different hops')
     matplotlib.pyplot.close()
             
