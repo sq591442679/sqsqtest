@@ -3,8 +3,9 @@ import matplotlib.pyplot
 from NEDGenerator import deliveryDestID
 from command import arg_names
 
-hops = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+hops = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 # folder_list = ['./results_n=1/', './results_n=2/','./results_n=3/', './results_n=5/', './results_OSPF/']
+parent_folder_name = './results/'
 
 
 def cookDropPacketRaw(folder_name:str):
@@ -124,13 +125,13 @@ if __name__ == '__main__':
 
     for hop in hops:
         for config_name in arg_names:
-            folder_name = './results/' + hop + '/' + config_name + '/'
+            folder_name = parent_folder_name + hop + '/' + config_name + '/'
             cookDropPacketRaw(folder_name)
             cookSuccessPacketRaw(folder_name)
             
     
     for hop in hops:
-        folder_name = './results/' + hop + '/'
+        folder_name = parent_folder_name + hop + '/'
         drawDropRatioPie(folder_name)
         experiment_name = 'n=' + hop
         experiment_names.append(experiment_name)
@@ -139,16 +140,16 @@ if __name__ == '__main__':
 
     fig, ax = matplotlib.pyplot.subplots()
     ax.plot(avg_control_overheads, avg_packet_delivery_failure_rates, 
-            marker='.', label='with loop avoidance, link failure rate = 0.1')
+            marker='.', label='without loop avoidance, link failure rate = 0.1')
     for i in range(len(avg_packet_delivery_failure_rates)):
         print(experiment_names[i], "'s PDR:", 1 - avg_packet_delivery_failure_rates[i])
         ax.annotate(experiment_names[i], (avg_control_overheads[i], avg_packet_delivery_failure_rates[i]))
     ax.set_title('Avg. Packet Delivery Failure Rate & Control Overhead \n on Different Mechanisms, End-to-end Hop = 5')
     ax.set_xlabel('Avg. Control Overhead(Bytes)')
     ax.set_ylabel('Avg. Packet Delivery Failure Rate')
-    ax.set_ylim([0.0, 0.02])
+    ax.set_ylim([0.0, 0.1])
     matplotlib.pyplot.legend()
-    fig.savefig('./results/overhead and PDR.png')
+    fig.savefig(parent_folder_name + 'overhead and PDR.png')
     matplotlib.pyplot.close()
 
     fig, ax = matplotlib.pyplot.subplots()
@@ -156,6 +157,6 @@ if __name__ == '__main__':
     for i in range(len(avg_packet_delivery_failure_rates)):
         print(experiment_names[i], "'s LSU overhead:", avg_control_overheads[i])
         ax.annotate(experiment_names[i], (hops[i], avg_control_overheads[i]))
-    fig.savefig('./results/overhead on different hops')
+    fig.savefig(parent_folder_name + 'overhead on different hops')
     matplotlib.pyplot.close()
             
