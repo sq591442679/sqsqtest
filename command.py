@@ -4,7 +4,7 @@ import subprocess
 import os
 
 fr_names = ["10"]
-test_names = ["1", "2", "3", "4", "5"]
+test_names = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 SQSQ_HOP = 9
 
