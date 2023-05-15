@@ -2,6 +2,7 @@ import threading
 import shutil
 import subprocess
 import os
+import time
 
 fr_names = ["10"]
 test_names = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
@@ -59,6 +60,7 @@ if __name__ == '__main__':
         
     for th in threads:
         th.start()
+        time.sleep(1)
         th.join()
 
     print('-------------------END----------------------')

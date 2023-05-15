@@ -1,1530 +1,1515 @@
 <?xml version="1.0" ?>
 <scenario>
-	<at t="20.121s">
-		<disconnect src-module="ospfRouter_8_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="21.250s">
-		<disconnect src-module="ospfRouter_9_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="21.740s">
-		<disconnect src-module="ospfRouter_8_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="23.278s">
-		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[1]"/>
-	</at>
-	<at t="23.569s">
-		<disconnect src-module="ospfRouter_1_6" src-gate="ethg[0]"/>
-	</at>
-	<at t="24.355s">
-		<disconnect src-module="ospfRouter_10_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="24.971s">
-		<disconnect src-module="ospfRouter_2_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="25.121s">
-		<connect src-module="ospfRouter_8_2" src-gate="ethg[1]" dest-module="ospfRouter_9_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="25.209s">
-		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="25.454s">
-		<disconnect src-module="ospfRouter_5_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="25.611s">
-		<disconnect src-module="ospfRouter_11_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="26.006s">
-		<disconnect src-module="ospfRouter_9_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="26.250s">
-		<connect src-module="ospfRouter_9_6" src-gate="ethg[1]" dest-module="ospfRouter_10_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="26.531s">
-		<disconnect src-module="ospfRouter_7_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="26.740s">
-		<connect src-module="ospfRouter_8_1" src-gate="ethg[2]" dest-module="ospfRouter_8_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
-	</at>
-	<at t="26.910s">
-		<disconnect src-module="ospfRouter_8_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="27.126s">
-		<disconnect src-module="ospfRouter_1_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="28.141s">
-		<disconnect src-module="ospfRouter_5_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="28.278s">
-		<connect src-module="ospfRouter_1_1" src-gate="ethg[1]" dest-module="ospfRouter_2_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="28.319s">
-		<disconnect src-module="ospfRouter_9_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="28.569s">
-		<connect src-module="ospfRouter_1_6" src-gate="ethg[0]" dest-module="ospfRouter_11_6" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="29.022s">
-		<disconnect src-module="ospfRouter_10_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="29.055s">
-		<disconnect src-module="ospfRouter_3_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="29.355s">
-		<connect src-module="ospfRouter_10_5" src-gate="ethg[1]" dest-module="ospfRouter_11_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="29.654s">
-		<disconnect src-module="ospfRouter_5_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="29.971s">
-		<connect src-module="ospfRouter_2_5" src-gate="ethg[1]" dest-module="ospfRouter_3_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="29.994s">
-		<disconnect src-module="ospfRouter_1_6" src-gate="ethg[0]"/>
-	</at>
-	<at t="30.209s">
-		<connect src-module="ospfRouter_2_2" src-gate="ethg[3]" dest-module="ospfRouter_2_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
-	</at>
-	<at t="30.410s">
-		<disconnect src-module="ospfRouter_8_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="30.454s">
-		<connect src-module="ospfRouter_5_5" src-gate="ethg[3]" dest-module="ospfRouter_5_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
-	</at>
-	<at t="30.611s">
-		<connect src-module="ospfRouter_11_2" src-gate="ethg[3]" dest-module="ospfRouter_11_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
-	</at>
-	<at t="30.739s">
-		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="31.006s">
-		<connect src-module="ospfRouter_9_2" src-gate="ethg[3]" dest-module="ospfRouter_9_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
-	</at>
-	<at t="31.531s">
-		<connect src-module="ospfRouter_7_4" src-gate="ethg[1]" dest-module="ospfRouter_8_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="31.628s">
-		<disconnect src-module="ospfRouter_3_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="31.674s">
-		<disconnect src-module="ospfRouter_3_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="31.910s">
-		<connect src-module="ospfRouter_8_1" src-gate="ethg[2]" dest-module="ospfRouter_8_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
-	</at>
-	<at t="32.126s">
-		<connect src-module="ospfRouter_1_5" src-gate="ethg[3]" dest-module="ospfRouter_1_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
-	</at>
-	<at t="32.785s">
-		<disconnect src-module="ospfRouter_10_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="32.907s">
-		<disconnect src-module="ospfRouter_4_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="33.141s">
-		<connect src-module="ospfRouter_5_3" src-gate="ethg[3]" dest-module="ospfRouter_5_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
-	</at>
-	<at t="33.319s">
-		<connect src-module="ospfRouter_9_3" src-gate="ethg[1]" dest-module="ospfRouter_10_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="33.421s">
-		<disconnect src-module="ospfRouter_7_1" src-gate="ethg[1]"/>
-	</at>
-	<at t="33.799s">
-		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[0]"/>
-	</at>
-	<at t="34.022s">
-		<connect src-module="ospfRouter_10_1" src-gate="ethg[2]" dest-module="ospfRouter_10_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
-	</at>
-	<at t="34.055s">
-		<connect src-module="ospfRouter_3_5" src-gate="ethg[1]" dest-module="ospfRouter_4_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="34.315s">
-		<disconnect src-module="ospfRouter_4_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="34.336s">
-		<disconnect src-module="ospfRouter_6_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="34.474s">
-		<disconnect src-module="ospfRouter_10_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="34.654s">
-		<connect src-module="ospfRouter_5_2" src-gate="ethg[1]" dest-module="ospfRouter_6_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="34.839s">
-		<disconnect src-module="ospfRouter_11_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="34.994s">
-		<connect src-module="ospfRouter_1_6" src-gate="ethg[0]" dest-module="ospfRouter_11_6" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="35.410s">
-		<connect src-module="ospfRouter_8_2" src-gate="ethg[3]" dest-module="ospfRouter_8_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
-	</at>
-	<at t="35.739s">
-		<connect src-module="ospfRouter_1_4" src-gate="ethg[3]" dest-module="ospfRouter_1_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
-	</at>
-	<at t="35.955s">
-		<disconnect src-module="ospfRouter_4_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="36.264s">
-		<disconnect src-module="ospfRouter_4_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="36.338s">
-		<disconnect src-module="ospfRouter_1_2" src-gate="ethg[0]"/>
-	</at>
-	<at t="36.628s">
-		<connect src-module="ospfRouter_3_2" src-gate="ethg[3]" dest-module="ospfRouter_3_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="36.644s">
-		<disconnect src-module="ospfRouter_5_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="36.674s">
-		<connect src-module="ospfRouter_3_4" src-gate="ethg[3]" dest-module="ospfRouter_3_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="37.205s">
-		<disconnect src-module="ospfRouter_9_1" src-gate="ethg[1]"/>
-	</at>
-	<at t="37.436s">
-		<disconnect src-module="ospfRouter_10_1" src-gate="ethg[3]"/>
-	</at>
-	<at t="37.659s">
-		<disconnect src-module="ospfRouter_8_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="37.761s">
-		<disconnect src-module="ospfRouter_11_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="37.785s">
-		<connect src-module="ospfRouter_10_2" src-gate="ethg[3]" dest-module="ospfRouter_10_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
-	</at>
-	<at t="37.907s">
-		<connect src-module="ospfRouter_4_4" src-gate="ethg[3]" dest-module="ospfRouter_4_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
-	</at>
-	<at t="38.323s">
-		<disconnect src-module="ospfRouter_7_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="38.331s">
-		<disconnect src-module="ospfRouter_2_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="38.421s">
-		<connect src-module="ospfRouter_7_1" src-gate="ethg[1]" dest-module="ospfRouter_8_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="38.799s">
-		<connect src-module="ospfRouter_1_1" src-gate="ethg[0]" dest-module="ospfRouter_11_1" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="38.857s">
+	<at t="20.054s">
 		<disconnect src-module="ospfRouter_9_4" src-gate="ethg[1]"/>
 	</at>
-	<at t="39.009s">
-		<disconnect src-module="ospfRouter_5_1" src-gate="ethg[3]"/>
-	</at>
-	<at t="39.315s">
-		<connect src-module="ospfRouter_4_2" src-gate="ethg[1]" dest-module="ospfRouter_5_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="39.336s">
-		<connect src-module="ospfRouter_6_1" src-gate="ethg[2]" dest-module="ospfRouter_6_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
-	</at>
-	<at t="39.474s">
-		<connect src-module="ospfRouter_10_5" src-gate="ethg[1]" dest-module="ospfRouter_11_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="39.839s">
-		<connect src-module="ospfRouter_11_3" src-gate="ethg[3]" dest-module="ospfRouter_11_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
-	</at>
-	<at t="40.023s">
-		<disconnect src-module="ospfRouter_8_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="40.092s">
-		<disconnect src-module="ospfRouter_3_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="40.247s">
-		<disconnect src-module="ospfRouter_6_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="40.320s">
-		<disconnect src-module="ospfRouter_5_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="40.410s">
-		<disconnect src-module="ospfRouter_6_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="40.465s">
-		<disconnect src-module="ospfRouter_6_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="40.749s">
-		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="40.855s">
-		<disconnect src-module="ospfRouter_6_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="40.955s">
-		<connect src-module="ospfRouter_4_3" src-gate="ethg[1]" dest-module="ospfRouter_5_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="41.128s">
-		<disconnect src-module="ospfRouter_11_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="41.255s">
-		<disconnect src-module="ospfRouter_5_1" src-gate="ethg[1]"/>
-	</at>
-	<at t="41.264s">
-		<connect src-module="ospfRouter_4_3" src-gate="ethg[3]" dest-module="ospfRouter_4_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
-	</at>
-	<at t="41.338s">
-		<connect src-module="ospfRouter_1_2" src-gate="ethg[0]" dest-module="ospfRouter_11_2" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="41.532s">
-		<disconnect src-module="ospfRouter_3_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="41.572s">
-		<disconnect src-module="ospfRouter_11_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="41.644s">
-		<connect src-module="ospfRouter_5_5" src-gate="ethg[1]" dest-module="ospfRouter_6_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="42.205s">
-		<connect src-module="ospfRouter_9_1" src-gate="ethg[1]" dest-module="ospfRouter_10_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="42.242s">
-		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[0]"/>
-	</at>
-	<at t="42.436s">
-		<connect src-module="ospfRouter_10_1" src-gate="ethg[3]" dest-module="ospfRouter_10_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
-	</at>
-	<at t="42.659s">
-		<connect src-module="ospfRouter_8_5" src-gate="ethg[1]" dest-module="ospfRouter_9_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="42.761s">
-		<connect src-module="ospfRouter_11_2" src-gate="ethg[3]" dest-module="ospfRouter_11_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
-	</at>
-	<at t="42.774s">
-		<disconnect src-module="ospfRouter_7_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="43.121s">
-		<disconnect src-module="ospfRouter_8_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="43.213s">
-		<disconnect src-module="ospfRouter_9_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="43.323s">
-		<connect src-module="ospfRouter_7_4" src-gate="ethg[1]" dest-module="ospfRouter_8_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="43.331s">
-		<connect src-module="ospfRouter_2_1" src-gate="ethg[2]" dest-module="ospfRouter_2_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
-	</at>
-	<at t="43.857s">
-		<connect src-module="ospfRouter_9_4" src-gate="ethg[1]" dest-module="ospfRouter_10_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="44.009s">
-		<connect src-module="ospfRouter_5_1" src-gate="ethg[3]" dest-module="ospfRouter_5_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
-	</at>
-	<at t="44.233s">
-		<disconnect src-module="ospfRouter_7_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="44.359s">
-		<disconnect src-module="ospfRouter_6_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="44.575s">
-		<disconnect src-module="ospfRouter_5_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="44.628s">
-		<disconnect src-module="ospfRouter_7_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="45.023s">
-		<connect src-module="ospfRouter_8_3" src-gate="ethg[3]" dest-module="ospfRouter_8_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
-	</at>
-	<at t="45.092s">
-		<connect src-module="ospfRouter_3_2" src-gate="ethg[3]" dest-module="ospfRouter_3_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="45.247s">
-		<connect src-module="ospfRouter_6_1" src-gate="ethg[2]" dest-module="ospfRouter_6_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
-	</at>
-	<at t="45.320s">
-		<connect src-module="ospfRouter_5_3" src-gate="ethg[1]" dest-module="ospfRouter_6_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="45.410s">
-		<connect src-module="ospfRouter_6_6" src-gate="ethg[1]" dest-module="ospfRouter_7_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="45.465s">
-		<connect src-module="ospfRouter_6_3" src-gate="ethg[3]" dest-module="ospfRouter_6_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
-	</at>
-	<at t="45.481s">
-		<disconnect src-module="ospfRouter_8_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="45.689s">
-		<disconnect src-module="ospfRouter_2_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="45.712s">
-		<disconnect src-module="ospfRouter_8_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="45.749s">
-		<connect src-module="ospfRouter_3_1" src-gate="ethg[2]" dest-module="ospfRouter_3_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="45.855s">
-		<connect src-module="ospfRouter_6_5" src-gate="ethg[3]" dest-module="ospfRouter_6_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
-	</at>
-	<at t="45.938s">
-		<disconnect src-module="ospfRouter_4_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="46.128s">
-		<connect src-module="ospfRouter_11_4" src-gate="ethg[3]" dest-module="ospfRouter_11_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
-	</at>
-	<at t="46.151s">
-		<disconnect src-module="ospfRouter_6_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="46.255s">
-		<connect src-module="ospfRouter_5_1" src-gate="ethg[1]" dest-module="ospfRouter_6_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="46.532s">
-		<connect src-module="ospfRouter_3_3" src-gate="ethg[3]" dest-module="ospfRouter_3_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="46.572s">
-		<connect src-module="ospfRouter_11_5" src-gate="ethg[3]" dest-module="ospfRouter_11_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
-	</at>
-	<at t="47.242s">
-		<connect src-module="ospfRouter_1_1" src-gate="ethg[0]" dest-module="ospfRouter_11_1" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="47.774s">
-		<connect src-module="ospfRouter_7_1" src-gate="ethg[2]" dest-module="ospfRouter_7_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="48.121s">
-		<connect src-module="ospfRouter_8_4" src-gate="ethg[1]" dest-module="ospfRouter_9_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="48.213s">
-		<connect src-module="ospfRouter_9_2" src-gate="ethg[3]" dest-module="ospfRouter_9_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
-	</at>
-	<at t="48.247s">
-		<disconnect src-module="ospfRouter_9_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="49.233s">
-		<connect src-module="ospfRouter_7_4" src-gate="ethg[3]" dest-module="ospfRouter_7_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="49.359s">
-		<connect src-module="ospfRouter_6_3" src-gate="ethg[1]" dest-module="ospfRouter_7_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="49.575s">
-		<connect src-module="ospfRouter_5_2" src-gate="ethg[3]" dest-module="ospfRouter_5_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
-	</at>
-	<at t="49.628s">
-		<connect src-module="ospfRouter_7_2" src-gate="ethg[3]" dest-module="ospfRouter_7_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="50.012s">
-		<disconnect src-module="ospfRouter_4_1" src-gate="ethg[3]"/>
-	</at>
-	<at t="50.481s">
-		<connect src-module="ospfRouter_8_3" src-gate="ethg[3]" dest-module="ospfRouter_8_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
-	</at>
-	<at t="50.689s">
-		<connect src-module="ospfRouter_2_5" src-gate="ethg[1]" dest-module="ospfRouter_3_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="50.712s">
-		<connect src-module="ospfRouter_8_2" src-gate="ethg[3]" dest-module="ospfRouter_8_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
-	</at>
-	<at t="50.938s">
-		<connect src-module="ospfRouter_4_2" src-gate="ethg[1]" dest-module="ospfRouter_5_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="51.091s">
-		<disconnect src-module="ospfRouter_10_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="51.151s">
-		<connect src-module="ospfRouter_6_2" src-gate="ethg[1]" dest-module="ospfRouter_7_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="51.799s">
-		<disconnect src-module="ospfRouter_6_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="52.472s">
-		<disconnect src-module="ospfRouter_6_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="52.635s">
-		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="53.138s">
-		<disconnect src-module="ospfRouter_8_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="53.239s">
-		<disconnect src-module="ospfRouter_7_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="53.245s">
-		<disconnect src-module="ospfRouter_9_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="53.247s">
-		<connect src-module="ospfRouter_9_2" src-gate="ethg[1]" dest-module="ospfRouter_10_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="53.402s">
-		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="53.569s">
-		<disconnect src-module="ospfRouter_1_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="53.628s">
-		<disconnect src-module="ospfRouter_7_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="54.101s">
-		<disconnect src-module="ospfRouter_5_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="54.459s">
-		<disconnect src-module="ospfRouter_7_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="55.012s">
-		<connect src-module="ospfRouter_4_1" src-gate="ethg[3]" dest-module="ospfRouter_4_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
-	</at>
-	<at t="55.177s">
-		<disconnect src-module="ospfRouter_6_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="55.876s">
-		<disconnect src-module="ospfRouter_4_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="56.091s">
-		<connect src-module="ospfRouter_10_1" src-gate="ethg[2]" dest-module="ospfRouter_10_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
-	</at>
-	<at t="56.341s">
-		<disconnect src-module="ospfRouter_8_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="56.376s">
-		<disconnect src-module="ospfRouter_5_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="56.574s">
-		<disconnect src-module="ospfRouter_7_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="56.653s">
-		<disconnect src-module="ospfRouter_9_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="56.799s">
-		<connect src-module="ospfRouter_6_3" src-gate="ethg[3]" dest-module="ospfRouter_6_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
-	</at>
-	<at t="57.472s">
-		<connect src-module="ospfRouter_6_6" src-gate="ethg[1]" dest-module="ospfRouter_7_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="57.635s">
-		<connect src-module="ospfRouter_1_4" src-gate="ethg[1]" dest-module="ospfRouter_2_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="57.652s">
-		<disconnect src-module="ospfRouter_6_1" src-gate="ethg[1]"/>
-	</at>
-	<at t="57.854s">
-		<disconnect src-module="ospfRouter_2_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="58.043s">
-		<disconnect src-module="ospfRouter_8_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="58.138s">
-		<connect src-module="ospfRouter_8_6" src-gate="ethg[1]" dest-module="ospfRouter_9_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="58.239s">
-		<connect src-module="ospfRouter_7_3" src-gate="ethg[3]" dest-module="ospfRouter_7_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="58.245s">
-		<connect src-module="ospfRouter_9_4" src-gate="ethg[1]" dest-module="ospfRouter_10_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="58.402s">
-		<connect src-module="ospfRouter_1_3" src-gate="ethg[1]" dest-module="ospfRouter_2_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="58.447s">
-		<disconnect src-module="ospfRouter_1_2" src-gate="ethg[0]"/>
-	</at>
-	<at t="58.569s">
-		<connect src-module="ospfRouter_1_6" src-gate="ethg[1]" dest-module="ospfRouter_2_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="58.628s">
-		<connect src-module="ospfRouter_7_5" src-gate="ethg[3]" dest-module="ospfRouter_7_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="58.962s">
-		<disconnect src-module="ospfRouter_5_1" src-gate="ethg[3]"/>
-	</at>
-	<at t="59.101s">
-		<connect src-module="ospfRouter_5_4" src-gate="ethg[1]" dest-module="ospfRouter_6_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="59.170s">
-		<disconnect src-module="ospfRouter_5_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="59.459s">
-		<connect src-module="ospfRouter_7_3" src-gate="ethg[1]" dest-module="ospfRouter_8_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="59.497s">
-		<disconnect src-module="ospfRouter_8_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="59.524s">
-		<disconnect src-module="ospfRouter_10_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="59.803s">
-		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="60.177s">
-		<connect src-module="ospfRouter_6_4" src-gate="ethg[1]" dest-module="ospfRouter_7_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="60.876s">
-		<connect src-module="ospfRouter_4_1" src-gate="ethg[2]" dest-module="ospfRouter_4_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
-	</at>
-	<at t="60.893s">
-		<disconnect src-module="ospfRouter_3_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="60.899s">
-		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[0]"/>
-	</at>
-	<at t="60.929s">
-		<disconnect src-module="ospfRouter_11_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="61.185s">
-		<disconnect src-module="ospfRouter_5_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="61.341s">
-		<connect src-module="ospfRouter_8_4" src-gate="ethg[1]" dest-module="ospfRouter_9_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="61.376s">
-		<connect src-module="ospfRouter_5_5" src-gate="ethg[1]" dest-module="ospfRouter_6_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="61.422s">
-		<disconnect src-module="ospfRouter_7_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="61.430s">
-		<disconnect src-module="ospfRouter_5_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="61.574s">
-		<connect src-module="ospfRouter_7_2" src-gate="ethg[3]" dest-module="ospfRouter_7_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="61.653s">
-		<connect src-module="ospfRouter_9_4" src-gate="ethg[3]" dest-module="ospfRouter_9_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
-	</at>
-	<at t="62.210s">
-		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="62.521s">
-		<disconnect src-module="ospfRouter_3_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="62.652s">
-		<connect src-module="ospfRouter_6_1" src-gate="ethg[1]" dest-module="ospfRouter_7_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="62.753s">
-		<disconnect src-module="ospfRouter_9_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="62.812s">
-		<disconnect src-module="ospfRouter_7_1" src-gate="ethg[3]"/>
-	</at>
-	<at t="62.854s">
-		<connect src-module="ospfRouter_2_5" src-gate="ethg[3]" dest-module="ospfRouter_2_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
-	</at>
-	<at t="63.043s">
-		<connect src-module="ospfRouter_8_1" src-gate="ethg[2]" dest-module="ospfRouter_8_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
-	</at>
-	<at t="63.221s">
-		<disconnect src-module="ospfRouter_6_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="63.325s">
-		<disconnect src-module="ospfRouter_4_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="63.426s">
-		<disconnect src-module="ospfRouter_2_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="63.447s">
-		<connect src-module="ospfRouter_1_2" src-gate="ethg[0]" dest-module="ospfRouter_11_2" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="63.507s">
-		<disconnect src-module="ospfRouter_7_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="63.700s">
-		<disconnect src-module="ospfRouter_11_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="63.962s">
-		<connect src-module="ospfRouter_5_1" src-gate="ethg[3]" dest-module="ospfRouter_5_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
-	</at>
-	<at t="64.122s">
-		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[1]"/>
-	</at>
-	<at t="64.170s">
-		<connect src-module="ospfRouter_5_5" src-gate="ethg[3]" dest-module="ospfRouter_5_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
-	</at>
-	<at t="64.497s">
-		<connect src-module="ospfRouter_8_6" src-gate="ethg[1]" dest-module="ospfRouter_9_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="64.524s">
-		<connect src-module="ospfRouter_10_6" src-gate="ethg[1]" dest-module="ospfRouter_11_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="64.803s">
-		<connect src-module="ospfRouter_1_3" src-gate="ethg[1]" dest-module="ospfRouter_2_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="65.317s">
-		<disconnect src-module="ospfRouter_2_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="65.893s">
-		<connect src-module="ospfRouter_3_4" src-gate="ethg[1]" dest-module="ospfRouter_4_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="65.899s">
-		<connect src-module="ospfRouter_1_1" src-gate="ethg[0]" dest-module="ospfRouter_11_1" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="65.929s">
-		<connect src-module="ospfRouter_11_1" src-gate="ethg[2]" dest-module="ospfRouter_11_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
-	</at>
-	<at t="66.185s">
-		<connect src-module="ospfRouter_5_1" src-gate="ethg[2]" dest-module="ospfRouter_5_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
-	</at>
-	<at t="66.422s">
-		<connect src-module="ospfRouter_7_5" src-gate="ethg[3]" dest-module="ospfRouter_7_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="66.430s">
-		<connect src-module="ospfRouter_5_2" src-gate="ethg[3]" dest-module="ospfRouter_5_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
-	</at>
-	<at t="66.527s">
-		<disconnect src-module="ospfRouter_7_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="67.210s">
-		<connect src-module="ospfRouter_2_2" src-gate="ethg[1]" dest-module="ospfRouter_3_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="67.521s">
-		<connect src-module="ospfRouter_3_3" src-gate="ethg[3]" dest-module="ospfRouter_3_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="67.753s">
-		<connect src-module="ospfRouter_9_2" src-gate="ethg[1]" dest-module="ospfRouter_10_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="67.812s">
-		<connect src-module="ospfRouter_7_1" src-gate="ethg[3]" dest-module="ospfRouter_7_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="67.933s">
-		<disconnect src-module="ospfRouter_1_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="68.053s">
-		<disconnect src-module="ospfRouter_11_1" src-gate="ethg[3]"/>
-	</at>
-	<at t="68.221s">
-		<connect src-module="ospfRouter_6_1" src-gate="ethg[2]" dest-module="ospfRouter_6_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
-	</at>
-	<at t="68.325s">
-		<connect src-module="ospfRouter_4_4" src-gate="ethg[1]" dest-module="ospfRouter_5_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="68.426s">
-		<connect src-module="ospfRouter_2_6" src-gate="ethg[1]" dest-module="ospfRouter_3_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="68.437s">
-		<disconnect src-module="ospfRouter_10_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="68.507s">
-		<connect src-module="ospfRouter_7_3" src-gate="ethg[3]" dest-module="ospfRouter_7_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="68.700s">
-		<connect src-module="ospfRouter_11_5" src-gate="ethg[3]" dest-module="ospfRouter_11_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
-	</at>
-	<at t="69.122s">
-		<connect src-module="ospfRouter_1_1" src-gate="ethg[1]" dest-module="ospfRouter_2_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="69.132s">
-		<disconnect src-module="ospfRouter_4_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="69.385s">
-		<disconnect src-module="ospfRouter_10_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="69.663s">
-		<disconnect src-module="ospfRouter_5_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="69.669s">
-		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="70.087s">
-		<disconnect src-module="ospfRouter_10_1" src-gate="ethg[1]"/>
-	</at>
-	<at t="70.173s">
-		<disconnect src-module="ospfRouter_7_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="70.317s">
-		<connect src-module="ospfRouter_2_3" src-gate="ethg[3]" dest-module="ospfRouter_2_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
-	</at>
-	<at t="70.671s">
-		<disconnect src-module="ospfRouter_3_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="70.791s">
-		<disconnect src-module="ospfRouter_6_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="71.339s">
-		<disconnect src-module="ospfRouter_8_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="71.527s">
-		<connect src-module="ospfRouter_7_2" src-gate="ethg[1]" dest-module="ospfRouter_8_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="71.571s">
-		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="71.614s">
-		<disconnect src-module="ospfRouter_2_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="72.249s">
-		<disconnect src-module="ospfRouter_4_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="72.805s">
-		<disconnect src-module="ospfRouter_6_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="72.933s">
-		<connect src-module="ospfRouter_1_6" src-gate="ethg[1]" dest-module="ospfRouter_2_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="73.053s">
-		<connect src-module="ospfRouter_11_1" src-gate="ethg[3]" dest-module="ospfRouter_11_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
-	</at>
-	<at t="73.214s">
-		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="73.220s">
-		<disconnect src-module="ospfRouter_3_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="73.437s">
-		<connect src-module="ospfRouter_10_3" src-gate="ethg[3]" dest-module="ospfRouter_10_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
-	</at>
-	<at t="73.766s">
-		<disconnect src-module="ospfRouter_11_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="74.073s">
-		<disconnect src-module="ospfRouter_1_2" src-gate="ethg[0]"/>
-	</at>
-	<at t="74.132s">
-		<connect src-module="ospfRouter_4_4" src-gate="ethg[1]" dest-module="ospfRouter_5_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="74.385s">
-		<connect src-module="ospfRouter_10_5" src-gate="ethg[1]" dest-module="ospfRouter_11_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="74.431s">
-		<disconnect src-module="ospfRouter_5_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="74.663s">
-		<connect src-module="ospfRouter_5_3" src-gate="ethg[3]" dest-module="ospfRouter_5_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
-	</at>
-	<at t="74.669s">
-		<connect src-module="ospfRouter_1_3" src-gate="ethg[1]" dest-module="ospfRouter_2_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="75.039s">
-		<disconnect src-module="ospfRouter_2_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="75.087s">
-		<connect src-module="ospfRouter_10_1" src-gate="ethg[1]" dest-module="ospfRouter_11_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="75.173s">
-		<connect src-module="ospfRouter_7_4" src-gate="ethg[3]" dest-module="ospfRouter_7_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="75.428s">
-		<disconnect src-module="ospfRouter_7_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="75.671s">
-		<connect src-module="ospfRouter_3_4" src-gate="ethg[1]" dest-module="ospfRouter_4_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="75.791s">
-		<connect src-module="ospfRouter_6_4" src-gate="ethg[1]" dest-module="ospfRouter_7_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="76.056s">
-		<disconnect src-module="ospfRouter_6_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="76.186s">
-		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="76.339s">
-		<connect src-module="ospfRouter_8_6" src-gate="ethg[1]" dest-module="ospfRouter_9_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="76.571s">
-		<connect src-module="ospfRouter_2_2" src-gate="ethg[3]" dest-module="ospfRouter_2_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
-	</at>
-	<at t="76.614s">
-		<connect src-module="ospfRouter_2_5" src-gate="ethg[3]" dest-module="ospfRouter_2_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
-	</at>
-	<at t="76.722s">
-		<disconnect src-module="ospfRouter_7_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="76.974s">
-		<disconnect src-module="ospfRouter_6_1" src-gate="ethg[1]"/>
-	</at>
-	<at t="77.249s">
-		<connect src-module="ospfRouter_4_5" src-gate="ethg[3]" dest-module="ospfRouter_4_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
-	</at>
-	<at t="77.572s">
-		<disconnect src-module="ospfRouter_3_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="77.651s">
-		<disconnect src-module="ospfRouter_3_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="77.676s">
-		<disconnect src-module="ospfRouter_8_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="77.805s">
-		<connect src-module="ospfRouter_6_2" src-gate="ethg[3]" dest-module="ospfRouter_6_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
-	</at>
-	<at t="78.214s">
-		<connect src-module="ospfRouter_1_3" src-gate="ethg[3]" dest-module="ospfRouter_1_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
-	</at>
-	<at t="78.220s">
-		<connect src-module="ospfRouter_3_2" src-gate="ethg[3]" dest-module="ospfRouter_3_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="78.378s">
-		<disconnect src-module="ospfRouter_10_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="78.766s">
-		<connect src-module="ospfRouter_11_3" src-gate="ethg[3]" dest-module="ospfRouter_11_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
-	</at>
-	<at t="78.785s">
-		<disconnect src-module="ospfRouter_10_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="79.073s">
-		<connect src-module="ospfRouter_1_2" src-gate="ethg[0]" dest-module="ospfRouter_11_2" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="79.329s">
-		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="79.431s">
-		<connect src-module="ospfRouter_5_4" src-gate="ethg[1]" dest-module="ospfRouter_6_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="79.597s">
-		<disconnect src-module="ospfRouter_7_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="79.914s">
-		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="79.958s">
-		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[1]"/>
-	</at>
-	<at t="80.039s">
-		<connect src-module="ospfRouter_2_4" src-gate="ethg[1]" dest-module="ospfRouter_3_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="80.428s">
-		<connect src-module="ospfRouter_7_5" src-gate="ethg[3]" dest-module="ospfRouter_7_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="80.615s">
-		<disconnect src-module="ospfRouter_1_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="80.693s">
-		<disconnect src-module="ospfRouter_6_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="80.880s">
-		<disconnect src-module="ospfRouter_4_1" src-gate="ethg[3]"/>
-	</at>
-	<at t="81.056s">
-		<connect src-module="ospfRouter_6_5" src-gate="ethg[1]" dest-module="ospfRouter_7_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="81.186s">
-		<connect src-module="ospfRouter_2_2" src-gate="ethg[1]" dest-module="ospfRouter_3_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="81.722s">
-		<connect src-module="ospfRouter_7_4" src-gate="ethg[3]" dest-module="ospfRouter_7_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="81.974s">
-		<connect src-module="ospfRouter_6_1" src-gate="ethg[1]" dest-module="ospfRouter_7_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="82.424s">
-		<disconnect src-module="ospfRouter_9_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="82.572s">
-		<connect src-module="ospfRouter_3_6" src-gate="ethg[1]" dest-module="ospfRouter_4_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="82.651s">
-		<connect src-module="ospfRouter_3_3" src-gate="ethg[1]" dest-module="ospfRouter_4_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="82.676s">
-		<connect src-module="ospfRouter_8_5" src-gate="ethg[3]" dest-module="ospfRouter_8_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
-	</at>
-	<at t="83.083s">
-		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[0]"/>
-	</at>
-	<at t="83.252s">
-		<disconnect src-module="ospfRouter_5_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="83.378s">
-		<connect src-module="ospfRouter_10_4" src-gate="ethg[1]" dest-module="ospfRouter_11_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="83.785s">
-		<connect src-module="ospfRouter_10_1" src-gate="ethg[2]" dest-module="ospfRouter_10_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
-	</at>
-	<at t="84.078s">
-		<disconnect src-module="ospfRouter_7_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="84.156s">
-		<disconnect src-module="ospfRouter_4_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="84.168s">
+	<at t="20.385s">
 		<disconnect src-module="ospfRouter_1_6" src-gate="ethg[0]"/>
 	</at>
-	<at t="84.329s">
-		<connect src-module="ospfRouter_1_4" src-gate="ethg[1]" dest-module="ospfRouter_2_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	<at t="20.699s">
+		<disconnect src-module="ospfRouter_11_3" src-gate="ethg[3]"/>
 	</at>
-	<at t="84.401s">
-		<disconnect src-module="ospfRouter_5_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="84.597s">
-		<connect src-module="ospfRouter_7_2" src-gate="ethg[3]" dest-module="ospfRouter_7_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="84.759s">
-		<disconnect src-module="ospfRouter_2_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="84.809s">
-		<disconnect src-module="ospfRouter_3_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="84.914s">
-		<connect src-module="ospfRouter_1_4" src-gate="ethg[3]" dest-module="ospfRouter_1_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
-	</at>
-	<at t="84.958s">
-		<connect src-module="ospfRouter_3_1" src-gate="ethg[1]" dest-module="ospfRouter_4_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="85.615s">
-		<connect src-module="ospfRouter_1_6" src-gate="ethg[1]" dest-module="ospfRouter_2_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="85.649s">
-		<disconnect src-module="ospfRouter_1_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="85.693s">
-		<connect src-module="ospfRouter_6_3" src-gate="ethg[3]" dest-module="ospfRouter_6_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
-	</at>
-	<at t="85.880s">
-		<connect src-module="ospfRouter_4_1" src-gate="ethg[3]" dest-module="ospfRouter_4_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
-	</at>
-	<at t="86.204s">
-		<disconnect src-module="ospfRouter_7_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="86.355s">
-		<disconnect src-module="ospfRouter_8_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="86.564s">
-		<disconnect src-module="ospfRouter_2_1" src-gate="ethg[3]"/>
-	</at>
-	<at t="86.625s">
-		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="87.424s">
-		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="87.424s">
-		<connect src-module="ospfRouter_9_2" src-gate="ethg[1]" dest-module="ospfRouter_10_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="87.487s">
-		<disconnect src-module="ospfRouter_10_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="88.083s">
-		<connect src-module="ospfRouter_1_1" src-gate="ethg[0]" dest-module="ospfRouter_11_1" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="88.252s">
-		<connect src-module="ospfRouter_5_5" src-gate="ethg[1]" dest-module="ospfRouter_6_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="88.738s">
-		<disconnect src-module="ospfRouter_4_1" src-gate="ethg[3]"/>
-	</at>
-	<at t="89.078s">
-		<connect src-module="ospfRouter_7_6" src-gate="ethg[1]" dest-module="ospfRouter_8_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="89.156s">
-		<connect src-module="ospfRouter_4_4" src-gate="ethg[3]" dest-module="ospfRouter_4_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
-	</at>
-	<at t="89.168s">
-		<connect src-module="ospfRouter_1_6" src-gate="ethg[0]" dest-module="ospfRouter_11_6" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="89.401s">
-		<connect src-module="ospfRouter_5_6" src-gate="ethg[1]" dest-module="ospfRouter_6_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="89.579s">
-		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="89.702s">
-		<disconnect src-module="ospfRouter_9_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="89.759s">
-		<connect src-module="ospfRouter_2_3" src-gate="ethg[3]" dest-module="ospfRouter_2_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
-	</at>
-	<at t="89.799s">
-		<disconnect src-module="ospfRouter_10_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="89.809s">
-		<connect src-module="ospfRouter_3_2" src-gate="ethg[1]" dest-module="ospfRouter_4_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="90.216s">
-		<disconnect src-module="ospfRouter_5_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="90.434s">
-		<disconnect src-module="ospfRouter_3_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="90.438s">
-		<disconnect src-module="ospfRouter_6_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="90.649s">
-		<connect src-module="ospfRouter_1_5" src-gate="ethg[3]" dest-module="ospfRouter_1_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
-	</at>
-	<at t="91.181s">
-		<disconnect src-module="ospfRouter_9_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="91.204s">
-		<connect src-module="ospfRouter_7_5" src-gate="ethg[3]" dest-module="ospfRouter_7_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="91.355s">
-		<connect src-module="ospfRouter_8_4" src-gate="ethg[3]" dest-module="ospfRouter_8_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
-	</at>
-	<at t="91.456s">
-		<disconnect src-module="ospfRouter_6_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="91.564s">
-		<connect src-module="ospfRouter_2_1" src-gate="ethg[3]" dest-module="ospfRouter_2_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
-	</at>
-	<at t="91.625s">
-		<connect src-module="ospfRouter_2_2" src-gate="ethg[3]" dest-module="ospfRouter_2_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
-	</at>
-	<at t="91.891s">
-		<disconnect src-module="ospfRouter_3_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="91.911s">
-		<disconnect src-module="ospfRouter_2_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="92.083s">
-		<disconnect src-module="ospfRouter_6_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="92.094s">
-		<disconnect src-module="ospfRouter_2_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="92.203s">
-		<disconnect src-module="ospfRouter_7_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="92.424s">
-		<connect src-module="ospfRouter_1_1" src-gate="ethg[2]" dest-module="ospfRouter_1_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
-	</at>
-	<at t="92.434s">
-		<disconnect src-module="ospfRouter_1_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="92.487s">
-		<connect src-module="ospfRouter_10_2" src-gate="ethg[3]" dest-module="ospfRouter_10_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
-	</at>
-	<at t="92.672s">
-		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="92.744s">
-		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[3]"/>
-	</at>
-	<at t="93.018s">
-		<disconnect src-module="ospfRouter_2_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="93.209s">
-		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="93.580s">
-		<disconnect src-module="ospfRouter_5_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="93.738s">
-		<connect src-module="ospfRouter_4_1" src-gate="ethg[3]" dest-module="ospfRouter_4_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
-	</at>
-	<at t="94.579s">
-		<connect src-module="ospfRouter_3_1" src-gate="ethg[2]" dest-module="ospfRouter_3_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="94.702s">
-		<connect src-module="ospfRouter_9_5" src-gate="ethg[1]" dest-module="ospfRouter_10_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="94.799s">
-		<connect src-module="ospfRouter_10_5" src-gate="ethg[1]" dest-module="ospfRouter_11_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="94.955s">
-		<disconnect src-module="ospfRouter_11_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="95.216s">
-		<connect src-module="ospfRouter_5_1" src-gate="ethg[2]" dest-module="ospfRouter_5_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
-	</at>
-	<at t="95.434s">
-		<connect src-module="ospfRouter_3_3" src-gate="ethg[3]" dest-module="ospfRouter_3_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="95.438s">
-		<connect src-module="ospfRouter_6_4" src-gate="ethg[1]" dest-module="ospfRouter_7_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="95.467s">
-		<disconnect src-module="ospfRouter_1_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="96.181s">
-		<connect src-module="ospfRouter_9_3" src-gate="ethg[3]" dest-module="ospfRouter_9_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
-	</at>
-	<at t="96.220s">
-		<disconnect src-module="ospfRouter_9_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="96.456s">
-		<connect src-module="ospfRouter_6_5" src-gate="ethg[3]" dest-module="ospfRouter_6_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
-	</at>
-	<at t="96.891s">
-		<connect src-module="ospfRouter_3_2" src-gate="ethg[3]" dest-module="ospfRouter_3_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="96.911s">
-		<connect src-module="ospfRouter_2_5" src-gate="ethg[1]" dest-module="ospfRouter_3_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="97.083s">
-		<connect src-module="ospfRouter_6_3" src-gate="ethg[1]" dest-module="ospfRouter_7_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="97.094s">
-		<connect src-module="ospfRouter_2_6" src-gate="ethg[1]" dest-module="ospfRouter_3_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="97.203s">
-		<connect src-module="ospfRouter_7_2" src-gate="ethg[3]" dest-module="ospfRouter_7_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="97.212s">
-		<disconnect src-module="ospfRouter_8_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="97.270s">
-		<disconnect src-module="ospfRouter_10_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="97.434s">
-		<connect src-module="ospfRouter_1_2" src-gate="ethg[3]" dest-module="ospfRouter_1_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
-	</at>
-	<at t="97.588s">
-		<disconnect src-module="ospfRouter_5_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="97.672s">
-		<connect src-module="ospfRouter_2_2" src-gate="ethg[1]" dest-module="ospfRouter_3_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="97.744s">
-		<connect src-module="ospfRouter_3_1" src-gate="ethg[3]" dest-module="ospfRouter_3_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="97.745s">
-		<disconnect src-module="ospfRouter_8_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="98.018s">
-		<connect src-module="ospfRouter_2_3" src-gate="ethg[1]" dest-module="ospfRouter_3_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="98.053s">
-		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[3]"/>
-	</at>
-	<at t="98.209s">
-		<connect src-module="ospfRouter_1_4" src-gate="ethg[3]" dest-module="ospfRouter_1_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
-	</at>
-	<at t="98.580s">
-		<connect src-module="ospfRouter_5_2" src-gate="ethg[1]" dest-module="ospfRouter_6_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="98.642s">
-		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="99.057s">
-		<disconnect src-module="ospfRouter_9_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="99.125s">
-		<disconnect src-module="ospfRouter_8_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="99.224s">
-		<disconnect src-module="ospfRouter_6_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="99.662s">
-		<disconnect src-module="ospfRouter_9_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="99.768s">
-		<disconnect src-module="ospfRouter_5_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="99.798s">
-		<disconnect src-module="ospfRouter_7_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="99.955s">
-		<connect src-module="ospfRouter_11_4" src-gate="ethg[3]" dest-module="ospfRouter_11_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
-	</at>
-	<at t="100.007s">
-		<disconnect src-module="ospfRouter_5_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="100.205s">
-		<disconnect src-module="ospfRouter_2_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="100.461s">
-		<disconnect src-module="ospfRouter_6_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="100.467s">
-		<connect src-module="ospfRouter_1_5" src-gate="ethg[3]" dest-module="ospfRouter_1_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
-	</at>
-	<at t="100.711s">
-		<disconnect src-module="ospfRouter_3_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="100.892s">
-		<disconnect src-module="ospfRouter_6_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="101.069s">
-		<disconnect src-module="ospfRouter_10_5" src-gate="ethg[1]"/>
-	</at>
-	<at t="101.194s">
-		<disconnect src-module="ospfRouter_3_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="101.220s">
-		<connect src-module="ospfRouter_9_2" src-gate="ethg[3]" dest-module="ospfRouter_9_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
-	</at>
-	<at t="101.726s">
-		<disconnect src-module="ospfRouter_10_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="102.212s">
-		<connect src-module="ospfRouter_8_4" src-gate="ethg[1]" dest-module="ospfRouter_9_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="102.270s">
-		<connect src-module="ospfRouter_10_5" src-gate="ethg[3]" dest-module="ospfRouter_10_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
-	</at>
-	<at t="102.588s">
-		<connect src-module="ospfRouter_5_6" src-gate="ethg[1]" dest-module="ospfRouter_6_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="102.745s">
-		<connect src-module="ospfRouter_8_2" src-gate="ethg[3]" dest-module="ospfRouter_8_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
-	</at>
-	<at t="103.053s">
-		<connect src-module="ospfRouter_3_1" src-gate="ethg[3]" dest-module="ospfRouter_3_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="103.568s">
-		<disconnect src-module="ospfRouter_7_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="103.632s">
-		<disconnect src-module="ospfRouter_3_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="103.642s">
-		<connect src-module="ospfRouter_2_2" src-gate="ethg[1]" dest-module="ospfRouter_3_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="104.057s">
-		<connect src-module="ospfRouter_9_2" src-gate="ethg[1]" dest-module="ospfRouter_10_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="104.125s">
-		<connect src-module="ospfRouter_8_6" src-gate="ethg[1]" dest-module="ospfRouter_9_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="104.224s">
-		<connect src-module="ospfRouter_6_5" src-gate="ethg[1]" dest-module="ospfRouter_7_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="104.339s">
-		<disconnect src-module="ospfRouter_4_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="104.504s">
-		<disconnect src-module="ospfRouter_2_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="104.662s">
-		<connect src-module="ospfRouter_9_4" src-gate="ethg[3]" dest-module="ospfRouter_9_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
-	</at>
-	<at t="104.696s">
-		<disconnect src-module="ospfRouter_4_1" src-gate="ethg[3]"/>
-	</at>
-	<at t="104.768s">
-		<connect src-module="ospfRouter_5_3" src-gate="ethg[3]" dest-module="ospfRouter_5_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
-	</at>
-	<at t="104.798s">
-		<connect src-module="ospfRouter_7_6" src-gate="ethg[1]" dest-module="ospfRouter_8_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="104.816s">
-		<disconnect src-module="ospfRouter_6_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="105.007s">
-		<connect src-module="ospfRouter_5_1" src-gate="ethg[2]" dest-module="ospfRouter_5_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
-	</at>
-	<at t="105.205s">
-		<connect src-module="ospfRouter_2_3" src-gate="ethg[1]" dest-module="ospfRouter_3_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="105.461s">
-		<connect src-module="ospfRouter_6_4" src-gate="ethg[3]" dest-module="ospfRouter_6_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
-	</at>
-	<at t="105.468s">
-		<disconnect src-module="ospfRouter_10_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="105.679s">
-		<disconnect src-module="ospfRouter_4_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="105.691s">
-		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="105.711s">
-		<connect src-module="ospfRouter_3_5" src-gate="ethg[1]" dest-module="ospfRouter_4_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="105.874s">
-		<disconnect src-module="ospfRouter_2_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="105.892s">
-		<connect src-module="ospfRouter_6_1" src-gate="ethg[2]" dest-module="ospfRouter_6_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
-	</at>
-	<at t="106.069s">
-		<connect src-module="ospfRouter_10_5" src-gate="ethg[1]" dest-module="ospfRouter_11_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="106.070s">
-		<disconnect src-module="ospfRouter_7_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="106.194s">
-		<connect src-module="ospfRouter_3_3" src-gate="ethg[1]" dest-module="ospfRouter_4_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="106.444s">
-		<disconnect src-module="ospfRouter_2_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="106.585s">
-		<disconnect src-module="ospfRouter_4_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="106.726s">
-		<connect src-module="ospfRouter_10_3" src-gate="ethg[1]" dest-module="ospfRouter_11_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="107.207s">
-		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[0]"/>
-	</at>
-	<at t="107.238s">
-		<disconnect src-module="ospfRouter_10_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="107.268s">
-		<disconnect src-module="ospfRouter_6_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="107.278s">
-		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[1]"/>
-	</at>
-	<at t="107.295s">
-		<disconnect src-module="ospfRouter_9_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="107.885s">
-		<disconnect src-module="ospfRouter_6_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="107.890s">
-		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[2]"/>
-	</at>
-	<at t="108.568s">
-		<connect src-module="ospfRouter_7_3" src-gate="ethg[3]" dest-module="ospfRouter_7_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
-	</at>
-	<at t="108.631s">
-		<disconnect src-module="ospfRouter_8_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="108.632s">
-		<connect src-module="ospfRouter_3_2" src-gate="ethg[1]" dest-module="ospfRouter_4_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="108.936s">
-		<disconnect src-module="ospfRouter_8_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="109.339s">
-		<connect src-module="ospfRouter_4_6" src-gate="ethg[1]" dest-module="ospfRouter_5_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="109.504s">
-		<connect src-module="ospfRouter_2_5" src-gate="ethg[3]" dest-module="ospfRouter_2_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
-	</at>
-	<at t="109.696s">
-		<connect src-module="ospfRouter_4_1" src-gate="ethg[3]" dest-module="ospfRouter_4_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
-	</at>
-	<at t="109.816s">
-		<connect src-module="ospfRouter_6_2" src-gate="ethg[1]" dest-module="ospfRouter_7_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="110.032s">
+	<at t="20.811s">
 		<disconnect src-module="ospfRouter_6_1" src-gate="ethg[1]"/>
 	</at>
-	<at t="110.468s">
-		<connect src-module="ospfRouter_10_6" src-gate="ethg[1]" dest-module="ospfRouter_11_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	<at t="21.607s">
+		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[1]"/>
 	</at>
-	<at t="110.679s">
-		<connect src-module="ospfRouter_4_5" src-gate="ethg[3]" dest-module="ospfRouter_4_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
+	<at t="21.622s">
+		<disconnect src-module="ospfRouter_5_4" src-gate="ethg[3]"/>
 	</at>
-	<at t="110.691s">
-		<connect src-module="ospfRouter_2_2" src-gate="ethg[1]" dest-module="ospfRouter_3_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="110.874s">
-		<connect src-module="ospfRouter_2_6" src-gate="ethg[1]" dest-module="ospfRouter_3_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="111.070s">
-		<connect src-module="ospfRouter_7_3" src-gate="ethg[1]" dest-module="ospfRouter_8_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="111.202s">
-		<disconnect src-module="ospfRouter_7_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="111.444s">
-		<connect src-module="ospfRouter_2_3" src-gate="ethg[3]" dest-module="ospfRouter_2_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
-	</at>
-	<at t="111.476s">
-		<disconnect src-module="ospfRouter_3_5" src-gate="ethg[3]"/>
-	</at>
-	<at t="111.568s">
-		<disconnect src-module="ospfRouter_9_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="111.585s">
-		<connect src-module="ospfRouter_4_3" src-gate="ethg[1]" dest-module="ospfRouter_5_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="111.782s">
-		<disconnect src-module="ospfRouter_2_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="112.099s">
-		<disconnect src-module="ospfRouter_8_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="112.103s">
-		<disconnect src-module="ospfRouter_4_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="112.207s">
-		<connect src-module="ospfRouter_1_3" src-gate="ethg[0]" dest-module="ospfRouter_11_3" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="112.238s">
-		<connect src-module="ospfRouter_10_3" src-gate="ethg[1]" dest-module="ospfRouter_11_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="112.238s">
+	<at t="22.054s">
 		<disconnect src-module="ospfRouter_1_5" src-gate="ethg[0]"/>
 	</at>
-	<at t="112.268s">
-		<connect src-module="ospfRouter_6_3" src-gate="ethg[3]" dest-module="ospfRouter_6_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	<at t="22.155s">
+		<disconnect src-module="ospfRouter_4_3" src-gate="ethg[1]"/>
 	</at>
-	<at t="112.278s">
-		<connect src-module="ospfRouter_1_1" src-gate="ethg[1]" dest-module="ospfRouter_2_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="112.295s">
-		<connect src-module="ospfRouter_9_6" src-gate="ethg[1]" dest-module="ospfRouter_10_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="112.324s">
-		<disconnect src-module="ospfRouter_1_2" src-gate="ethg[1]"/>
-	</at>
-	<at t="112.885s">
-		<connect src-module="ospfRouter_6_2" src-gate="ethg[3]" dest-module="ospfRouter_6_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
-	</at>
-	<at t="112.890s">
-		<connect src-module="ospfRouter_3_1" src-gate="ethg[2]" dest-module="ospfRouter_3_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="113.297s">
-		<disconnect src-module="ospfRouter_2_4" src-gate="ethg[1]"/>
-	</at>
-	<at t="113.421s">
-		<disconnect src-module="ospfRouter_5_3" src-gate="ethg[1]"/>
-	</at>
-	<at t="113.631s">
-		<connect src-module="ospfRouter_8_4" src-gate="ethg[3]" dest-module="ospfRouter_8_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
-	</at>
-	<at t="113.936s">
-		<connect src-module="ospfRouter_8_6" src-gate="ethg[1]" dest-module="ospfRouter_9_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="113.995s">
-		<disconnect src-module="ospfRouter_3_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="114.974s">
-		<disconnect src-module="ospfRouter_9_3" src-gate="ethg[3]"/>
-	</at>
-	<at t="115.032s">
-		<connect src-module="ospfRouter_6_1" src-gate="ethg[1]" dest-module="ospfRouter_7_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="116.202s">
-		<connect src-module="ospfRouter_7_3" src-gate="ethg[1]" dest-module="ospfRouter_8_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="116.220s">
-		<disconnect src-module="ospfRouter_10_2" src-gate="ethg[3]"/>
-	</at>
-	<at t="116.476s">
-		<connect src-module="ospfRouter_3_5" src-gate="ethg[3]" dest-module="ospfRouter_3_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
-	</at>
-	<at t="116.568s">
-		<connect src-module="ospfRouter_9_3" src-gate="ethg[1]" dest-module="ospfRouter_10_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="116.671s">
-		<disconnect src-module="ospfRouter_2_6" src-gate="ethg[1]"/>
-	</at>
-	<at t="116.782s">
-		<connect src-module="ospfRouter_2_3" src-gate="ethg[1]" dest-module="ospfRouter_3_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="116.828s">
-		<disconnect src-module="ospfRouter_10_4" src-gate="ethg[3]"/>
-	</at>
-	<at t="117.099s">
-		<connect src-module="ospfRouter_8_4" src-gate="ethg[1]" dest-module="ospfRouter_9_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="117.103s">
-		<connect src-module="ospfRouter_4_3" src-gate="ethg[3]" dest-module="ospfRouter_4_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
-	</at>
-	<at t="117.238s">
-		<connect src-module="ospfRouter_1_5" src-gate="ethg[0]" dest-module="ospfRouter_11_5" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="117.324s">
-		<connect src-module="ospfRouter_1_2" src-gate="ethg[1]" dest-module="ospfRouter_2_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
-	</at>
-	<at t="117.441s">
-		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[1]"/>
-	</at>
-	<at t="117.915s">
+	<at t="22.506s">
 		<disconnect src-module="ospfRouter_11_4" src-gate="ethg[3]"/>
 	</at>
-	<at t="118.158s">
-		<disconnect src-module="ospfRouter_8_4" src-gate="ethg[3]"/>
+	<at t="22.794s">
+		<disconnect src-module="ospfRouter_1_6" src-gate="ethg[1]"/>
 	</at>
-	<at t="118.297s">
-		<connect src-module="ospfRouter_2_4" src-gate="ethg[1]" dest-module="ospfRouter_3_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	<at t="23.121s">
+		<disconnect src-module="ospfRouter_1_2" src-gate="ethg[0]"/>
 	</at>
-	<at t="118.421s">
-		<connect src-module="ospfRouter_5_3" src-gate="ethg[1]" dest-module="ospfRouter_6_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	<at t="24.104s">
+		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[3]"/>
 	</at>
-	<at t="118.560s">
-		<disconnect src-module="ospfRouter_2_1" src-gate="ethg[2]"/>
+	<at t="24.202s">
+		<disconnect src-module="ospfRouter_5_5" src-gate="ethg[1]"/>
 	</at>
-	<at t="118.862s">
+	<at t="24.228s">
+		<disconnect src-module="ospfRouter_8_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="24.245s">
+		<disconnect src-module="ospfRouter_7_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="24.467s">
+		<disconnect src-module="ospfRouter_5_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="24.501s">
 		<disconnect src-module="ospfRouter_11_5" src-gate="ethg[3]"/>
 	</at>
-	<at t="118.995s">
-		<connect src-module="ospfRouter_3_4" src-gate="ethg[3]" dest-module="ospfRouter_3_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	<at t="24.568s">
+		<disconnect src-module="ospfRouter_6_1" src-gate="ethg[2]"/>
 	</at>
-	<at t="119.445s">
-		<disconnect src-module="ospfRouter_5_2" src-gate="ethg[1]"/>
+	<at t="24.773s">
+		<disconnect src-module="ospfRouter_5_6" src-gate="ethg[1]"/>
 	</at>
-	<at t="119.672s">
+	<at t="25.054s">
+		<connect src-module="ospfRouter_9_4" src-gate="ethg[1]" dest-module="ospfRouter_10_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="25.237s">
+		<disconnect src-module="ospfRouter_6_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="25.385s">
+		<connect src-module="ospfRouter_1_6" src-gate="ethg[0]" dest-module="ospfRouter_11_6" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="25.398s">
+		<disconnect src-module="ospfRouter_10_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="25.699s">
+		<connect src-module="ospfRouter_11_3" src-gate="ethg[3]" dest-module="ospfRouter_11_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="25.811s">
+		<connect src-module="ospfRouter_6_1" src-gate="ethg[1]" dest-module="ospfRouter_7_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="26.607s">
+		<connect src-module="ospfRouter_2_2" src-gate="ethg[1]" dest-module="ospfRouter_3_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="26.622s">
+		<connect src-module="ospfRouter_5_4" src-gate="ethg[3]" dest-module="ospfRouter_5_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
+	</at>
+	<at t="26.777s">
+		<disconnect src-module="ospfRouter_6_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="26.946s">
+		<disconnect src-module="ospfRouter_8_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="27.054s">
+		<connect src-module="ospfRouter_1_5" src-gate="ethg[0]" dest-module="ospfRouter_11_5" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="27.059s">
 		<disconnect src-module="ospfRouter_2_3" src-gate="ethg[3]"/>
 	</at>
-	<at t="119.847s">
+	<at t="27.155s">
+		<connect src-module="ospfRouter_4_3" src-gate="ethg[1]" dest-module="ospfRouter_5_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="27.372s">
+		<disconnect src-module="ospfRouter_6_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="27.506s">
+		<connect src-module="ospfRouter_11_4" src-gate="ethg[3]" dest-module="ospfRouter_11_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="27.600s">
+		<disconnect src-module="ospfRouter_6_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="27.794s">
+		<connect src-module="ospfRouter_1_6" src-gate="ethg[1]" dest-module="ospfRouter_2_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="27.841s">
+		<disconnect src-module="ospfRouter_3_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="27.888s">
+		<disconnect src-module="ospfRouter_10_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="28.121s">
+		<connect src-module="ospfRouter_1_2" src-gate="ethg[0]" dest-module="ospfRouter_11_2" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="28.384s">
+		<disconnect src-module="ospfRouter_10_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="28.470s">
+		<disconnect src-module="ospfRouter_9_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="28.488s">
+		<disconnect src-module="ospfRouter_2_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="28.674s">
+		<disconnect src-module="ospfRouter_6_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="28.889s">
+		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="29.104s">
+		<connect src-module="ospfRouter_2_2" src-gate="ethg[3]" dest-module="ospfRouter_2_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
+	</at>
+	<at t="29.202s">
+		<connect src-module="ospfRouter_5_5" src-gate="ethg[1]" dest-module="ospfRouter_6_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="29.228s">
+		<connect src-module="ospfRouter_8_5" src-gate="ethg[3]" dest-module="ospfRouter_8_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="29.245s">
+		<connect src-module="ospfRouter_7_5" src-gate="ethg[3]" dest-module="ospfRouter_7_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
+	</at>
+	<at t="29.467s">
+		<connect src-module="ospfRouter_5_1" src-gate="ethg[1]" dest-module="ospfRouter_6_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="29.491s">
+		<disconnect src-module="ospfRouter_8_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="29.501s">
+		<connect src-module="ospfRouter_11_5" src-gate="ethg[3]" dest-module="ospfRouter_11_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="29.568s">
+		<connect src-module="ospfRouter_6_1" src-gate="ethg[2]" dest-module="ospfRouter_6_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="29.568s">
+		<disconnect src-module="ospfRouter_7_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="29.773s">
+		<connect src-module="ospfRouter_5_6" src-gate="ethg[1]" dest-module="ospfRouter_6_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="30.237s">
+		<connect src-module="ospfRouter_6_3" src-gate="ethg[3]" dest-module="ospfRouter_6_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="30.376s">
+		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[0]"/>
+	</at>
+	<at t="30.398s">
+		<connect src-module="ospfRouter_10_6" src-gate="ethg[1]" dest-module="ospfRouter_11_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="30.669s">
+		<disconnect src-module="ospfRouter_9_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="31.167s">
+		<disconnect src-module="ospfRouter_8_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="31.479s">
+		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[0]"/>
+	</at>
+	<at t="31.777s">
+		<connect src-module="ospfRouter_6_2" src-gate="ethg[3]" dest-module="ospfRouter_6_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="31.946s">
+		<connect src-module="ospfRouter_8_1" src-gate="ethg[2]" dest-module="ospfRouter_8_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="32.059s">
+		<connect src-module="ospfRouter_2_3" src-gate="ethg[3]" dest-module="ospfRouter_2_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
+	</at>
+	<at t="32.372s">
+		<connect src-module="ospfRouter_6_3" src-gate="ethg[1]" dest-module="ospfRouter_7_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="32.489s">
+		<disconnect src-module="ospfRouter_6_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="32.600s">
+		<connect src-module="ospfRouter_6_5" src-gate="ethg[3]" dest-module="ospfRouter_6_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="32.841s">
+		<connect src-module="ospfRouter_3_6" src-gate="ethg[1]" dest-module="ospfRouter_4_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="32.888s">
+		<connect src-module="ospfRouter_10_1" src-gate="ethg[1]" dest-module="ospfRouter_11_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="33.147s">
+		<disconnect src-module="ospfRouter_11_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="33.214s">
+		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="33.384s">
+		<connect src-module="ospfRouter_10_1" src-gate="ethg[2]" dest-module="ospfRouter_10_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
+	</at>
+	<at t="33.470s">
+		<connect src-module="ospfRouter_9_1" src-gate="ethg[1]" dest-module="ospfRouter_10_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="33.488s">
+		<connect src-module="ospfRouter_2_3" src-gate="ethg[1]" dest-module="ospfRouter_3_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="33.568s">
+		<disconnect src-module="ospfRouter_5_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="33.674s">
+		<connect src-module="ospfRouter_6_6" src-gate="ethg[1]" dest-module="ospfRouter_7_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="33.889s">
+		<connect src-module="ospfRouter_2_2" src-gate="ethg[1]" dest-module="ospfRouter_3_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="34.491s">
+		<connect src-module="ospfRouter_8_5" src-gate="ethg[3]" dest-module="ospfRouter_8_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="34.568s">
+		<connect src-module="ospfRouter_7_6" src-gate="ethg[1]" dest-module="ospfRouter_8_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="34.804s">
+		<disconnect src-module="ospfRouter_3_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="35.376s">
+		<connect src-module="ospfRouter_1_1" src-gate="ethg[0]" dest-module="ospfRouter_11_1" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="35.568s">
+		<disconnect src-module="ospfRouter_3_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="35.604s">
+		<disconnect src-module="ospfRouter_7_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="35.669s">
+		<connect src-module="ospfRouter_9_1" src-gate="ethg[3]" dest-module="ospfRouter_9_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
+	</at>
+	<at t="35.774s">
+		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[0]"/>
+	</at>
+	<at t="35.822s">
+		<disconnect src-module="ospfRouter_10_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="35.932s">
+		<disconnect src-module="ospfRouter_9_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="35.978s">
+		<disconnect src-module="ospfRouter_9_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="36.167s">
+		<connect src-module="ospfRouter_8_4" src-gate="ethg[3]" dest-module="ospfRouter_8_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="36.386s">
+		<disconnect src-module="ospfRouter_7_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="36.479s">
+		<connect src-module="ospfRouter_1_3" src-gate="ethg[0]" dest-module="ospfRouter_11_3" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="36.552s">
+		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="36.581s">
+		<disconnect src-module="ospfRouter_5_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="36.969s">
+		<disconnect src-module="ospfRouter_8_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="37.081s">
+		<disconnect src-module="ospfRouter_10_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="37.271s">
+		<disconnect src-module="ospfRouter_11_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="37.419s">
+		<disconnect src-module="ospfRouter_5_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="37.489s">
+		<connect src-module="ospfRouter_6_2" src-gate="ethg[1]" dest-module="ospfRouter_7_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="37.852s">
+		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="37.871s">
+		<disconnect src-module="ospfRouter_11_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="38.147s">
+		<connect src-module="ospfRouter_11_1" src-gate="ethg[2]" dest-module="ospfRouter_11_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="38.214s">
+		<connect src-module="ospfRouter_2_2" src-gate="ethg[3]" dest-module="ospfRouter_2_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
+	</at>
+	<at t="38.228s">
+		<disconnect src-module="ospfRouter_6_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="38.568s">
+		<connect src-module="ospfRouter_5_1" src-gate="ethg[3]" dest-module="ospfRouter_5_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
+	</at>
+	<at t="38.998s">
+		<disconnect src-module="ospfRouter_2_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="39.644s">
+		<disconnect src-module="ospfRouter_4_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="39.804s">
+		<connect src-module="ospfRouter_3_6" src-gate="ethg[1]" dest-module="ospfRouter_4_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="39.879s">
+		<disconnect src-module="ospfRouter_1_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="40.568s">
+		<connect src-module="ospfRouter_3_5" src-gate="ethg[1]" dest-module="ospfRouter_4_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="40.604s">
+		<connect src-module="ospfRouter_7_6" src-gate="ethg[1]" dest-module="ospfRouter_8_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="40.774s">
+		<connect src-module="ospfRouter_1_4" src-gate="ethg[0]" dest-module="ospfRouter_11_4" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="40.822s">
+		<connect src-module="ospfRouter_10_5" src-gate="ethg[1]" dest-module="ospfRouter_11_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="40.932s">
+		<connect src-module="ospfRouter_9_3" src-gate="ethg[1]" dest-module="ospfRouter_10_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="40.978s">
+		<connect src-module="ospfRouter_9_4" src-gate="ethg[3]" dest-module="ospfRouter_9_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
+	</at>
+	<at t="41.103s">
+		<disconnect src-module="ospfRouter_8_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="41.249s">
+		<disconnect src-module="ospfRouter_10_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="41.386s">
+		<connect src-module="ospfRouter_7_3" src-gate="ethg[3]" dest-module="ospfRouter_7_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
+	</at>
+	<at t="41.552s">
+		<connect src-module="ospfRouter_1_1" src-gate="ethg[1]" dest-module="ospfRouter_2_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="41.581s">
+		<connect src-module="ospfRouter_5_5" src-gate="ethg[1]" dest-module="ospfRouter_6_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="41.783s">
+		<disconnect src-module="ospfRouter_10_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="41.811s">
+		<disconnect src-module="ospfRouter_2_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="41.958s">
+		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="41.969s">
+		<connect src-module="ospfRouter_8_1" src-gate="ethg[2]" dest-module="ospfRouter_8_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="42.081s">
+		<connect src-module="ospfRouter_10_1" src-gate="ethg[1]" dest-module="ospfRouter_11_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="42.271s">
+		<connect src-module="ospfRouter_11_4" src-gate="ethg[3]" dest-module="ospfRouter_11_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="42.281s">
+		<disconnect src-module="ospfRouter_5_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="42.419s">
+		<connect src-module="ospfRouter_5_2" src-gate="ethg[1]" dest-module="ospfRouter_6_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="42.834s">
+		<disconnect src-module="ospfRouter_4_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="42.852s">
+		<connect src-module="ospfRouter_1_1" src-gate="ethg[2]" dest-module="ospfRouter_1_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="42.871s">
+		<connect src-module="ospfRouter_11_2" src-gate="ethg[3]" dest-module="ospfRouter_11_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="42.935s">
 		<disconnect src-module="ospfRouter_1_2" src-gate="ethg[3]"/>
 	</at>
-	<at t="119.974s">
-		<connect src-module="ospfRouter_9_3" src-gate="ethg[3]" dest-module="ospfRouter_9_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
+	<at t="42.990s">
+		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="43.007s">
+		<disconnect src-module="ospfRouter_2_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="43.228s">
+		<connect src-module="ospfRouter_6_1" src-gate="ethg[1]" dest-module="ospfRouter_7_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="43.383s">
+		<disconnect src-module="ospfRouter_9_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="43.680s">
+		<disconnect src-module="ospfRouter_6_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="43.998s">
+		<connect src-module="ospfRouter_2_5" src-gate="ethg[1]" dest-module="ospfRouter_3_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="44.644s">
+		<connect src-module="ospfRouter_4_3" src-gate="ethg[1]" dest-module="ospfRouter_5_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="44.792s">
+		<disconnect src-module="ospfRouter_9_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="44.879s">
+		<connect src-module="ospfRouter_1_5" src-gate="ethg[3]" dest-module="ospfRouter_1_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="45.547s">
+		<disconnect src-module="ospfRouter_7_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="45.677s">
+		<disconnect src-module="ospfRouter_5_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="46.103s">
+		<connect src-module="ospfRouter_8_3" src-gate="ethg[3]" dest-module="ospfRouter_8_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="46.249s">
+		<connect src-module="ospfRouter_10_5" src-gate="ethg[1]" dest-module="ospfRouter_11_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="46.705s">
+		<disconnect src-module="ospfRouter_5_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="46.783s">
+		<connect src-module="ospfRouter_10_1" src-gate="ethg[3]" dest-module="ospfRouter_10_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
+	</at>
+	<at t="46.789s">
+		<disconnect src-module="ospfRouter_7_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="46.811s">
+		<connect src-module="ospfRouter_2_5" src-gate="ethg[3]" dest-module="ospfRouter_2_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
+	</at>
+	<at t="46.956s">
+		<disconnect src-module="ospfRouter_6_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="46.958s">
+		<connect src-module="ospfRouter_1_1" src-gate="ethg[3]" dest-module="ospfRouter_1_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="47.247s">
+		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="47.281s">
+		<connect src-module="ospfRouter_5_4" src-gate="ethg[3]" dest-module="ospfRouter_5_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
+	</at>
+	<at t="47.309s">
+		<disconnect src-module="ospfRouter_9_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="47.351s">
+		<disconnect src-module="ospfRouter_3_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="47.399s">
+		<disconnect src-module="ospfRouter_10_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="47.834s">
+		<connect src-module="ospfRouter_4_2" src-gate="ethg[3]" dest-module="ospfRouter_4_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
+	</at>
+	<at t="47.905s">
+		<disconnect src-module="ospfRouter_1_6" src-gate="ethg[0]"/>
+	</at>
+	<at t="47.935s">
+		<connect src-module="ospfRouter_1_2" src-gate="ethg[3]" dest-module="ospfRouter_1_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="47.965s">
+		<disconnect src-module="ospfRouter_7_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="47.990s">
+		<connect src-module="ospfRouter_1_1" src-gate="ethg[2]" dest-module="ospfRouter_1_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="48.007s">
+		<connect src-module="ospfRouter_2_1" src-gate="ethg[2]" dest-module="ospfRouter_2_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
+	</at>
+	<at t="48.263s">
+		<disconnect src-module="ospfRouter_10_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="48.383s">
+		<connect src-module="ospfRouter_9_2" src-gate="ethg[3]" dest-module="ospfRouter_9_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
+	</at>
+	<at t="48.680s">
+		<connect src-module="ospfRouter_6_4" src-gate="ethg[3]" dest-module="ospfRouter_6_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="48.734s">
+		<disconnect src-module="ospfRouter_8_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="48.850s">
+		<disconnect src-module="ospfRouter_5_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="49.016s">
+		<disconnect src-module="ospfRouter_6_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="49.424s">
+		<disconnect src-module="ospfRouter_7_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="49.488s">
+		<disconnect src-module="ospfRouter_9_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="49.792s">
+		<connect src-module="ospfRouter_9_3" src-gate="ethg[1]" dest-module="ospfRouter_10_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="50.227s">
+		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="50.383s">
+		<disconnect src-module="ospfRouter_10_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="50.547s">
+		<connect src-module="ospfRouter_7_1" src-gate="ethg[1]" dest-module="ospfRouter_8_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="50.677s">
+		<connect src-module="ospfRouter_5_6" src-gate="ethg[1]" dest-module="ospfRouter_6_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="51.705s">
+		<connect src-module="ospfRouter_5_4" src-gate="ethg[1]" dest-module="ospfRouter_6_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="51.789s">
+		<connect src-module="ospfRouter_7_2" src-gate="ethg[3]" dest-module="ospfRouter_7_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
+	</at>
+	<at t="51.956s">
+		<connect src-module="ospfRouter_6_6" src-gate="ethg[1]" dest-module="ospfRouter_7_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="52.247s">
+		<connect src-module="ospfRouter_1_4" src-gate="ethg[1]" dest-module="ospfRouter_2_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="52.309s">
+		<connect src-module="ospfRouter_9_4" src-gate="ethg[3]" dest-module="ospfRouter_9_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
+	</at>
+	<at t="52.351s">
+		<connect src-module="ospfRouter_3_2" src-gate="ethg[1]" dest-module="ospfRouter_4_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="52.399s">
+		<connect src-module="ospfRouter_10_2" src-gate="ethg[1]" dest-module="ospfRouter_11_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="52.566s">
+		<disconnect src-module="ospfRouter_2_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="52.905s">
+		<connect src-module="ospfRouter_1_6" src-gate="ethg[0]" dest-module="ospfRouter_11_6" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="52.965s">
+		<connect src-module="ospfRouter_7_3" src-gate="ethg[1]" dest-module="ospfRouter_8_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="53.263s">
+		<connect src-module="ospfRouter_10_3" src-gate="ethg[3]" dest-module="ospfRouter_10_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
+	</at>
+	<at t="53.734s">
+		<connect src-module="ospfRouter_8_1" src-gate="ethg[3]" dest-module="ospfRouter_8_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="53.843s">
+		<disconnect src-module="ospfRouter_9_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="53.850s">
+		<connect src-module="ospfRouter_5_1" src-gate="ethg[3]" dest-module="ospfRouter_5_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
+	</at>
+	<at t="54.016s">
+		<connect src-module="ospfRouter_6_2" src-gate="ethg[3]" dest-module="ospfRouter_6_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="54.027s">
+		<disconnect src-module="ospfRouter_8_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="54.304s">
+		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[0]"/>
+	</at>
+	<at t="54.400s">
+		<disconnect src-module="ospfRouter_9_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="54.424s">
+		<connect src-module="ospfRouter_7_6" src-gate="ethg[1]" dest-module="ospfRouter_8_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="54.444s">
+		<disconnect src-module="ospfRouter_11_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="54.488s">
+		<connect src-module="ospfRouter_9_5" src-gate="ethg[1]" dest-module="ospfRouter_10_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="55.211s">
+		<disconnect src-module="ospfRouter_11_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="55.227s">
+		<connect src-module="ospfRouter_3_1" src-gate="ethg[3]" dest-module="ospfRouter_3_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="55.383s">
+		<connect src-module="ospfRouter_10_4" src-gate="ethg[1]" dest-module="ospfRouter_11_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="55.997s">
+		<disconnect src-module="ospfRouter_5_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="56.052s">
+		<disconnect src-module="ospfRouter_6_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="56.298s">
+		<disconnect src-module="ospfRouter_7_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="56.547s">
+		<disconnect src-module="ospfRouter_1_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="56.645s">
+		<disconnect src-module="ospfRouter_8_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="57.566s">
+		<connect src-module="ospfRouter_2_1" src-gate="ethg[1]" dest-module="ospfRouter_3_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="58.843s">
+		<connect src-module="ospfRouter_9_3" src-gate="ethg[1]" dest-module="ospfRouter_10_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="59.027s">
+		<connect src-module="ospfRouter_8_2" src-gate="ethg[1]" dest-module="ospfRouter_9_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="59.081s">
+		<disconnect src-module="ospfRouter_9_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="59.304s">
+		<connect src-module="ospfRouter_1_3" src-gate="ethg[0]" dest-module="ospfRouter_11_3" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="59.362s">
+		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="59.373s">
+		<disconnect src-module="ospfRouter_8_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="59.400s">
+		<connect src-module="ospfRouter_9_1" src-gate="ethg[2]" dest-module="ospfRouter_9_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
+	</at>
+	<at t="59.437s">
+		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[0]"/>
+	</at>
+	<at t="59.444s">
+		<connect src-module="ospfRouter_11_1" src-gate="ethg[2]" dest-module="ospfRouter_11_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="59.937s">
+		<disconnect src-module="ospfRouter_11_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="60.211s">
+		<connect src-module="ospfRouter_11_3" src-gate="ethg[3]" dest-module="ospfRouter_11_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="60.389s">
+		<disconnect src-module="ospfRouter_2_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="60.971s">
+		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="60.997s">
+		<connect src-module="ospfRouter_5_2" src-gate="ethg[3]" dest-module="ospfRouter_5_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
+	</at>
+	<at t="61.052s">
+		<connect src-module="ospfRouter_6_3" src-gate="ethg[3]" dest-module="ospfRouter_6_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="61.184s">
+		<disconnect src-module="ospfRouter_5_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="61.298s">
+		<connect src-module="ospfRouter_7_1" src-gate="ethg[2]" dest-module="ospfRouter_7_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
+	</at>
+	<at t="61.547s">
+		<connect src-module="ospfRouter_1_6" src-gate="ethg[1]" dest-module="ospfRouter_2_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="61.645s">
+		<connect src-module="ospfRouter_8_5" src-gate="ethg[1]" dest-module="ospfRouter_9_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="61.941s">
+		<disconnect src-module="ospfRouter_8_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="62.044s">
+		<disconnect src-module="ospfRouter_2_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="62.701s">
+		<disconnect src-module="ospfRouter_4_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="63.037s">
+		<disconnect src-module="ospfRouter_1_6" src-gate="ethg[0]"/>
+	</at>
+	<at t="63.377s">
+		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="63.576s">
+		<disconnect src-module="ospfRouter_8_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="63.756s">
+		<disconnect src-module="ospfRouter_7_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="64.081s">
+		<connect src-module="ospfRouter_9_5" src-gate="ethg[3]" dest-module="ospfRouter_9_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
+	</at>
+	<at t="64.362s">
+		<connect src-module="ospfRouter_3_1" src-gate="ethg[3]" dest-module="ospfRouter_3_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="64.373s">
+		<connect src-module="ospfRouter_8_3" src-gate="ethg[3]" dest-module="ospfRouter_8_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="64.437s">
+		<connect src-module="ospfRouter_1_4" src-gate="ethg[0]" dest-module="ospfRouter_11_4" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="64.937s">
+		<connect src-module="ospfRouter_11_4" src-gate="ethg[3]" dest-module="ospfRouter_11_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="65.020s">
+		<disconnect src-module="ospfRouter_5_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="65.050s">
+		<disconnect src-module="ospfRouter_8_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="65.389s">
+		<connect src-module="ospfRouter_2_5" src-gate="ethg[3]" dest-module="ospfRouter_2_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
+	</at>
+	<at t="65.462s">
+		<disconnect src-module="ospfRouter_6_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="65.971s">
+		<connect src-module="ospfRouter_1_4" src-gate="ethg[1]" dest-module="ospfRouter_2_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="66.184s">
+		<connect src-module="ospfRouter_5_1" src-gate="ethg[2]" dest-module="ospfRouter_5_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
+	</at>
+	<at t="66.504s">
+		<disconnect src-module="ospfRouter_8_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="66.941s">
+		<connect src-module="ospfRouter_8_1" src-gate="ethg[2]" dest-module="ospfRouter_8_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="67.044s">
+		<connect src-module="ospfRouter_2_3" src-gate="ethg[3]" dest-module="ospfRouter_2_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
+	</at>
+	<at t="67.452s">
+		<disconnect src-module="ospfRouter_3_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="67.701s">
+		<connect src-module="ospfRouter_4_4" src-gate="ethg[3]" dest-module="ospfRouter_4_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
+	</at>
+	<at t="68.037s">
+		<connect src-module="ospfRouter_1_6" src-gate="ethg[0]" dest-module="ospfRouter_11_6" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="68.377s">
+		<connect src-module="ospfRouter_1_3" src-gate="ethg[3]" dest-module="ospfRouter_1_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="68.576s">
+		<connect src-module="ospfRouter_8_1" src-gate="ethg[3]" dest-module="ospfRouter_8_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="68.756s">
+		<connect src-module="ospfRouter_7_5" src-gate="ethg[3]" dest-module="ospfRouter_7_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
+	</at>
+	<at t="68.884s">
+		<disconnect src-module="ospfRouter_1_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="69.527s">
+		<disconnect src-module="ospfRouter_7_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="69.567s">
+		<disconnect src-module="ospfRouter_11_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="69.952s">
+		<disconnect src-module="ospfRouter_10_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="70.020s">
+		<connect src-module="ospfRouter_5_2" src-gate="ethg[1]" dest-module="ospfRouter_6_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="70.050s">
+		<connect src-module="ospfRouter_8_1" src-gate="ethg[1]" dest-module="ospfRouter_9_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="70.145s">
+		<disconnect src-module="ospfRouter_2_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="70.228s">
+		<disconnect src-module="ospfRouter_5_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="70.462s">
+		<connect src-module="ospfRouter_6_4" src-gate="ethg[1]" dest-module="ospfRouter_7_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="71.504s">
+		<connect src-module="ospfRouter_8_6" src-gate="ethg[1]" dest-module="ospfRouter_9_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="71.548s">
+		<disconnect src-module="ospfRouter_10_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="71.648s">
+		<disconnect src-module="ospfRouter_2_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="71.676s">
+		<disconnect src-module="ospfRouter_7_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="71.798s">
+		<disconnect src-module="ospfRouter_3_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="72.203s">
+		<disconnect src-module="ospfRouter_4_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="72.273s">
+		<disconnect src-module="ospfRouter_5_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="72.452s">
+		<connect src-module="ospfRouter_3_4" src-gate="ethg[3]" dest-module="ospfRouter_3_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="72.960s">
+		<disconnect src-module="ospfRouter_4_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="73.121s">
+		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="73.412s">
+		<disconnect src-module="ospfRouter_6_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="73.614s">
+		<disconnect src-module="ospfRouter_8_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="73.884s">
+		<connect src-module="ospfRouter_1_6" src-gate="ethg[1]" dest-module="ospfRouter_2_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="74.297s">
+		<disconnect src-module="ospfRouter_5_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="74.299s">
+		<disconnect src-module="ospfRouter_8_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="74.479s">
+		<disconnect src-module="ospfRouter_6_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="74.527s">
+		<connect src-module="ospfRouter_7_2" src-gate="ethg[3]" dest-module="ospfRouter_7_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
+	</at>
+	<at t="74.567s">
+		<connect src-module="ospfRouter_11_1" src-gate="ethg[3]" dest-module="ospfRouter_11_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="74.952s">
+		<connect src-module="ospfRouter_10_3" src-gate="ethg[1]" dest-module="ospfRouter_11_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="75.145s">
+		<connect src-module="ospfRouter_2_1" src-gate="ethg[3]" dest-module="ospfRouter_2_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
+	</at>
+	<at t="75.228s">
+		<connect src-module="ospfRouter_5_3" src-gate="ethg[3]" dest-module="ospfRouter_5_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
+	</at>
+	<at t="75.407s">
+		<disconnect src-module="ospfRouter_2_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="75.671s">
+		<disconnect src-module="ospfRouter_3_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="75.700s">
+		<disconnect src-module="ospfRouter_9_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="75.941s">
+		<disconnect src-module="ospfRouter_10_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="76.044s">
+		<disconnect src-module="ospfRouter_3_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="76.548s">
+		<connect src-module="ospfRouter_10_4" src-gate="ethg[1]" dest-module="ospfRouter_11_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="76.648s">
+		<connect src-module="ospfRouter_2_1" src-gate="ethg[2]" dest-module="ospfRouter_2_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
+	</at>
+	<at t="76.656s">
+		<disconnect src-module="ospfRouter_7_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="76.676s">
+		<connect src-module="ospfRouter_7_2" src-gate="ethg[1]" dest-module="ospfRouter_8_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="76.798s">
+		<connect src-module="ospfRouter_3_2" src-gate="ethg[3]" dest-module="ospfRouter_3_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="76.799s">
+		<disconnect src-module="ospfRouter_8_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="77.122s">
+		<disconnect src-module="ospfRouter_4_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="77.203s">
+		<connect src-module="ospfRouter_4_4" src-gate="ethg[1]" dest-module="ospfRouter_5_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="77.273s">
+		<connect src-module="ospfRouter_5_5" src-gate="ethg[1]" dest-module="ospfRouter_6_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="77.612s">
+		<disconnect src-module="ospfRouter_5_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="77.673s">
+		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[0]"/>
+	</at>
+	<at t="77.960s">
+		<connect src-module="ospfRouter_4_5" src-gate="ethg[3]" dest-module="ospfRouter_4_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
+	</at>
+	<at t="78.121s">
+		<connect src-module="ospfRouter_3_1" src-gate="ethg[2]" dest-module="ospfRouter_3_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="78.412s">
+		<connect src-module="ospfRouter_6_2" src-gate="ethg[3]" dest-module="ospfRouter_6_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="78.614s">
+		<connect src-module="ospfRouter_8_2" src-gate="ethg[3]" dest-module="ospfRouter_8_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="79.297s">
+		<connect src-module="ospfRouter_5_1" src-gate="ethg[1]" dest-module="ospfRouter_6_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="79.299s">
+		<connect src-module="ospfRouter_8_1" src-gate="ethg[1]" dest-module="ospfRouter_9_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="79.479s">
+		<connect src-module="ospfRouter_6_2" src-gate="ethg[1]" dest-module="ospfRouter_7_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="79.579s">
+		<disconnect src-module="ospfRouter_7_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="79.586s">
+		<disconnect src-module="ospfRouter_1_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="80.407s">
+		<connect src-module="ospfRouter_2_6" src-gate="ethg[1]" dest-module="ospfRouter_3_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="80.433s">
+		<disconnect src-module="ospfRouter_2_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="80.445s">
+		<disconnect src-module="ospfRouter_4_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="80.671s">
+		<connect src-module="ospfRouter_3_5" src-gate="ethg[3]" dest-module="ospfRouter_3_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="80.700s">
+		<connect src-module="ospfRouter_9_4" src-gate="ethg[1]" dest-module="ospfRouter_10_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="80.941s">
+		<connect src-module="ospfRouter_10_3" src-gate="ethg[3]" dest-module="ospfRouter_10_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
+	</at>
+	<at t="81.044s">
+		<connect src-module="ospfRouter_3_4" src-gate="ethg[1]" dest-module="ospfRouter_4_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="81.355s">
+		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="81.385s">
+		<disconnect src-module="ospfRouter_9_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="81.559s">
+		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="81.656s">
+		<connect src-module="ospfRouter_7_2" src-gate="ethg[3]" dest-module="ospfRouter_7_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
+	</at>
+	<at t="81.799s">
+		<connect src-module="ospfRouter_8_1" src-gate="ethg[3]" dest-module="ospfRouter_8_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="81.860s">
+		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="82.020s">
+		<disconnect src-module="ospfRouter_11_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="82.122s">
+		<connect src-module="ospfRouter_4_1" src-gate="ethg[2]" dest-module="ospfRouter_4_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
+	</at>
+	<at t="82.192s">
+		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="82.612s">
+		<connect src-module="ospfRouter_5_5" src-gate="ethg[1]" dest-module="ospfRouter_6_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="82.673s">
+		<connect src-module="ospfRouter_1_3" src-gate="ethg[0]" dest-module="ospfRouter_11_3" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="82.764s">
+		<disconnect src-module="ospfRouter_8_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="83.359s">
+		<disconnect src-module="ospfRouter_8_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="83.522s">
+		<disconnect src-module="ospfRouter_9_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="83.831s">
+		<disconnect src-module="ospfRouter_7_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="84.579s">
+		<connect src-module="ospfRouter_7_5" src-gate="ethg[1]" dest-module="ospfRouter_8_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="84.585s">
+		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="84.586s">
+		<connect src-module="ospfRouter_1_5" src-gate="ethg[3]" dest-module="ospfRouter_1_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="85.433s">
+		<connect src-module="ospfRouter_2_6" src-gate="ethg[1]" dest-module="ospfRouter_3_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="85.445s">
+		<connect src-module="ospfRouter_4_1" src-gate="ethg[1]" dest-module="ospfRouter_5_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="85.620s">
+		<disconnect src-module="ospfRouter_9_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="86.355s">
+		<connect src-module="ospfRouter_3_1" src-gate="ethg[3]" dest-module="ospfRouter_3_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="86.385s">
+		<connect src-module="ospfRouter_9_2" src-gate="ethg[1]" dest-module="ospfRouter_10_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="86.468s">
+		<disconnect src-module="ospfRouter_3_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="86.559s">
+		<connect src-module="ospfRouter_3_1" src-gate="ethg[1]" dest-module="ospfRouter_4_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="86.860s">
+		<connect src-module="ospfRouter_1_4" src-gate="ethg[3]" dest-module="ospfRouter_1_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="87.020s">
+		<connect src-module="ospfRouter_11_1" src-gate="ethg[2]" dest-module="ospfRouter_11_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="87.056s">
+		<disconnect src-module="ospfRouter_6_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="87.192s">
+		<connect src-module="ospfRouter_3_1" src-gate="ethg[2]" dest-module="ospfRouter_3_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="87.350s">
+		<disconnect src-module="ospfRouter_8_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="87.472s">
+		<disconnect src-module="ospfRouter_2_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="87.484s">
+		<disconnect src-module="ospfRouter_10_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="87.632s">
+		<disconnect src-module="ospfRouter_2_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="87.640s">
+		<disconnect src-module="ospfRouter_3_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="87.764s">
+		<connect src-module="ospfRouter_8_6" src-gate="ethg[1]" dest-module="ospfRouter_9_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="87.909s">
+		<disconnect src-module="ospfRouter_3_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="88.264s">
+		<disconnect src-module="ospfRouter_9_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="88.359s">
+		<connect src-module="ospfRouter_8_5" src-gate="ethg[3]" dest-module="ospfRouter_8_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="88.434s">
+		<disconnect src-module="ospfRouter_8_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="88.522s">
+		<connect src-module="ospfRouter_9_3" src-gate="ethg[1]" dest-module="ospfRouter_10_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="88.831s">
+		<connect src-module="ospfRouter_7_4" src-gate="ethg[1]" dest-module="ospfRouter_8_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="89.081s">
+		<disconnect src-module="ospfRouter_9_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="89.262s">
+		<disconnect src-module="ospfRouter_1_6" src-gate="ethg[0]"/>
+	</at>
+	<at t="89.585s">
+		<connect src-module="ospfRouter_1_1" src-gate="ethg[3]" dest-module="ospfRouter_1_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="89.925s">
+		<disconnect src-module="ospfRouter_10_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="89.936s">
+		<disconnect src-module="ospfRouter_10_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="89.966s">
+		<disconnect src-module="ospfRouter_4_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="90.060s">
+		<disconnect src-module="ospfRouter_4_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="90.293s">
+		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[0]"/>
+	</at>
+	<at t="90.529s">
+		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="90.620s">
+		<connect src-module="ospfRouter_9_6" src-gate="ethg[1]" dest-module="ospfRouter_10_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="91.040s">
+		<disconnect src-module="ospfRouter_7_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="91.468s">
+		<connect src-module="ospfRouter_3_2" src-gate="ethg[3]" dest-module="ospfRouter_3_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="92.056s">
+		<connect src-module="ospfRouter_6_2" src-gate="ethg[3]" dest-module="ospfRouter_6_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="92.350s">
+		<connect src-module="ospfRouter_8_5" src-gate="ethg[1]" dest-module="ospfRouter_9_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="92.472s">
+		<connect src-module="ospfRouter_2_5" src-gate="ethg[1]" dest-module="ospfRouter_3_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="92.484s">
+		<connect src-module="ospfRouter_10_6" src-gate="ethg[1]" dest-module="ospfRouter_11_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="92.632s">
+		<connect src-module="ospfRouter_2_1" src-gate="ethg[1]" dest-module="ospfRouter_3_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="92.640s">
+		<connect src-module="ospfRouter_3_3" src-gate="ethg[1]" dest-module="ospfRouter_4_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="92.707s">
+		<disconnect src-module="ospfRouter_5_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="92.909s">
+		<connect src-module="ospfRouter_3_3" src-gate="ethg[3]" dest-module="ospfRouter_3_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="93.264s">
+		<connect src-module="ospfRouter_9_4" src-gate="ethg[3]" dest-module="ospfRouter_9_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
+	</at>
+	<at t="93.434s">
+		<connect src-module="ospfRouter_8_4" src-gate="ethg[3]" dest-module="ospfRouter_8_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="93.794s">
+		<disconnect src-module="ospfRouter_5_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="93.941s">
+		<disconnect src-module="ospfRouter_7_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="94.081s">
+		<connect src-module="ospfRouter_9_5" src-gate="ethg[3]" dest-module="ospfRouter_9_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
+	</at>
+	<at t="94.159s">
+		<disconnect src-module="ospfRouter_6_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="94.262s">
+		<connect src-module="ospfRouter_1_6" src-gate="ethg[0]" dest-module="ospfRouter_11_6" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="94.619s">
+		<disconnect src-module="ospfRouter_1_2" src-gate="ethg[0]"/>
+	</at>
+	<at t="94.925s">
+		<connect src-module="ospfRouter_10_1" src-gate="ethg[2]" dest-module="ospfRouter_10_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
+	</at>
+	<at t="94.936s">
+		<connect src-module="ospfRouter_10_4" src-gate="ethg[3]" dest-module="ospfRouter_10_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
+	</at>
+	<at t="94.966s">
+		<connect src-module="ospfRouter_4_1" src-gate="ethg[2]" dest-module="ospfRouter_4_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
+	</at>
+	<at t="95.060s">
+		<connect src-module="ospfRouter_4_3" src-gate="ethg[3]" dest-module="ospfRouter_4_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
+	</at>
+	<at t="95.293s">
+		<connect src-module="ospfRouter_1_4" src-gate="ethg[0]" dest-module="ospfRouter_11_4" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="95.320s">
+		<disconnect src-module="ospfRouter_11_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="95.345s">
+		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="95.529s">
+		<connect src-module="ospfRouter_1_1" src-gate="ethg[2]" dest-module="ospfRouter_1_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="95.582s">
+		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[0]"/>
+	</at>
+	<at t="95.678s">
+		<disconnect src-module="ospfRouter_10_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="96.040s">
+		<connect src-module="ospfRouter_7_3" src-gate="ethg[3]" dest-module="ospfRouter_7_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
+	</at>
+	<at t="96.356s">
+		<disconnect src-module="ospfRouter_6_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="96.464s">
+		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[0]"/>
+	</at>
+	<at t="97.444s">
+		<disconnect src-module="ospfRouter_1_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="97.707s">
+		<connect src-module="ospfRouter_5_1" src-gate="ethg[3]" dest-module="ospfRouter_5_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
+	</at>
+	<at t="97.807s">
+		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="97.909s">
+		<disconnect src-module="ospfRouter_6_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="98.247s">
+		<disconnect src-module="ospfRouter_7_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="98.454s">
+		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="98.794s">
+		<connect src-module="ospfRouter_5_2" src-gate="ethg[3]" dest-module="ospfRouter_5_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
+	</at>
+	<at t="98.941s">
+		<connect src-module="ospfRouter_7_2" src-gate="ethg[3]" dest-module="ospfRouter_7_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
+	</at>
+	<at t="99.159s">
+		<connect src-module="ospfRouter_6_5" src-gate="ethg[3]" dest-module="ospfRouter_6_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="99.619s">
+		<connect src-module="ospfRouter_1_2" src-gate="ethg[0]" dest-module="ospfRouter_11_2" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="100.320s">
+		<connect src-module="ospfRouter_11_5" src-gate="ethg[3]" dest-module="ospfRouter_11_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="100.345s">
+		<connect src-module="ospfRouter_1_1" src-gate="ethg[1]" dest-module="ospfRouter_2_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="100.582s">
+		<connect src-module="ospfRouter_1_4" src-gate="ethg[0]" dest-module="ospfRouter_11_4" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="100.678s">
+		<connect src-module="ospfRouter_10_2" src-gate="ethg[3]" dest-module="ospfRouter_10_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
+	</at>
+	<at t="100.851s">
+		<disconnect src-module="ospfRouter_2_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="100.905s">
+		<disconnect src-module="ospfRouter_7_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="101.117s">
+		<disconnect src-module="ospfRouter_2_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="101.356s">
+		<connect src-module="ospfRouter_6_4" src-gate="ethg[3]" dest-module="ospfRouter_6_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="101.464s">
+		<connect src-module="ospfRouter_1_3" src-gate="ethg[0]" dest-module="ospfRouter_11_3" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="101.822s">
+		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[0]"/>
+	</at>
+	<at t="102.073s">
+		<disconnect src-module="ospfRouter_8_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="102.108s">
+		<disconnect src-module="ospfRouter_6_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="102.444s">
+		<connect src-module="ospfRouter_1_1" src-gate="ethg[3]" dest-module="ospfRouter_1_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="102.545s">
+		<disconnect src-module="ospfRouter_4_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="102.807s">
+		<connect src-module="ospfRouter_1_3" src-gate="ethg[3]" dest-module="ospfRouter_1_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="102.880s">
+		<disconnect src-module="ospfRouter_1_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="102.909s">
+		<connect src-module="ospfRouter_6_3" src-gate="ethg[1]" dest-module="ospfRouter_7_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="103.109s">
+		<disconnect src-module="ospfRouter_3_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="103.166s">
+		<disconnect src-module="ospfRouter_4_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="103.247s">
+		<connect src-module="ospfRouter_7_2" src-gate="ethg[1]" dest-module="ospfRouter_8_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="103.454s">
+		<connect src-module="ospfRouter_1_3" src-gate="ethg[1]" dest-module="ospfRouter_2_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="104.252s">
+		<disconnect src-module="ospfRouter_10_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="105.334s">
+		<disconnect src-module="ospfRouter_2_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="105.851s">
+		<connect src-module="ospfRouter_2_6" src-gate="ethg[1]" dest-module="ospfRouter_3_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="105.905s">
+		<connect src-module="ospfRouter_7_5" src-gate="ethg[1]" dest-module="ospfRouter_8_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="106.117s">
+		<connect src-module="ospfRouter_2_4" src-gate="ethg[1]" dest-module="ospfRouter_3_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="106.137s">
+		<disconnect src-module="ospfRouter_2_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="106.216s">
+		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="106.229s">
+		<disconnect src-module="ospfRouter_10_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="106.442s">
+		<disconnect src-module="ospfRouter_1_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="106.822s">
+		<connect src-module="ospfRouter_1_4" src-gate="ethg[0]" dest-module="ospfRouter_11_4" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="106.850s">
+		<disconnect src-module="ospfRouter_5_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="107.073s">
+		<connect src-module="ospfRouter_8_3" src-gate="ethg[3]" dest-module="ospfRouter_8_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL8"/>
+	</at>
+	<at t="107.108s">
+		<connect src-module="ospfRouter_6_3" src-gate="ethg[3]" dest-module="ospfRouter_6_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="107.545s">
+		<connect src-module="ospfRouter_4_4" src-gate="ethg[1]" dest-module="ospfRouter_5_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="107.546s">
+		<disconnect src-module="ospfRouter_1_2" src-gate="ethg[0]"/>
+	</at>
+	<at t="107.780s">
+		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="107.831s">
+		<disconnect src-module="ospfRouter_8_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="107.880s">
+		<connect src-module="ospfRouter_1_2" src-gate="ethg[3]" dest-module="ospfRouter_1_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="108.109s">
+		<connect src-module="ospfRouter_3_2" src-gate="ethg[3]" dest-module="ospfRouter_3_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="108.166s">
+		<connect src-module="ospfRouter_4_3" src-gate="ethg[3]" dest-module="ospfRouter_4_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
+	</at>
+	<at t="108.373s">
+		<disconnect src-module="ospfRouter_1_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="108.406s">
+		<disconnect src-module="ospfRouter_5_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="108.771s">
+		<disconnect src-module="ospfRouter_10_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="108.957s">
+		<disconnect src-module="ospfRouter_1_3" src-gate="ethg[0]"/>
+	</at>
+	<at t="109.252s">
+		<connect src-module="ospfRouter_10_1" src-gate="ethg[3]" dest-module="ospfRouter_10_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
+	</at>
+	<at t="109.319s">
+		<disconnect src-module="ospfRouter_4_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="110.211s">
+		<disconnect src-module="ospfRouter_6_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="110.334s">
+		<connect src-module="ospfRouter_2_2" src-gate="ethg[3]" dest-module="ospfRouter_2_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL2"/>
+	</at>
+	<at t="111.137s">
+		<connect src-module="ospfRouter_2_6" src-gate="ethg[1]" dest-module="ospfRouter_3_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="111.216s">
+		<connect src-module="ospfRouter_3_1" src-gate="ethg[1]" dest-module="ospfRouter_4_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="111.229s">
+		<connect src-module="ospfRouter_10_1" src-gate="ethg[1]" dest-module="ospfRouter_11_1" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="111.335s">
+		<disconnect src-module="ospfRouter_5_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="111.442s">
+		<connect src-module="ospfRouter_1_2" src-gate="ethg[1]" dest-module="ospfRouter_2_2" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="111.654s">
+		<disconnect src-module="ospfRouter_8_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="111.798s">
+		<disconnect src-module="ospfRouter_5_6" src-gate="ethg[1]"/>
+	</at>
+	<at t="111.850s">
+		<connect src-module="ospfRouter_5_5" src-gate="ethg[3]" dest-module="ospfRouter_5_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
+	</at>
+	<at t="111.968s">
+		<disconnect src-module="ospfRouter_11_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="112.069s">
+		<disconnect src-module="ospfRouter_9_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="112.144s">
+		<disconnect src-module="ospfRouter_10_5" src-gate="ethg[3]"/>
+	</at>
+	<at t="112.546s">
+		<connect src-module="ospfRouter_1_2" src-gate="ethg[0]" dest-module="ospfRouter_11_2" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="112.780s">
+		<connect src-module="ospfRouter_3_1" src-gate="ethg[2]" dest-module="ospfRouter_3_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="112.831s">
+		<connect src-module="ospfRouter_8_6" src-gate="ethg[1]" dest-module="ospfRouter_9_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="113.200s">
+		<disconnect src-module="ospfRouter_6_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="113.312s">
+		<disconnect src-module="ospfRouter_3_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="113.329s">
+		<disconnect src-module="ospfRouter_7_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="113.373s">
+		<connect src-module="ospfRouter_1_4" src-gate="ethg[3]" dest-module="ospfRouter_1_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL1"/>
+	</at>
+	<at t="113.406s">
+		<connect src-module="ospfRouter_5_5" src-gate="ethg[1]" dest-module="ospfRouter_6_5" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="113.654s">
+		<disconnect src-module="ospfRouter_4_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="113.771s">
+		<connect src-module="ospfRouter_10_6" src-gate="ethg[1]" dest-module="ospfRouter_11_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="113.957s">
+		<connect src-module="ospfRouter_1_3" src-gate="ethg[0]" dest-module="ospfRouter_11_3" dest-gate="ethg[1]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="114.319s">
+		<connect src-module="ospfRouter_4_2" src-gate="ethg[3]" dest-module="ospfRouter_4_3" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
+	</at>
+	<at t="114.362s">
+		<disconnect src-module="ospfRouter_10_3" src-gate="ethg[1]"/>
+	</at>
+	<at t="114.711s">
+		<disconnect src-module="ospfRouter_9_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="115.211s">
+		<connect src-module="ospfRouter_6_4" src-gate="ethg[1]" dest-module="ospfRouter_7_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="116.173s">
+		<disconnect src-module="ospfRouter_2_1" src-gate="ethg[3]"/>
+	</at>
+	<at t="116.280s">
+		<disconnect src-module="ospfRouter_1_2" src-gate="ethg[3]"/>
+	</at>
+	<at t="116.335s">
+		<connect src-module="ospfRouter_5_4" src-gate="ethg[3]" dest-module="ospfRouter_5_5" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL5"/>
+	</at>
+	<at t="116.574s">
+		<disconnect src-module="ospfRouter_2_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="116.654s">
+		<connect src-module="ospfRouter_8_4" src-gate="ethg[1]" dest-module="ospfRouter_9_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="116.798s">
+		<connect src-module="ospfRouter_5_6" src-gate="ethg[1]" dest-module="ospfRouter_6_6" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="116.968s">
+		<connect src-module="ospfRouter_11_1" src-gate="ethg[3]" dest-module="ospfRouter_11_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL11"/>
+	</at>
+	<at t="117.069s">
+		<connect src-module="ospfRouter_9_1" src-gate="ethg[2]" dest-module="ospfRouter_9_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL9"/>
+	</at>
+	<at t="117.144s">
+		<connect src-module="ospfRouter_10_5" src-gate="ethg[3]" dest-module="ospfRouter_10_6" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL10"/>
+	</at>
+	<at t="117.662s">
+		<disconnect src-module="ospfRouter_2_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="117.909s">
+		<disconnect src-module="ospfRouter_10_2" src-gate="ethg[1]"/>
+	</at>
+	<at t="118.083s">
+		<disconnect src-module="ospfRouter_5_4" src-gate="ethg[3]"/>
+	</at>
+	<at t="118.200s">
+		<connect src-module="ospfRouter_6_1" src-gate="ethg[2]" dest-module="ospfRouter_6_6" dest-gate="ethg[3]" channel-type="inet.examples.ospfv2.sqsqtest.ISL6"/>
+	</at>
+	<at t="118.211s">
+		<disconnect src-module="ospfRouter_7_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="118.312s">
+		<connect src-module="ospfRouter_3_1" src-gate="ethg[3]" dest-module="ospfRouter_3_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL3"/>
+	</at>
+	<at t="118.329s">
+		<connect src-module="ospfRouter_7_3" src-gate="ethg[3]" dest-module="ospfRouter_7_4" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL7"/>
+	</at>
+	<at t="118.441s">
+		<disconnect src-module="ospfRouter_9_5" src-gate="ethg[1]"/>
+	</at>
+	<at t="118.654s">
+		<connect src-module="ospfRouter_4_1" src-gate="ethg[3]" dest-module="ospfRouter_4_2" dest-gate="ethg[2]" channel-type="inet.examples.ospfv2.sqsqtest.ISL4"/>
+	</at>
+	<at t="118.893s">
+		<disconnect src-module="ospfRouter_7_4" src-gate="ethg[1]"/>
+	</at>
+	<at t="119.157s">
+		<disconnect src-module="ospfRouter_9_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="119.243s">
+		<disconnect src-module="ospfRouter_9_3" src-gate="ethg[3]"/>
+	</at>
+	<at t="119.323s">
+		<disconnect src-module="ospfRouter_6_1" src-gate="ethg[2]"/>
+	</at>
+	<at t="119.362s">
+		<connect src-module="ospfRouter_10_3" src-gate="ethg[1]" dest-module="ospfRouter_11_3" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="119.483s">
+		<disconnect src-module="ospfRouter_4_1" src-gate="ethg[1]"/>
+	</at>
+	<at t="119.711s">
+		<connect src-module="ospfRouter_9_4" src-gate="ethg[1]" dest-module="ospfRouter_10_4" dest-gate="ethg[0]" channel-type="inet.examples.ospfv2.sqsqtest.ISL0"/>
+	</at>
+	<at t="119.804s">
+		<disconnect src-module="ospfRouter_3_6" src-gate="ethg[1]"/>
 	</at>
 </scenario>
