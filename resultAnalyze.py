@@ -141,7 +141,16 @@ def getAvgLSUOverhead(folder_name:str) -> float:
 
 
 def getAvgDelay(folder_name:str) -> float:
-    
+    df = pandas.DataFrame()
+    for config_name in arg_names:
+        if df.empty:
+            df = pandas.read_csv(folder_name + config_name + '/successPacketCooked.csv')
+        else:
+            df = pandas.concat(
+                [df, pandas.read_csv(folder_name + config_name + '/successPacketCooked.csv')],
+                ignore_index=True
+            )
+    return df['avgDelay'].sum() / len(arg_names)
 
 
 if __name__ == '__main__':
@@ -170,13 +179,37 @@ if __name__ == '__main__':
         for i in range(len(avg_packet_delivery_failure_rates)):
             print(experiment_names[i], "'s PDR:", 1 - avg_packet_delivery_failure_rates[i])
             ax.annotate(experiment_names[i], (avg_control_overheads[i], avg_packet_delivery_failure_rates[i]))
-    
     ax.set_title('Avg. Packet Delivery Failure Rate & Control Overhead \n on Different Mechanisms, End-to-end Hop = 6')
     ax.set_xlabel('Avg. Control Overhead(Bytes)')
     ax.set_ylabel('Avg. Packet Delivery Failure Rate')
     ax.set_ylim([0.0, 0.1])
     matplotlib.pyplot.legend()
     fig.savefig('./results/overhead and PDR.png')
+    matplotlib.pyplot.close()
+
+    fig, ax = matplotlib.pyplot.subplots()
+    for parent_folder_name in parent_folder_names:
+        avg_control_overheads = []
+        avg_delays = []
+        experiment_names = []        
+        for hop in hops:
+            folder_name = parent_folder_name + hop + '/'
+            drawDropRatioPie(folder_name)
+            experiment_name = hop
+            experiment_names.append(experiment_name)
+            avg_control_overheads.append(getAvgLSUOverhead(folder_name))
+            avg_delays.append(getAvgDelay(folder_name))
+        ax.plot(avg_control_overheads, avg_delays, 
+                marker='.', label=parent_folder_name.split('_')[-1][:-1] + ', link failure rate = 0.1')
+        for i in range(len(avg_delays)):
+            print(experiment_names[i], "'s EED:", avg_delays[i])
+            ax.annotate(experiment_names[i], (avg_control_overheads[i], avg_delays[i]))
+    ax.set_title('Avg. End to End Delay & Control Overhead \n on Different Mechanisms, End-to-end Hop = 6')
+    ax.set_xlabel('Avg. Control Overhead(Bytes)')
+    ax.set_ylabel('Avg. End to End Delay(s)')
+    # ax.set_ylim([0.0, 0.1])
+    matplotlib.pyplot.legend()
+    fig.savefig('./results/overhead and EED.png')
     matplotlib.pyplot.close()
 
     for parent_folder_name in parent_folder_names:    
