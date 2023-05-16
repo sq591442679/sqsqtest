@@ -3,10 +3,10 @@ import matplotlib.pyplot
 from NEDGenerator import deliveryDestID, SIMULATION_DURATION_TIME
 from command import arg_names
 
-hops = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+hops = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 # folder_list = ['./results_n=1/', './results_n=2/','./results_n=3/', './results_n=5/', './results_OSPF/']
 # parent_folder_names = ['./results/results_dis=6_fr=10_loopAvoidance/', './results/results_dis=6_fr=10_noLoopAvoidance/', './results/results_dis=6_fr=10_DD/']
-parent_folder_names = ['./results/results_dis=6_fr=10_DD/', './results/results_dis=6_fr=10_loopAvoidance/']
+parent_folder_names = ['./results/results_dis=6_fr=10_DD/', './results/results_dis=6_fr=10_loopAvoidance/', './results/results_dis=6_fr=10_noLoopAvoidance/']
 
 
 def cookDropPacketRaw(folder_name:str, hop):
@@ -88,31 +88,31 @@ def drawDropRatioPie(folder_name: str):
 
 def getAvgPacketDeliveryRate(folder_name: str) -> float:
     df = pandas.DataFrame()
-    if folder_name == './results/results_dis=6_fr=10_noLoopAvoidance/3/' or folder_name == './results/results_dis=6_fr=10_noLoopAvoidance/5/':
-        _arg_names = ['fail10_test1', 'fail10_test3', 'fail10_test5']
-        for config_name in _arg_names:
-            if df.empty:
-                df = pandas.read_csv(folder_name+ config_name + '/successPacketCooked.csv')
-            else:
-                df = pandas.concat(
-                    [df, pandas.read_csv(folder_name + config_name + '/successPacketCooked.csv')],
-                    ignore_index=True
-                )
-        success_count = df['successCnt'].sum()
-        return success_count / (len(_arg_names) * 1000)
+    # if folder_name == './results/results_dis=6_fr=10_noLoopAvoidance/3/' or folder_name == './results/results_dis=6_fr=10_noLoopAvoidance/5/':
+    #     _arg_names = ['fail10_test1', 'fail10_test3', 'fail10_test5']
+    #     for config_name in _arg_names:
+    #         if df.empty:
+    #             df = pandas.read_csv(folder_name+ config_name + '/successPacketCooked.csv')
+    #         else:
+    #             df = pandas.concat(
+    #                 [df, pandas.read_csv(folder_name + config_name + '/successPacketCooked.csv')],
+    #                 ignore_index=True
+    #             )
+    #     success_count = df['successCnt'].sum()
+    #     return success_count / (len(_arg_names) * 1000)
     
-    elif folder_name == './results/results_dis=6_fr=10_noLoopAvoidance/6/':
-        _arg_names = ['fail10_test5']
-        for config_name in _arg_names:
-            if df.empty:
-                df = pandas.read_csv(folder_name+ config_name + '/successPacketCooked.csv')
-            else:
-                df = pandas.concat(
-                    [df, pandas.read_csv(folder_name + config_name + '/successPacketCooked.csv')],
-                    ignore_index=True
-                )
-        success_count = df['successCnt'].sum()
-        return success_count / (len(_arg_names) * 1000)
+    # elif folder_name == './results/results_dis=6_fr=10_noLoopAvoidance/6/':
+    #     _arg_names = ['fail10_test5']
+    #     for config_name in _arg_names:
+    #         if df.empty:
+    #             df = pandas.read_csv(folder_name+ config_name + '/successPacketCooked.csv')
+    #         else:
+    #             df = pandas.concat(
+    #                 [df, pandas.read_csv(folder_name + config_name + '/successPacketCooked.csv')],
+    #                 ignore_index=True
+    #             )
+    #     success_count = df['successCnt'].sum()
+    #     return success_count / (len(_arg_names) * 1000)
 
     for config_name in arg_names:
         if df.empty:
@@ -178,16 +178,42 @@ if __name__ == '__main__':
             avg_packet_delivery_failure_rates.append(1 - getAvgPacketDeliveryRate(folder_name))
             avg_control_overheads.append(getAvgLSUOverhead(folder_name))
         ax.plot(avg_control_overheads, avg_packet_delivery_failure_rates, 
-                marker='.', label=parent_folder_name.split('_')[-1][:-1] + ', link failure rate = 0.1')
+                marker='.', label=parent_folder_name.split('_')[-1][:-1])
         for i in range(len(avg_packet_delivery_failure_rates)):
             print(experiment_names[i], "'s PDR:", 1 - avg_packet_delivery_failure_rates[i])
             ax.annotate(experiment_names[i], (avg_control_overheads[i], avg_packet_delivery_failure_rates[i]))
-    ax.set_title('Avg. Packet Delivery Failure Rate & Control Overhead \n on Different Mechanisms, End-to-end Hop = 6')
+    ax.set_title('Avg. Packet Loss Rate & Control Overhead, \nEnd-to-end Hop = 6, link failure rate = 0.1')
     ax.set_xlabel('Avg. Control Overhead(Bps)')
-    ax.set_ylabel('Avg. Packet Delivery Failure Rate')
+    ax.set_ylabel('Avg. Packet Loss Rate')
     ax.set_ylim([0.0, 0.1])
     matplotlib.pyplot.legend()
-    fig.savefig('./results/overhead and PDR.png')
+    fig.savefig('./results/overhead and PDR.png', dpi=300)
+    matplotlib.pyplot.close()
+
+    fig, ax = matplotlib.pyplot.subplots()
+    for parent_folder_name in parent_folder_names:
+        avg_packet_delivery_failure_rates = []
+        avg_control_overheads = []
+        experiment_names = []        
+        for hop in hops:
+            if int(hop) >= 4:
+                folder_name = parent_folder_name + hop + '/'
+                drawDropRatioPie(folder_name)
+                experiment_name = hop
+                experiment_names.append(experiment_name)
+                avg_packet_delivery_failure_rates.append(1 - getAvgPacketDeliveryRate(folder_name))
+                avg_control_overheads.append(getAvgLSUOverhead(folder_name))
+        ax.plot(avg_control_overheads, avg_packet_delivery_failure_rates, 
+                marker='.', label=parent_folder_name.split('_')[-1][:-1])
+        for i in range(len(avg_packet_delivery_failure_rates)):
+            # print(experiment_names[i], "'s PDR:", 1 - avg_packet_delivery_failure_rates[i])
+            ax.annotate(experiment_names[i], (avg_control_overheads[i], avg_packet_delivery_failure_rates[i]))
+    ax.set_title('Avg. Packet Loss Rate & Control Overhead(partial), \nEnd-to-end Hop = 6, link failure rate = 0.1')
+    ax.set_xlabel('Avg. Control Overhead(Bps)')
+    ax.set_ylabel('Avg. Packet Loss Rate')
+    ax.set_ylim([0.0, 0.015])
+    matplotlib.pyplot.legend()
+    fig.savefig('./results/overhead and PDR (partial).png', dpi=300)
     matplotlib.pyplot.close()
 
     fig, ax = matplotlib.pyplot.subplots()
@@ -203,16 +229,16 @@ if __name__ == '__main__':
             avg_control_overheads.append(getAvgLSUOverhead(folder_name))
             avg_delays.append(getAvgDelay(folder_name))
         ax.plot(avg_control_overheads, avg_delays, 
-                marker='.', label=parent_folder_name.split('_')[-1][:-1] + ', link failure rate = 0.1')
+                marker='.', label=parent_folder_name.split('_')[-1][:-1])
         for i in range(len(avg_delays)):
             print(experiment_names[i], "'s EED:", avg_delays[i])
             ax.annotate(experiment_names[i], (avg_control_overheads[i], avg_delays[i]))
-    ax.set_title('Avg. End to End Delay & Control Overhead \n on Different Mechanisms, End-to-end Hop = 6')
-    ax.set_xlabel('Avg. Control Overhead(Bytes)')
+    ax.set_title('Avg. End to End Delay & Control Overhead, \nEnd-to-end Hop = 6, link failure rate = 0.1')
+    ax.set_xlabel('Avg. Control Overhead(Bps)')
     ax.set_ylabel('Avg. End to End Delay(s)')
     # ax.set_ylim([0.0, 0.1])
     matplotlib.pyplot.legend()
-    fig.savefig('./results/overhead and EED.png')
+    fig.savefig('./results/overhead and EED.png', dpi=300)
     matplotlib.pyplot.close()
 
     for parent_folder_name in parent_folder_names:    
@@ -228,6 +254,6 @@ if __name__ == '__main__':
         for i in range(len(avg_packet_delivery_failure_rates)):
             print(experiment_names[i], "'s LSU overhead:", avg_control_overheads[i])
             ax.annotate(experiment_names[i], (hops[i], avg_control_overheads[i]))
-        fig.savefig(parent_folder_name + 'overhead on different hops')
+        fig.savefig(parent_folder_name + 'overhead on different hops', dpi=300)
         matplotlib.pyplot.close()
             
