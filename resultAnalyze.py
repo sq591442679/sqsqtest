@@ -1,11 +1,12 @@
 import pandas
 import matplotlib.pyplot
-from NEDGenerator import deliveryDestID
+from NEDGenerator import deliveryDestID, SIMULATION_DURATION_TIME
 from command import arg_names
 
-hops = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+hops = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 # folder_list = ['./results_n=1/', './results_n=2/','./results_n=3/', './results_n=5/', './results_OSPF/']
-parent_folder_names = ['./results/results_dis=6_fr=10_loopAvoidance/', './results/results_dis=6_fr=10_noLoopAvoidance/', './results/results_dis=6_fr=10_DD/']
+# parent_folder_names = ['./results/results_dis=6_fr=10_loopAvoidance/', './results/results_dis=6_fr=10_noLoopAvoidance/', './results/results_dis=6_fr=10_DD/']
+parent_folder_names = ['./results/results_dis=6_fr=10_DD/', './results/results_dis=6_fr=10_loopAvoidance/']
 
 
 def cookDropPacketRaw(folder_name:str, hop):
@@ -26,6 +27,7 @@ def cookDropPacketRaw(folder_name:str, hop):
 
 def cookSuccessPacketRaw(folder_name:str, hop):
     with open(folder_name + 'successPacketCooked.csv', 'w') as f:
+        print(folder_name)
         print('config', 'hop', 'successCnt', 'avgDelay', file=f, sep=',')
         df = pandas.read_csv(folder_name + 'successPacketRaw.csv')
 
@@ -137,6 +139,7 @@ def getAvgLSUOverhead(folder_name:str) -> float:
     
     overhead = df['LSUOverhead'].sum()
     overhead /= len(arg_names)
+    overhead /= SIMULATION_DURATION_TIME
     return overhead
 
 
@@ -180,7 +183,7 @@ if __name__ == '__main__':
             print(experiment_names[i], "'s PDR:", 1 - avg_packet_delivery_failure_rates[i])
             ax.annotate(experiment_names[i], (avg_control_overheads[i], avg_packet_delivery_failure_rates[i]))
     ax.set_title('Avg. Packet Delivery Failure Rate & Control Overhead \n on Different Mechanisms, End-to-end Hop = 6')
-    ax.set_xlabel('Avg. Control Overhead(Bytes)')
+    ax.set_xlabel('Avg. Control Overhead(Bps)')
     ax.set_ylabel('Avg. Packet Delivery Failure Rate')
     ax.set_ylim([0.0, 0.1])
     matplotlib.pyplot.legend()
