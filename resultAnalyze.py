@@ -6,7 +6,8 @@ from command import arg_names
 hops = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 # folder_list = ['./results_n=1/', './results_n=2/','./results_n=3/', './results_n=5/', './results_OSPF/']
 # parent_folder_names = ['./results/results_dis=6_fr=10_loopAvoidance/', './results/results_dis=6_fr=10_noLoopAvoidance/', './results/results_dis=6_fr=10_DD/']
-parent_folder_names = ['./results/results_dis=6_fr=10_DD/', './results/results_dis=6_fr=10_loopAvoidance/', './results/results_dis=6_fr=10_noLoopAvoidance/']
+parent_folder_names = ['./results/results_dis=6_fr=10_DD/', './results/results_dis=6_fr=10_loopAvoidance/', './results/results_dis=6_fr=10_noLoopAvoidance/', 
+                       './results/results_dis=6_fr=10_DDNoAvoidance/']
 
 
 def cookDropPacketRaw(folder_name:str, hop):

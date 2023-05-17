@@ -299,6 +299,9 @@ def buildNetworkConfigFile():
                 })
                 network_by_router_id[(x, y)][3] = cnt
                 network_by_router_id[x, rescale(y + 1, Y)][2] = cnt
+                # print('{Ipv4Address(192, 168, %d, 0), std::make_pair(Ipv4Address(0, 0, %d, %d), Ipv4Address(0, 0, %d, %d))},' 
+                #       % (cnt, x, y, x, rescale(y + 1, Y)))
+
             # 描述与其下边的路由器之间的网络
             cnt += 1
             et.SubElement(root, 'interface', attrib={
@@ -308,19 +311,31 @@ def buildNetworkConfigFile():
             })
             network_by_router_id[(x, y)][1] = cnt
             network_by_router_id[rescale(x + 1, X), y][0] = cnt
+            # print('{Ipv4Address(192, 168, %d, 0), std::make_pair(Ipv4Address(0, 0, %d, %d), Ipv4Address(0, 0, %d, %d))},' 
+            #           % (cnt, x, y, rescale(x + 1, X), y))
+            
     xml_str = et.tostring(root, encoding='utf-8')
     xml_pretty_str = xml.dom.minidom.parseString(xml_str).toprettyxml()
     with open('./sqsqNetworkConfig.xml', 'w') as f:
         f.write(xml_pretty_str)
 
+    # router_id_by_ip_address = {}
+    # print('--------------------------------')
     # for x in range(1, X + 1):
     #     for y in range(1, Y + 1):
     #         print(
-    #             "network_by_router_id[Ipv4Address(0, 0, %d, %d)] = {Ipv4Address(192, 168, %d, 1), Ipv4Address(192, "
-    #             "168, %d, 2), Ipv4Address(192, 168, %d, 1), Ipv4Address(192, 168, %d, 1)}; "
+    #             '{Ipv4Address(0, 0, %d, %d), {Ipv4Address(192, 168, %d, 2), Ipv4Address(192, '
+    #             '168, %d, 1), Ipv4Address(192, 168, %d, 2), Ipv4Address(192, 168, %d, 1)}},'
     #             % (x, y, network_by_router_id[(x, y)][0], network_by_router_id[(x, y)][1],
     #                 network_by_router_id[(x, y)][2],
     #                 network_by_router_id[(x, y)][3]))
+    #         router_id_by_ip_address['Ipv4Address(192, 168, %d, 2)' % network_by_router_id[(x, y)][0]] = 'Ipv4Address(0, 0, %d, %d)' % (x, y)
+    #         router_id_by_ip_address['Ipv4Address(192, 168, %d, 1)' % network_by_router_id[(x, y)][1]] = 'Ipv4Address(0, 0, %d, %d)' % (x, y)
+    #         router_id_by_ip_address['Ipv4Address(192, 168, %d, 2)' % network_by_router_id[(x, y)][2]] = 'Ipv4Address(0, 0, %d, %d)' % (x, y)
+    #         router_id_by_ip_address['Ipv4Address(192, 168, %d, 1)' % network_by_router_id[(x, y)][3]] = 'Ipv4Address(0, 0, %d, %d)' % (x, y)
+    # print('--------------------------------')
+    # for key in router_id_by_ip_address.keys():
+    #     print('{%s, %s},' % (key, router_id_by_ip_address[key]))
 
 
 def buildASConfigFile(by_hop=False):
@@ -362,7 +377,7 @@ def buildASConfigFile(by_hop=False):
                         et.SubElement(router, 'BroadcastInterface', attrib={
                             'ifName': 'eth%d' % i,
                             'areaID': '0.0.0.0',
-                            'interfaceOutputCost': str(max(100, math.ceil(ISLDelay[x] * 10000)))
+                            'interfaceOutputCost': str(round(ISLDelay[x] * 10000))
                         })
             if (by_hop):
                 for i in range(0, 4):
@@ -514,18 +529,18 @@ def buildIniFile(link_failure_rate_array):
 def run():
     generateISLDelay()
     generateLinks()
-    # buildNEDFile()
-    # buildNetworkConfigFile()
+    buildNEDFile()
+    buildNetworkConfigFile()
     buildASConfigFile()
 
     # buildScenarioFile(0.15, 'test.xml')
 
-    link_failure_rate_array = numpy.arange(0.000, 0.201, 0.01)
-    for i in range(1, NUM_OF_TESTS + 1):
-        for fr in link_failure_rate_array:
-            buildScenarioFile(fr, './scenarios/test%d/sqsqScenario%s.xml' % (i, "{:.3f}".format(fr)))
+    # link_failure_rate_array = numpy.arange(0.000, 0.201, 0.01)
+    # for i in range(1, NUM_OF_TESTS + 1):
+    #     for fr in link_failure_rate_array:
+    #         buildScenarioFile(fr, './scenarios/test%d/sqsqScenario%s.xml' % (i, "{:.3f}".format(fr)))
 
-    buildIniFile(link_failure_rate_array)
+    # buildIniFile(link_failure_rate_array)
 
 
 # 按间距中的绿色按钮以运行脚本。
