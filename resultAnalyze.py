@@ -1,13 +1,12 @@
 import pandas
 import matplotlib.pyplot
 from NEDGenerator import deliveryDestID, SIMULATION_DURATION_TIME
-from command import arg_names
+from command import arg_names, hops, parent_folder_names
 
-hops = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+
 # folder_list = ['./results_n=1/', './results_n=2/','./results_n=3/', './results_n=5/', './results_OSPF/']
 # parent_folder_names = ['./results/results_dis=6_fr=10_loopAvoidance/', './results/results_dis=6_fr=10_noLoopAvoidance/', './results/results_dis=6_fr=10_DD/']
-parent_folder_names = ['./results/results_dis=6_fr=10_withDD-withLoopPrevention/', './results/results_dis=6_fr=10_withDD-withoutLoopPrevention/', 
-                       './results/results_dis=6_fr=10_withoutDD-withLoopPrevention/', './results/results_dis=6_fr=10_withoutDD-withoutLoopPrevention/']
+
 markers = ['.', '^', 's', 'x']
 
 
@@ -135,10 +134,10 @@ def getAvgDelay(folder_name:str) -> float:
 
 if __name__ == '__main__':
 
-    for config_name in arg_names:
-        folder_name = './results/OSPF/' + config_name + '/'
-        cookDropPacketRaw(folder_name, 'OSPF')
-        cookSuccessPacketRaw(folder_name, 'OSPF')
+    # for config_name in arg_names:
+    #     folder_name = './results/OSPF/' + config_name + '/'
+    #     cookDropPacketRaw(folder_name, 'OSPF')
+    #     cookSuccessPacketRaw(folder_name, 'OSPF')
     
     for parent_folder_name in parent_folder_names:
         for hop in hops:
@@ -163,10 +162,10 @@ if __name__ == '__main__':
             avg_packet_delivery_failure_rates.append((1 - getAvgPacketDeliveryRate(folder_name)) * 100)
             avg_control_overheads.append(getAvgLSUOverhead(folder_name) / 1e6)
         
-        if parent_folder_name == './results/results_dis=6_fr=10_withDD-withoutLoopPrevention/':
-            experiment_names.append('OSPF')
-            avg_packet_delivery_failure_rates.append((1 - getAvgPacketDeliveryRate('./results/OSPF/')) * 100)
-            avg_control_overheads.append(getAvgLSUOverhead('./results/OSPF/') / 1e6)
+        # if parent_folder_name == './results/results_dis=6_fr=10_withDD-withoutLoopPrevention/':
+        #     experiment_names.append('OSPF')
+        #     avg_packet_delivery_failure_rates.append((1 - getAvgPacketDeliveryRate('./results/OSPF/')) * 100)
+        #     avg_control_overheads.append(getAvgLSUOverhead('./results/OSPF/') / 1e6)
 
         # ax2.plot(avg_control_overheads, avg_packet_delivery_failure_rates, marker='.')
         # for i in range(len(avg_packet_delivery_failure_rates)):
@@ -208,10 +207,10 @@ if __name__ == '__main__':
             avg_control_overheads.append(getAvgLSUOverhead(folder_name) / 1e6)
             avg_delays.append(getAvgDelay(folder_name) * 1e3)
         
-        if parent_folder_name == './results/results_dis=6_fr=10_withDD-withoutLoopPrevention/':
-            experiment_names.append('OSPF')
-            avg_delays.append(getAvgDelay('./results/OSPF/') * 1e3)
-            avg_control_overheads.append(getAvgLSUOverhead('./results/OSPF/') / 1e6)
+        # if parent_folder_name == './results/results_dis=6_fr=10_withDD-withoutLoopPrevention/':
+        #     experiment_names.append('OSPF')
+        #     avg_delays.append(getAvgDelay('./results/OSPF/') * 1e3)
+        #     avg_control_overheads.append(getAvgLSUOverhead('./results/OSPF/') / 1e6)
 
         ax.plot(avg_control_overheads, avg_delays, 
                 marker=markers[marker_index], label=parent_folder_name.split('_')[-1][:-1])

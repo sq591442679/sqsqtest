@@ -13,7 +13,7 @@ SIMULATION_DURATION_TIME = SIMULATION_END_TIME - WARMUP_PERIOD
 LINK_DOWN_DURATION = 5  # 链路故障的持续时间 单位秒
 LINK_DISCONNECT_TYPE = 0
 LINK_RECONNECT_TYPE = 1
-NUM_OF_TESTS = 10  # for each link failure rate, run NUM_OF_TESTS times
+NUM_OF_TESTS = 50  # for each link failure rate, run NUM_OF_TESTS times
 
 H = 780000  # 轨道高度780千米
 R = 6371004  # 地球半径6371.004千米
