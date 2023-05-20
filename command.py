@@ -10,7 +10,7 @@ test_names = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 
 hops = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-experiment_names = ['withDD-withLoopPrevention', 'withDD-withoutLoopPrevention', 'withoutDD-withLoopPrevention', 'withoutDD-withoutLoopPrevention']
+experiment_names = ['withDD-withLoopPrevention', 'withoutDD-withLoopPrevention']
 parent_folder_names = ['./results/' + experiment_name + '/' for experiment_name in experiment_names]
 
 
@@ -90,7 +90,9 @@ if __name__ == '__main__':
         for hop in hops:
             os.mkdir('./results/' + experiment_name + '/' + hop)
             changeOspfv2Common(experiment_name, hop)
-            subprocess.run("make -C /home/sqsq/Desktop/sat-ospf/inet MODE=release -j64 all", shell=True)
+            result = subprocess.run("make -C /home/sqsq/Desktop/sat-ospf/inet MODE=release -j64 all", shell=True)
+            if result.returncode != 0:
+                raise Exception('')
 
             for config in arg_names:
                 parent_dir = './results/' + experiment_name + '/' + hop + '/' + config 

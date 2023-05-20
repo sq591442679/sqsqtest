@@ -529,16 +529,17 @@ def buildIniFile(link_failure_rate_array):
 def run():
     generateISLDelay()
     generateLinks()
-    buildNEDFile()
-    buildNetworkConfigFile()
-    buildASConfigFile()
+    # buildNEDFile()
+    # buildNetworkConfigFile()
+    # buildASConfigFile()
 
     # buildScenarioFile(0.15, 'test.xml')
 
-    # link_failure_rate_array = numpy.arange(0.000, 0.201, 0.01)
-    # for i in range(1, NUM_OF_TESTS + 1):
-    #     for fr in link_failure_rate_array:
-    #         buildScenarioFile(fr, './scenarios/test%d/sqsqScenario%s.xml' % (i, "{:.3f}".format(fr)))
+    link_failure_rate_array = numpy.arange(0.000, 0.201, 0.01)
+    for i in range(1, NUM_OF_TESTS + 1):
+        os.mkdir('./scenarios/test%d' % i)
+        for fr in link_failure_rate_array:
+            buildScenarioFile(fr, './scenarios/test%d/sqsqScenario%s.xml' % (i, "{:.3f}".format(fr)))
 
     # buildIniFile(link_failure_rate_array)
 

@@ -177,7 +177,7 @@ if __name__ == '__main__':
         # ax2.set_ylabel('Avg. Packet Loss Rate(%)') 
 
         ax.plot(avg_control_overheads, avg_packet_delivery_failure_rates, 
-                marker=markers[marker_index], label=parent_folder_name.split('_')[-1][:-1])
+                marker=markers[marker_index], label=parent_folder_name.split('/')[-2])
         marker_index += 1
 
         for i in range(len(avg_packet_delivery_failure_rates)):
@@ -213,7 +213,7 @@ if __name__ == '__main__':
         #     avg_control_overheads.append(getAvgLSUOverhead('./results/OSPF/') / 1e6)
 
         ax.plot(avg_control_overheads, avg_delays, 
-                marker=markers[marker_index], label=parent_folder_name.split('_')[-1][:-1])
+                marker=markers[marker_index], label=parent_folder_name.split('/')[-2])
         marker_index += 1
         
         for i in range(len(avg_delays)):
