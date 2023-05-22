@@ -5,12 +5,14 @@ import os
 import time
 from multiprocessing import Process
 
+from NEDGenerator import NUM_OF_TESTS, WARMUP_PERIOD, SIMULATION_END_TIME
+
 fr_names = ["10"]
-test_names = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+test_names = [str(i) for i in range(1, NUM_OF_TESTS + 1)]
 arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 
-hops = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-experiment_names = ['withDD-withLoopPrevention', 'withoutDD-withLoopPrevention']
+hops = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+experiment_names = ['withDD-withLoopPrevention', 'withDD-withoutLoopPrevention', 'withoutDD-withLoopPrevention', 'withoutDD-withoutLoopPrevention']
 parent_folder_names = ['./results/' + experiment_name + '/' for experiment_name in experiment_names]
 
 
@@ -31,11 +33,30 @@ def getParameters(experiment_name: str):
 
 
 def changeOspfv2Common(experiment_name: str, hop: str):
+    # TODO OSPF
+    if hop == 'OSPF':
+        with open("/home/sqsq/Desktop/sat-ospf/inet/src/inet/routing/ospfv2/router/Ospfv2Common.h", "r+") as f:
+            lines = f.readlines()
+            if "SQSQ_CONVERGENCY_TIME" in lines[46]:
+                lines[46] = "#define SQSQ_CONVERGENCY_TIME                  %f\n" % float(SIMULATION_END_TIME + 50)
+                f.seek(0)
+            f.writelines(lines)
+        f.close()
+        return
+    else:
+        with open("/home/sqsq/Desktop/sat-ospf/inet/src/inet/routing/ospfv2/router/Ospfv2Common.h", "r+") as f:
+            lines = f.readlines()
+            if "SQSQ_CONVERGENCY_TIME" in lines[46]:
+                lines[46] = "#define SQSQ_CONVERGENCY_TIME                  %f\n" % float(WARMUP_PERIOD)
+                f.seek(0)
+            f.writelines(lines)
+        f.close()
+
     LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE = getParameters(experiment_name)
 
     with open("/home/sqsq/Desktop/sat-ospf/inet/src/inet/routing/ospfv2/router/Ospfv2Common.h", "r+") as f:
         lines = f.readlines()
-        print(lines[50])
+        # print(lines[50])
         if "SQSQ_HOP" in lines[47]:
             lines[47] = "#define SQSQ_HOP                               %s\n" % hop
         else:
@@ -86,9 +107,17 @@ if __name__ == '__main__':
     # for parent_folder_name in parent_folder_names:
     #     for hop in hops
     for experiment_name in experiment_names:
-        os.mkdir('./results/' + experiment_name)
+        if not os.path.exists('./results/' + experiment_name):
+            os.mkdir('./results/' + experiment_name)
+        if experiment_name == 'withDD-withoutLoopPrevention':
+            hops.append('OSPF')
+        else:
+            if 'OSPF' in hops:
+                hops.remove('OSPF')
+        
         for hop in hops:
-            os.mkdir('./results/' + experiment_name + '/' + hop)
+            if not os.path.exists('./results/' + experiment_name + '/' + hop):
+                os.mkdir('./results/' + experiment_name + '/' + hop)
             changeOspfv2Common(experiment_name, hop)
             result = subprocess.run("make -C /home/sqsq/Desktop/sat-ospf/inet MODE=release -j64 all", shell=True)
             if result.returncode != 0:
