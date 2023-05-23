@@ -519,30 +519,44 @@ def buildIniFile(link_failure_rate_array):
                 print('[Config fail%s_test%d]' % (str(int(link_failure_rate * 100)).zfill(2), test), file=f)
                 print('**.scenarioManager.script = xmldoc(\"./scenarios/test%d/sqsqScenario%s.xml\")' %
                       (test, "{:.3f}".format(link_failure_rate)), file=f)
-                print('**.ospfRouter_%d_%d.app[0].destAddresses = "ospfRouter_%d_%d"' 
-                      % (deliverySrcID.x, deliverySrcID.y, deliveryDestID.x, deliveryDestID.y), 
+                # print('**.ospfRouter_%d_%d.app[0].destAddresses = "ospfRouter_%d_%d"' 
+                #       % (deliverySrcID.x, deliverySrcID.y, deliveryDestID.x, deliveryDestID.y), 
+                #       file=f)
+
+                print('**.app[0].sendInterval = 0.0001s', file=f)                
+                print('**.ospfRouter_6_5.app[0].destAddresses = "ospfRouter_%d_%d"' 
+                      % (deliveryDestID.x, deliveryDestID.y), 
                       file=f)
+                print('**.ospfRouter_7_5.app[0].destAddresses = "ospfRouter_%d_%d"' 
+                      % (deliveryDestID.x, deliveryDestID.y), 
+                      file=f)
+                print('**.ospfRouter_8_5.app[0].destAddresses = "ospfRouter_%d_%d"' 
+                      % (deliveryDestID.x, deliveryDestID.y), 
+                      file=f)         
+                print('**.ospfRouter_9_5.app[0].destAddresses = "ospfRouter_%d_%d"' 
+                      % (deliveryDestID.x, deliveryDestID.y), 
+                      file=f)       
                 # printUdpDestAddress(pair_dis, f)
             print('', file=f)
 
 
 def run():
-    generateISLDelay()
-    generateLinks()
-    buildNEDFile()
+    # generateISLDelay()
+    # generateLinks()
+    # buildNEDFile()
     # buildNetworkConfigFile()
     # buildASConfigFile()
 
     # buildScenarioFile(0.15, 'test.xml')
 
-    link_failure_rate_array = numpy.arange(0.000, 0.201, 0.01)
+    link_failure_rate_array = [0.1]
     
     # for i in range(1, NUM_OF_TESTS + 1):
     #     os.mkdir('./scenarios/test%d' % i)
     #     for fr in link_failure_rate_array:
     #         buildScenarioFile(fr, './scenarios/test%d/sqsqScenario%s.xml' % (i, "{:.3f}".format(fr)))
 
-    # buildIniFile(link_failure_rate_array)
+    buildIniFile(link_failure_rate_array)
 
 
 # 按间距中的绿色按钮以运行脚本。

@@ -12,7 +12,7 @@ markers = ['.', '^', 's', 'x']
 
 def cookDropPacketRaw(folder_name:str, hop):
     with open(folder_name + 'dropPacketCooked.csv', 'w') as f:
-        print('config', 'hop', 'noEntryCnt', 'stubCnt', 'loopCnt', 'total', file=f, sep=',')
+        print('config', 'hop', 'noEntryCnt', 'stubCnt', 'loopCnt', 'queueCnt', 'total', file=f, sep=',')
         df = pandas.read_csv(folder_name + 'dropPacketRaw.csv')
         line_cnt1 = df.shape[0]
         df = df.drop_duplicates()
@@ -21,9 +21,10 @@ def cookDropPacketRaw(folder_name:str, hop):
         no_entry_count = df['isNoEntry'].sum()
         stub_cnt = df['isStub'].sum()
         loop_cnt = df['isLoop'].sum()
-        total = no_entry_count + stub_cnt + loop_cnt
+        queue_cnt = df['isQueue'].sum()
+        total = no_entry_count + stub_cnt + loop_cnt + queue_cnt
 
-        print(config_name, hop, no_entry_count, stub_cnt, loop_cnt, total, file=f, sep=',')
+        print(config_name, hop, no_entry_count, stub_cnt, loop_cnt, queue_cnt, total, file=f, sep=',')
 
 
 def cookSuccessPacketRaw(folder_name:str, hop):
@@ -54,28 +55,32 @@ def drawDropRatioPie(folder_name: str):
     
     no_entry_sum = 0
     loop_sum = 0
+    queue_sum = 0
 
     for config_name in arg_names:
         df_config = df[df['config'] == config_name]
         no_entry_sum += df_config['noEntryCnt'].sum()
         loop_sum += df_config['loopCnt'].sum()
+        queue_sum += df_config['queueCnt'].sum()
     
     no_entry_sum /= len(arg_names)
     loop_sum /= len(arg_names)
-    total_sum = no_entry_sum + loop_sum
+    queue_sum /= len(arg_names)
+    total_sum = no_entry_sum + loop_sum + queue_sum
 
     if total_sum != 0:
         no_entry_ratio = no_entry_sum / total_sum
         loop_ratio = loop_sum / total_sum
-        labels = ['avg no entry=' + str(no_entry_sum), 'avg loop=' + str(loop_sum)]
-        sizes = [no_entry_ratio, loop_ratio]
-        colors = ['lightblue', 'lightgreen']
+        queue_ratio = queue_sum / total_sum
+        labels = ['avg no entry=' + str(no_entry_sum), 'avg loop=' + str(loop_sum), 'avg queue=' + str(queue_sum)]
+        sizes = [no_entry_ratio, loop_ratio, queue_sum]
+        colors = ['lightblue', 'lightgreen', 'lightyellow']
         explode = [0.1, 0]
         fig, ax = matplotlib.pyplot.subplots()
         ax.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', 
             startangle=45, wedgeprops=dict(width=0.4, edgecolor='w'))
         ax.axis('equal')
-        ax.set_title('no-entry failure vs. loop failure in n = ' + folder_name.split('/')[-2])
+        ax.set_title('no-entry failure vs. loop failure vs. queue failure in n = ' + folder_name.split('/')[-2])
         matplotlib.pyplot.text(0, 0, 'avg dropped packet:\n' + str(total_sum), ha='center')
         fig.savefig(folder_name + 'dropRatioPie.png')
         matplotlib.pyplot.close()

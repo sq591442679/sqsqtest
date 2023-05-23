@@ -8,28 +8,30 @@ from multiprocessing import Process
 from NEDGenerator import NUM_OF_TESTS, WARMUP_PERIOD, SIMULATION_END_TIME
 
 fr_names = ["10"]
-test_names = [str(i) for i in range(1, NUM_OF_TESTS + 1)]
+# test_names = [str(i) for i in range(1, NUM_OF_TESTS + 1)]
+test_names = [str(i) for i in range(1, 2)]
 arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 
-hops = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-experiment_names = ['withDD-withLoopPrevention', 'withDD-withoutLoopPrevention', 'withoutDD-withLoopPrevention', 'withoutDD-withoutLoopPrevention']
+# hops = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+hops = ['0', '1', '2']
+# experiment_names = ['withDD-withLoopPrevention', 'withDD-withoutLoopPrevention', 'withoutDD-withLoopPrevention', 'withoutDD-withoutLoopPrevention']
+experiment_names = ['withDD-withLoopPrevention-withLoadBalance', 'withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
 parent_folder_names = ['./results/' + experiment_name + '/' for experiment_name in experiment_names]
 
 
 def getParameters(experiment_name: str):
-    if experiment_name == 'withDD-withLoopPrevention':
-        LOOP_AVOIDANCE = 'true'
+    REQUEST_SHOULD_KNOWN_RANGE = 'false'
+    LOOP_AVOIDANCE = 'false'
+    LOAD_BALANCE = 'false'
+
+    if 'withDD' in experiment_name:
         REQUEST_SHOULD_KNOWN_RANGE = 'true'
-    elif experiment_name == 'withDD-withoutLoopPrevention':
-        LOOP_AVOIDANCE = 'false'
-        REQUEST_SHOULD_KNOWN_RANGE = 'true'    
-    elif experiment_name == 'withoutDD-withLoopPrevention':
+    if 'withLoopPrevention' in experiment_name:
         LOOP_AVOIDANCE = 'true'
-        REQUEST_SHOULD_KNOWN_RANGE = 'false'
-    elif experiment_name == 'withoutDD-withoutLoopPrevention':
-        LOOP_AVOIDANCE = 'false'
-        REQUEST_SHOULD_KNOWN_RANGE = 'false'
-    return LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE
+    if 'withLoadBalance' in experiment_name:
+        LOAD_BALANCE = 'true'
+
+    return LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE, LOAD_BALANCE
 
 
 def changeOspfv2Common(experiment_name: str, hop: str):
@@ -52,7 +54,7 @@ def changeOspfv2Common(experiment_name: str, hop: str):
             f.writelines(lines)
         f.close()
 
-    LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE = getParameters(experiment_name)
+    LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE, LOAD_BALANCE = getParameters(experiment_name)
 
     with open("/home/sqsq/Desktop/sat-ospf/inet/src/inet/routing/ospfv2/router/Ospfv2Common.h", "r+") as f:
         lines = f.readlines()
@@ -70,6 +72,8 @@ def changeOspfv2Common(experiment_name: str, hop: str):
             raise Exception('')
         if "REQUEST_SHOULD_KNOWN_RANGE" in lines[59]:
             lines[59] = "#define REQUEST_SHOULD_KNOWN_RANGE             %s\n" % REQUEST_SHOULD_KNOWN_RANGE
+        if "LOAD_BALANCE" in lines[62]:
+            lines[62] = "#define LOAD_BALANCE                           %s\n" % LOAD_BALANCE
         else:
             raise Exception('')
         
@@ -127,7 +131,7 @@ if __name__ == '__main__':
                 parent_dir = './results/' + experiment_name + '/' + hop + '/' + config 
                 os.mkdir(parent_dir)
                 with open(parent_dir + '/dropPacketRaw.csv', 'w') as f:
-                    print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', file=f, sep=',')
+                    print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', 'isQUeue', file=f, sep=',')
                 with open(parent_dir + '/controlOverhead.csv', 'w') as f:
                     print('config', 'hop', 'module', 'helloOverhead', 'DDOverhead', 'LSROverhead', 'LSUOverhead', 'LSACKOverhead', 'total', file=f, sep=',')
                 with open(parent_dir + '/successPacketRaw.csv', 'w') as f:
