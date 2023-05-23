@@ -6,73 +6,73 @@ import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
 channel ISL0 extends ThruputMeteringChannel
 {
 	delay = 0.013431s;
-	datarate = 100Mbps;
+	datarate = 10Mbps;
 	thruputDisplayFormat = "#N";
 }
 channel ISL1 extends ThruputMeteringChannel
 {
 	delay = 0.004139s;
-	datarate = 100Mbps;
+	datarate = 10Mbps;
 	thruputDisplayFormat = "#N";
 }
 channel ISL2 extends ThruputMeteringChannel
 {
 	delay = 0.016173s;
-	datarate = 100Mbps;
+	datarate = 10Mbps;
 	thruputDisplayFormat = "#N";
 }
 channel ISL3 extends ThruputMeteringChannel
 {
 	delay = 0.023073s;
-	datarate = 100Mbps;
+	datarate = 10Mbps;
 	thruputDisplayFormat = "#N";
 }
 channel ISL4 extends ThruputMeteringChannel
 {
 	delay = 0.022647s;
-	datarate = 100Mbps;
+	datarate = 10Mbps;
 	thruputDisplayFormat = "#N";
 }
 channel ISL5 extends ThruputMeteringChannel
 {
 	delay = 0.015030s;
-	datarate = 100Mbps;
+	datarate = 10Mbps;
 	thruputDisplayFormat = "#N";
 }
 channel ISL6 extends ThruputMeteringChannel
 {
 	delay = 0.002642s;
-	datarate = 100Mbps;
+	datarate = 10Mbps;
 	thruputDisplayFormat = "#N";
 }
 channel ISL7 extends ThruputMeteringChannel
 {
 	delay = 0.010585s;
-	datarate = 100Mbps;
+	datarate = 10Mbps;
 	thruputDisplayFormat = "#N";
 }
 channel ISL8 extends ThruputMeteringChannel
 {
 	delay = 0.020451s;
-	datarate = 100Mbps;
+	datarate = 10Mbps;
 	thruputDisplayFormat = "#N";
 }
 channel ISL9 extends ThruputMeteringChannel
 {
 	delay = 0.023825s;
-	datarate = 100Mbps;
+	datarate = 10Mbps;
 	thruputDisplayFormat = "#N";
 }
 channel ISL10 extends ThruputMeteringChannel
 {
 	delay = 0.019634s;
-	datarate = 100Mbps;
+	datarate = 10Mbps;
 	thruputDisplayFormat = "#N";
 }
 channel ISL11 extends ThruputMeteringChannel
 {
 	delay = 0.009209s;
-	datarate = 100Mbps;
+	datarate = 10Mbps;
 	thruputDisplayFormat = "#N";
 }
 network Network

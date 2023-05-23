@@ -226,7 +226,7 @@ def buildNEDFile():
                 print('channel ISL%d extends ThruputMeteringChannel' % i, file=f)
                 print('{', file=f)
                 print('\tdelay = %fs;' % ISLDelay[i], file=f)
-                print('\tdatarate = 100Mbps;', file=f)
+                print('\tdatarate = 10Mbps;', file=f)
                 print('\tthruputDisplayFormat = \"#N\";', file=f)
                 print('}', file=f)
 
@@ -529,7 +529,7 @@ def buildIniFile(link_failure_rate_array):
 def run():
     generateISLDelay()
     generateLinks()
-    # buildNEDFile()
+    buildNEDFile()
     # buildNetworkConfigFile()
     # buildASConfigFile()
 
@@ -542,7 +542,7 @@ def run():
     #     for fr in link_failure_rate_array:
     #         buildScenarioFile(fr, './scenarios/test%d/sqsqScenario%s.xml' % (i, "{:.3f}".format(fr)))
 
-    buildIniFile(link_failure_rate_array)
+    # buildIniFile(link_failure_rate_array)
 
 
 # 按间距中的绿色按钮以运行脚本。

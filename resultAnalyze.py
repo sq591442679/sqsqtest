@@ -187,7 +187,7 @@ if __name__ == '__main__':
     ax.set_title('Avg. Packet Loss Rate & Control Overhead, \nEnd-to-end Hop = 6, link failure rate = 0.1')
     ax.set_xlabel('Avg. Control Overhead(MBps)')
     ax.set_ylabel('Avg. Packet Loss Rate(%)')
-    # ax.set_ylim([0.0, 10.0])
+    ax.set_ylim([0.0, 10.0])
     ax.legend()
     fig.savefig('./results/overhead and PDR.png', dpi=300)
     matplotlib.pyplot.close()
