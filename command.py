@@ -8,14 +8,15 @@ from multiprocessing import Process
 from NEDGenerator import NUM_OF_TESTS, WARMUP_PERIOD, SIMULATION_END_TIME
 
 fr_names = ["10"]
-# test_names = [str(i) for i in range(1, NUM_OF_TESTS + 1)]
-test_names = [str(i) for i in range(1, 2)]
+test_names = [str(i) for i in range(1, NUM_OF_TESTS + 1)]
+# test_names = [str(i) for i in range(1, 11)]
 arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 
-# hops = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-hops = ['0', '1', '2']
+hops = ['0', '1', '2', '3', '4', '5']
+# hops = ['1']
 # experiment_names = ['withDD-withLoopPrevention', 'withDD-withoutLoopPrevention', 'withoutDD-withLoopPrevention', 'withoutDD-withoutLoopPrevention']
 experiment_names = ['withDD-withLoopPrevention-withLoadBalance', 'withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
+# experiment_names = ['withDD-withLoopPrevention-withLoadBalance']
 parent_folder_names = ['./results/' + experiment_name + '/' for experiment_name in experiment_names]
 
 
@@ -89,17 +90,18 @@ def execute(command: str) -> None:
 if __name__ == '__main__':
     """
     README
-    before running this script:
-        1. change the SQSQ_HOP in Ospfv2Common.h and SQSQ_HOP in this script, then build the omnet++ project
-        2. make sure there is no ./results/$SQSQHOP repository
-    when the simulation ends, there will be:
-        1. a dropPacketRaw.csv, which contains the information about the dropped packet
-            header: 'config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop'
-            REMEMBER: this csv may contains repeated lines
-        2. a controlOverhead.csv
-            header: config, hop, module, helloOverhead, DDOverhead, LSROverhead, LSUOverhead, LSACKOverhead, total
-        3. a successPacketRaw.csv
-            header: 'config', 'hop', 'module', 'simtime', 'delay'
+    what this script does:
+        1. change the SQSQ_HOP, LOOP_AVOIDANCE...... in Ospfv2Common.h according to expriment name 
+        2. then build the omnet++ project
+        3. init csv files, which will be written by inet during the simulation
+            csv files are:
+                a dropPacketRaw.csv, which contains the information about the dropped packet
+                    header: 'config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', 'isQueue'
+                    REMEMBER: this csv may contains repeated lines
+                a controlOverhead.csv
+                    header: config, hop, module, helloOverhead, DDOverhead, LSROverhead, LSUOverhead, LSACKOverhead, total
+                a successPacketRaw.csv
+                    header: 'config', 'hop', 'module', 'simtime', 'delay'
     """
     
     cmds = ["opp_run -m -u Cmdenv -c " + i + " --cmdenv-express-mode=true -n " + 
@@ -131,7 +133,9 @@ if __name__ == '__main__':
                 parent_dir = './results/' + experiment_name + '/' + hop + '/' + config 
                 os.mkdir(parent_dir)
                 with open(parent_dir + '/dropPacketRaw.csv', 'w') as f:
-                    print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', 'isQUeue', file=f, sep=',')
+                    print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', 'isQueue', file=f, sep=',')
+                with open(parent_dir + '/queueDropPacketRaw.csv', 'w') as f:
+                    print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', 'isQueue', file=f, sep=',')
                 with open(parent_dir + '/controlOverhead.csv', 'w') as f:
                     print('config', 'hop', 'module', 'helloOverhead', 'DDOverhead', 'LSROverhead', 'LSUOverhead', 'LSACKOverhead', 'total', file=f, sep=',')
                 with open(parent_dir + '/successPacketRaw.csv', 'w') as f:

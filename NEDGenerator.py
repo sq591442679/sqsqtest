@@ -523,7 +523,9 @@ def buildIniFile(link_failure_rate_array):
                 #       % (deliverySrcID.x, deliverySrcID.y, deliveryDestID.x, deliveryDestID.y), 
                 #       file=f)
 
-                print('**.app[0].sendInterval = 0.0001s', file=f)                
+                print('**.app[0].sendInterval = 0.002s', file=f)
+                print('**.app[0].messageLength = 1024 bytes', file=f)
+                # print('sim-time-limit = 45s', file=f)            
                 print('**.ospfRouter_6_5.app[0].destAddresses = "ospfRouter_%d_%d"' 
                       % (deliveryDestID.x, deliveryDestID.y), 
                       file=f)

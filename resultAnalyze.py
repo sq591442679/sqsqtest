@@ -8,12 +8,14 @@ from command import arg_names, hops, parent_folder_names
 # parent_folder_names = ['./results/results_dis=6_fr=10_loopAvoidance/', './results/results_dis=6_fr=10_noLoopAvoidance/', './results/results_dis=6_fr=10_DD/']
 
 markers = ['.', '^', 's', 'x']
+expected_total_num_packets = 200000
 
 
 def cookDropPacketRaw(folder_name:str, hop):
     with open(folder_name + 'dropPacketCooked.csv', 'w') as f:
         print('config', 'hop', 'noEntryCnt', 'stubCnt', 'loopCnt', 'queueCnt', 'total', file=f, sep=',')
         df = pandas.read_csv(folder_name + 'dropPacketRaw.csv')
+        df = pandas.concat([df, pandas.read_csv(folder_name + 'queueDropPacketRaw.csv')], ignore_index=True)
         line_cnt1 = df.shape[0]
         df = df.drop_duplicates()
         # print('duplicate lines:', df.shape[0] - line_cnt1)
@@ -72,13 +74,16 @@ def drawDropRatioPie(folder_name: str):
         no_entry_ratio = no_entry_sum / total_sum
         loop_ratio = loop_sum / total_sum
         queue_ratio = queue_sum / total_sum
-        labels = ['avg no entry=' + str(no_entry_sum), 'avg loop=' + str(loop_sum), 'avg queue=' + str(queue_sum)]
-        sizes = [no_entry_ratio, loop_ratio, queue_sum]
-        colors = ['lightblue', 'lightgreen', 'lightyellow']
-        explode = [0.1, 0]
+
+        labels = ['avg no entry=%.2f%%' % (no_entry_ratio * 100), 'avg loop=%.2f%%' % (loop_ratio * 100), 'avg queue=%.2f%%' % (queue_ratio * 100)]
+        sizes = [no_entry_ratio, loop_ratio, queue_ratio]
+        colors = ['lightblue', 'lightgreen', '#FFC0CB']
+
+        explodes = [0.1, 0.1, 0.1]
+
         fig, ax = matplotlib.pyplot.subplots()
-        ax.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', 
-            startangle=45, wedgeprops=dict(width=0.4, edgecolor='w'))
+        ax.pie(sizes, labels=labels, colors=colors, 
+            explode=explodes, startangle=45, wedgeprops=dict(width=0.4, edgecolor='w'))
         ax.axis('equal')
         ax.set_title('no-entry failure vs. loop failure vs. queue failure in n = ' + folder_name.split('/')[-2])
         matplotlib.pyplot.text(0, 0, 'avg dropped packet:\n' + str(total_sum), ha='center')
@@ -104,7 +109,7 @@ def getAvgPacketDeliveryRate(folder_name: str) -> float:
                 ignore_index=True
             )
     success_count = df['successCnt'].sum()
-    return success_count / (len(arg_names) * 1000)
+    return success_count / (len(arg_names) * expected_total_num_packets)
 
 
 def getAvgLSUOverhead(folder_name:str) -> float:
@@ -189,10 +194,10 @@ if __name__ == '__main__':
             print(experiment_names[i], "'s packet loss: %.2f%%" % avg_packet_delivery_failure_rates[i])
             ax.annotate(experiment_names[i], (avg_control_overheads[i], avg_packet_delivery_failure_rates[i]))
 
-    ax.set_title('Avg. Packet Loss Rate & Control Overhead, \nEnd-to-end Hop = 6, link failure rate = 0.1')
+    ax.set_title('Avg. Packet Loss Rate & Control Overhead, link failure rate = 0.1')
     ax.set_xlabel('Avg. Control Overhead(MBps)')
     ax.set_ylabel('Avg. Packet Loss Rate(%)')
-    ax.set_ylim([0.0, 10.0])
+    ax.set_ylim(bottom=0)
     ax.legend()
     fig.savefig('./results/overhead and PDR.png', dpi=300)
     matplotlib.pyplot.close()
