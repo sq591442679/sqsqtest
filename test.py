@@ -1,10 +1,10 @@
 if __name__ == '__main__':
-    with open("/home/sqsq/Desktop/test.cc", "r+") as f:
-        lines = f.readlines()
+    read_file = open("/home/sqsq/Desktop/test.cc", "r")
+    lines = read_file.readlines()
+    print(lines[47])
+    lines[47] = "#define SQSQ_HOP                               114541\n"
+    read_file.close()
 
-        print(lines[47])
-        lines[47] = "#define SQSQ_HOP                               4\n"
-
-        f.seek(0)
-        f.writelines(lines)
-    f.close()
+    write_file = open("/home/sqsq/Desktop/test.cc", "w")
+    write_file.writelines(lines)
+    write_file.close()

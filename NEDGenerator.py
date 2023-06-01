@@ -160,7 +160,9 @@ class ScenarioEvent:
 
 
 allISLSet = set()
-deliverySrcID = SatelliteID(9, 3)
+send_interval = "0.01"
+# deliverySrcIDs = [SatelliteID(6, 5), SatelliteID(7, 5), SatelliteID(8, 5), SatelliteID(9, 5)]
+deliverySrcIDs = [SatelliteID(9, 3)]
 deliveryDestID = SatelliteID(5, 5)
 
 
@@ -368,13 +370,13 @@ def buildASConfigFile(by_hop=False):
             if not by_hop:
                 for i in range(0, 4):
                     if i == 0 or i == 1:  # 上 下
-                        et.SubElement(router, 'BroadcastInterface', attrib={
+                        et.SubElement(router, 'PointToPointInterface', attrib={
                             'ifName': 'eth%d' % i,
                             'areaID': '0.0.0.0',
                             'interfaceOutputCost': str(round(ISLDelay[0] * 10000))  # 注意ospfcost应为整数
                         })
                     elif ISLDelay[x] < 1:
-                        et.SubElement(router, 'BroadcastInterface', attrib={
+                        et.SubElement(router, 'PointToPointInterface', attrib={
                             'ifName': 'eth%d' % i,
                             'areaID': '0.0.0.0',
                             'interfaceOutputCost': str(round(ISLDelay[x] * 10000))
@@ -382,13 +384,13 @@ def buildASConfigFile(by_hop=False):
             if (by_hop):
                 for i in range(0, 4):
                     if i == 0 or i == 1:  # 上 下
-                        et.SubElement(router, 'BroadcastInterface', attrib={
+                        et.SubElement(router, 'PointToPointInterface', attrib={
                             'ifName': 'eth%d' % i,
                             'areaID': '0.0.0.0',
                             'interfaceOutputCost': '1' 
                         })
                     elif ISLDelay[x] < 1:
-                        et.SubElement(router, 'BroadcastInterface', attrib={
+                        et.SubElement(router, 'PointToPointInterface', attrib={
                             'ifName': 'eth%d' % i,
                             'areaID': '0.0.0.0',
                             'interfaceOutputCost': '1'
@@ -416,12 +418,16 @@ def buildScenarioFile(link_failure_rate: float, file_name: str):
         for link in allISLSet:
             if link.__lt__(link.generateBackwardLink()):
 
-                if (
-                        (link.srcSatelliteID.__eq__(deliverySrcID) and link.destSatelliteID.__eq__(deliverySrcID.getNeighborOnDirection(0))) \
-                    or  (link.destSatelliteID.__eq__(deliverySrcID) and link.srcSatelliteID.__eq__(deliverySrcID.getNeighborOnDirection(0))) \
-                    or  (link.srcSatelliteID.__eq__(deliveryDestID) and link.destSatelliteID.__eq__(deliveryDestID.getNeighborOnDirection(0))) \
-                    or  (link.destSatelliteID.__eq__(deliveryDestID) and link.srcSatelliteID.__eq__(deliveryDestID.getNeighborOnDirection(0)))
-                ):
+                isKeyLink = False
+                for deliverySrcID in deliverySrcIDs:
+                    if (
+                            (link.srcSatelliteID.__eq__(deliverySrcID) and link.destSatelliteID.__eq__(deliverySrcID.getNeighborOnDirection(0))) \
+                        or  (link.destSatelliteID.__eq__(deliverySrcID) and link.srcSatelliteID.__eq__(deliverySrcID.getNeighborOnDirection(0))) \
+                        or  (link.srcSatelliteID.__eq__(deliveryDestID) and link.destSatelliteID.__eq__(deliveryDestID.getNeighborOnDirection(0))) \
+                        or  (link.destSatelliteID.__eq__(deliveryDestID) and link.srcSatelliteID.__eq__(deliveryDestID.getNeighborOnDirection(0)))
+                    ):
+                        isKeyLink = True
+                if isKeyLink == True:
                     continue
 
                 event_time: float = WARMUP_PERIOD
@@ -519,37 +525,22 @@ def buildIniFile(link_failure_rate_array):
                 print('[Config fail%s_test%d]' % (str(int(link_failure_rate * 100)).zfill(2), test), file=f)
                 print('**.scenarioManager.script = xmldoc(\"./scenarios/test%d/sqsqScenario%s.xml\")' %
                       (test, "{:.3f}".format(link_failure_rate)), file=f)
-                # print('**.ospfRouter_%d_%d.app[0].destAddresses = "ospfRouter_%d_%d"' 
-                #       % (deliverySrcID.x, deliverySrcID.y, deliveryDestID.x, deliveryDestID.y), 
-                #       file=f)
 
-                print('**.app[0].sendInterval = 0.002s', file=f)
-                print('**.app[0].messageLength = 1024 bytes', file=f)
-                # print('sim-time-limit = 45s', file=f)            
-                print('**.ospfRouter_6_5.app[0].destAddresses = "ospfRouter_%d_%d"' 
-                      % (deliveryDestID.x, deliveryDestID.y), 
-                      file=f)
-                print('**.ospfRouter_7_5.app[0].destAddresses = "ospfRouter_%d_%d"' 
-                      % (deliveryDestID.x, deliveryDestID.y), 
-                      file=f)
-                print('**.ospfRouter_8_5.app[0].destAddresses = "ospfRouter_%d_%d"' 
-                      % (deliveryDestID.x, deliveryDestID.y), 
-                      file=f)         
-                print('**.ospfRouter_9_5.app[0].destAddresses = "ospfRouter_%d_%d"' 
-                      % (deliveryDestID.x, deliveryDestID.y), 
-                      file=f)       
-                # printUdpDestAddress(pair_dis, f)
+                print('**.app[0].sendInterval = %ss' % send_interval, file=f)
+                print('**.app[0].messageLength = 1024 bytes', file=f)      
+                for deliverySrcID in deliverySrcIDs:
+                    print('**.ospfRouter_%d_%d.app[0].destAddresses = "ospfRouter_%d_%d"' 
+                        % (deliverySrcID.x, deliverySrcID.y, deliveryDestID.x, deliveryDestID.y), 
+                        file=f)    
             print('', file=f)
 
 
 def run():
-    # generateISLDelay()
-    # generateLinks()
+    generateISLDelay()
+    generateLinks()
     # buildNEDFile()
     # buildNetworkConfigFile()
     # buildASConfigFile()
-
-    # buildScenarioFile(0.15, 'test.xml')
 
     link_failure_rate_array = [0.1]
     

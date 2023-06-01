@@ -1,665 +1,402 @@
 <?xml version="1.0" ?>
 <OSPFASConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OSPF.xsd">
-	<Area id="0.0.0.0">
-		<AddressRange address="ospfRouter_1_1%eth0" mask="ospfRouter_1_1%eth0"/>
-		<AddressRange address="ospfRouter_1_1%eth1" mask="ospfRouter_1_1%eth1"/>
-		<AddressRange address="ospfRouter_1_1%eth2" mask="ospfRouter_1_1%eth2"/>
-		<AddressRange address="ospfRouter_1_1%eth3" mask="ospfRouter_1_1%eth3"/>
-		<AddressRange address="ospfRouter_1_2%eth0" mask="ospfRouter_1_2%eth0"/>
-		<AddressRange address="ospfRouter_1_2%eth1" mask="ospfRouter_1_2%eth1"/>
-		<AddressRange address="ospfRouter_1_2%eth2" mask="ospfRouter_1_2%eth2"/>
-		<AddressRange address="ospfRouter_1_2%eth3" mask="ospfRouter_1_2%eth3"/>
-		<AddressRange address="ospfRouter_1_3%eth0" mask="ospfRouter_1_3%eth0"/>
-		<AddressRange address="ospfRouter_1_3%eth1" mask="ospfRouter_1_3%eth1"/>
-		<AddressRange address="ospfRouter_1_3%eth2" mask="ospfRouter_1_3%eth2"/>
-		<AddressRange address="ospfRouter_1_3%eth3" mask="ospfRouter_1_3%eth3"/>
-		<AddressRange address="ospfRouter_1_4%eth0" mask="ospfRouter_1_4%eth0"/>
-		<AddressRange address="ospfRouter_1_4%eth1" mask="ospfRouter_1_4%eth1"/>
-		<AddressRange address="ospfRouter_1_4%eth2" mask="ospfRouter_1_4%eth2"/>
-		<AddressRange address="ospfRouter_1_4%eth3" mask="ospfRouter_1_4%eth3"/>
-		<AddressRange address="ospfRouter_1_5%eth0" mask="ospfRouter_1_5%eth0"/>
-		<AddressRange address="ospfRouter_1_5%eth1" mask="ospfRouter_1_5%eth1"/>
-		<AddressRange address="ospfRouter_1_5%eth2" mask="ospfRouter_1_5%eth2"/>
-		<AddressRange address="ospfRouter_1_5%eth3" mask="ospfRouter_1_5%eth3"/>
-		<AddressRange address="ospfRouter_1_6%eth0" mask="ospfRouter_1_6%eth0"/>
-		<AddressRange address="ospfRouter_1_6%eth1" mask="ospfRouter_1_6%eth1"/>
-		<AddressRange address="ospfRouter_1_6%eth2" mask="ospfRouter_1_6%eth2"/>
-		<AddressRange address="ospfRouter_1_6%eth3" mask="ospfRouter_1_6%eth3"/>
-		<AddressRange address="ospfRouter_2_1%eth0" mask="ospfRouter_2_1%eth0"/>
-		<AddressRange address="ospfRouter_2_1%eth1" mask="ospfRouter_2_1%eth1"/>
-		<AddressRange address="ospfRouter_2_1%eth2" mask="ospfRouter_2_1%eth2"/>
-		<AddressRange address="ospfRouter_2_1%eth3" mask="ospfRouter_2_1%eth3"/>
-		<AddressRange address="ospfRouter_2_2%eth0" mask="ospfRouter_2_2%eth0"/>
-		<AddressRange address="ospfRouter_2_2%eth1" mask="ospfRouter_2_2%eth1"/>
-		<AddressRange address="ospfRouter_2_2%eth2" mask="ospfRouter_2_2%eth2"/>
-		<AddressRange address="ospfRouter_2_2%eth3" mask="ospfRouter_2_2%eth3"/>
-		<AddressRange address="ospfRouter_2_3%eth0" mask="ospfRouter_2_3%eth0"/>
-		<AddressRange address="ospfRouter_2_3%eth1" mask="ospfRouter_2_3%eth1"/>
-		<AddressRange address="ospfRouter_2_3%eth2" mask="ospfRouter_2_3%eth2"/>
-		<AddressRange address="ospfRouter_2_3%eth3" mask="ospfRouter_2_3%eth3"/>
-		<AddressRange address="ospfRouter_2_4%eth0" mask="ospfRouter_2_4%eth0"/>
-		<AddressRange address="ospfRouter_2_4%eth1" mask="ospfRouter_2_4%eth1"/>
-		<AddressRange address="ospfRouter_2_4%eth2" mask="ospfRouter_2_4%eth2"/>
-		<AddressRange address="ospfRouter_2_4%eth3" mask="ospfRouter_2_4%eth3"/>
-		<AddressRange address="ospfRouter_2_5%eth0" mask="ospfRouter_2_5%eth0"/>
-		<AddressRange address="ospfRouter_2_5%eth1" mask="ospfRouter_2_5%eth1"/>
-		<AddressRange address="ospfRouter_2_5%eth2" mask="ospfRouter_2_5%eth2"/>
-		<AddressRange address="ospfRouter_2_5%eth3" mask="ospfRouter_2_5%eth3"/>
-		<AddressRange address="ospfRouter_2_6%eth0" mask="ospfRouter_2_6%eth0"/>
-		<AddressRange address="ospfRouter_2_6%eth1" mask="ospfRouter_2_6%eth1"/>
-		<AddressRange address="ospfRouter_2_6%eth2" mask="ospfRouter_2_6%eth2"/>
-		<AddressRange address="ospfRouter_2_6%eth3" mask="ospfRouter_2_6%eth3"/>
-		<AddressRange address="ospfRouter_3_1%eth0" mask="ospfRouter_3_1%eth0"/>
-		<AddressRange address="ospfRouter_3_1%eth1" mask="ospfRouter_3_1%eth1"/>
-		<AddressRange address="ospfRouter_3_1%eth2" mask="ospfRouter_3_1%eth2"/>
-		<AddressRange address="ospfRouter_3_1%eth3" mask="ospfRouter_3_1%eth3"/>
-		<AddressRange address="ospfRouter_3_2%eth0" mask="ospfRouter_3_2%eth0"/>
-		<AddressRange address="ospfRouter_3_2%eth1" mask="ospfRouter_3_2%eth1"/>
-		<AddressRange address="ospfRouter_3_2%eth2" mask="ospfRouter_3_2%eth2"/>
-		<AddressRange address="ospfRouter_3_2%eth3" mask="ospfRouter_3_2%eth3"/>
-		<AddressRange address="ospfRouter_3_3%eth0" mask="ospfRouter_3_3%eth0"/>
-		<AddressRange address="ospfRouter_3_3%eth1" mask="ospfRouter_3_3%eth1"/>
-		<AddressRange address="ospfRouter_3_3%eth2" mask="ospfRouter_3_3%eth2"/>
-		<AddressRange address="ospfRouter_3_3%eth3" mask="ospfRouter_3_3%eth3"/>
-		<AddressRange address="ospfRouter_3_4%eth0" mask="ospfRouter_3_4%eth0"/>
-		<AddressRange address="ospfRouter_3_4%eth1" mask="ospfRouter_3_4%eth1"/>
-		<AddressRange address="ospfRouter_3_4%eth2" mask="ospfRouter_3_4%eth2"/>
-		<AddressRange address="ospfRouter_3_4%eth3" mask="ospfRouter_3_4%eth3"/>
-		<AddressRange address="ospfRouter_3_5%eth0" mask="ospfRouter_3_5%eth0"/>
-		<AddressRange address="ospfRouter_3_5%eth1" mask="ospfRouter_3_5%eth1"/>
-		<AddressRange address="ospfRouter_3_5%eth2" mask="ospfRouter_3_5%eth2"/>
-		<AddressRange address="ospfRouter_3_5%eth3" mask="ospfRouter_3_5%eth3"/>
-		<AddressRange address="ospfRouter_3_6%eth0" mask="ospfRouter_3_6%eth0"/>
-		<AddressRange address="ospfRouter_3_6%eth1" mask="ospfRouter_3_6%eth1"/>
-		<AddressRange address="ospfRouter_3_6%eth2" mask="ospfRouter_3_6%eth2"/>
-		<AddressRange address="ospfRouter_3_6%eth3" mask="ospfRouter_3_6%eth3"/>
-		<AddressRange address="ospfRouter_4_1%eth0" mask="ospfRouter_4_1%eth0"/>
-		<AddressRange address="ospfRouter_4_1%eth1" mask="ospfRouter_4_1%eth1"/>
-		<AddressRange address="ospfRouter_4_1%eth2" mask="ospfRouter_4_1%eth2"/>
-		<AddressRange address="ospfRouter_4_1%eth3" mask="ospfRouter_4_1%eth3"/>
-		<AddressRange address="ospfRouter_4_2%eth0" mask="ospfRouter_4_2%eth0"/>
-		<AddressRange address="ospfRouter_4_2%eth1" mask="ospfRouter_4_2%eth1"/>
-		<AddressRange address="ospfRouter_4_2%eth2" mask="ospfRouter_4_2%eth2"/>
-		<AddressRange address="ospfRouter_4_2%eth3" mask="ospfRouter_4_2%eth3"/>
-		<AddressRange address="ospfRouter_4_3%eth0" mask="ospfRouter_4_3%eth0"/>
-		<AddressRange address="ospfRouter_4_3%eth1" mask="ospfRouter_4_3%eth1"/>
-		<AddressRange address="ospfRouter_4_3%eth2" mask="ospfRouter_4_3%eth2"/>
-		<AddressRange address="ospfRouter_4_3%eth3" mask="ospfRouter_4_3%eth3"/>
-		<AddressRange address="ospfRouter_4_4%eth0" mask="ospfRouter_4_4%eth0"/>
-		<AddressRange address="ospfRouter_4_4%eth1" mask="ospfRouter_4_4%eth1"/>
-		<AddressRange address="ospfRouter_4_4%eth2" mask="ospfRouter_4_4%eth2"/>
-		<AddressRange address="ospfRouter_4_4%eth3" mask="ospfRouter_4_4%eth3"/>
-		<AddressRange address="ospfRouter_4_5%eth0" mask="ospfRouter_4_5%eth0"/>
-		<AddressRange address="ospfRouter_4_5%eth1" mask="ospfRouter_4_5%eth1"/>
-		<AddressRange address="ospfRouter_4_5%eth2" mask="ospfRouter_4_5%eth2"/>
-		<AddressRange address="ospfRouter_4_5%eth3" mask="ospfRouter_4_5%eth3"/>
-		<AddressRange address="ospfRouter_4_6%eth0" mask="ospfRouter_4_6%eth0"/>
-		<AddressRange address="ospfRouter_4_6%eth1" mask="ospfRouter_4_6%eth1"/>
-		<AddressRange address="ospfRouter_4_6%eth2" mask="ospfRouter_4_6%eth2"/>
-		<AddressRange address="ospfRouter_4_6%eth3" mask="ospfRouter_4_6%eth3"/>
-		<AddressRange address="ospfRouter_5_1%eth0" mask="ospfRouter_5_1%eth0"/>
-		<AddressRange address="ospfRouter_5_1%eth1" mask="ospfRouter_5_1%eth1"/>
-		<AddressRange address="ospfRouter_5_1%eth2" mask="ospfRouter_5_1%eth2"/>
-		<AddressRange address="ospfRouter_5_1%eth3" mask="ospfRouter_5_1%eth3"/>
-		<AddressRange address="ospfRouter_5_2%eth0" mask="ospfRouter_5_2%eth0"/>
-		<AddressRange address="ospfRouter_5_2%eth1" mask="ospfRouter_5_2%eth1"/>
-		<AddressRange address="ospfRouter_5_2%eth2" mask="ospfRouter_5_2%eth2"/>
-		<AddressRange address="ospfRouter_5_2%eth3" mask="ospfRouter_5_2%eth3"/>
-		<AddressRange address="ospfRouter_5_3%eth0" mask="ospfRouter_5_3%eth0"/>
-		<AddressRange address="ospfRouter_5_3%eth1" mask="ospfRouter_5_3%eth1"/>
-		<AddressRange address="ospfRouter_5_3%eth2" mask="ospfRouter_5_3%eth2"/>
-		<AddressRange address="ospfRouter_5_3%eth3" mask="ospfRouter_5_3%eth3"/>
-		<AddressRange address="ospfRouter_5_4%eth0" mask="ospfRouter_5_4%eth0"/>
-		<AddressRange address="ospfRouter_5_4%eth1" mask="ospfRouter_5_4%eth1"/>
-		<AddressRange address="ospfRouter_5_4%eth2" mask="ospfRouter_5_4%eth2"/>
-		<AddressRange address="ospfRouter_5_4%eth3" mask="ospfRouter_5_4%eth3"/>
-		<AddressRange address="ospfRouter_5_5%eth0" mask="ospfRouter_5_5%eth0"/>
-		<AddressRange address="ospfRouter_5_5%eth1" mask="ospfRouter_5_5%eth1"/>
-		<AddressRange address="ospfRouter_5_5%eth2" mask="ospfRouter_5_5%eth2"/>
-		<AddressRange address="ospfRouter_5_5%eth3" mask="ospfRouter_5_5%eth3"/>
-		<AddressRange address="ospfRouter_5_6%eth0" mask="ospfRouter_5_6%eth0"/>
-		<AddressRange address="ospfRouter_5_6%eth1" mask="ospfRouter_5_6%eth1"/>
-		<AddressRange address="ospfRouter_5_6%eth2" mask="ospfRouter_5_6%eth2"/>
-		<AddressRange address="ospfRouter_5_6%eth3" mask="ospfRouter_5_6%eth3"/>
-		<AddressRange address="ospfRouter_6_1%eth0" mask="ospfRouter_6_1%eth0"/>
-		<AddressRange address="ospfRouter_6_1%eth1" mask="ospfRouter_6_1%eth1"/>
-		<AddressRange address="ospfRouter_6_1%eth2" mask="ospfRouter_6_1%eth2"/>
-		<AddressRange address="ospfRouter_6_1%eth3" mask="ospfRouter_6_1%eth3"/>
-		<AddressRange address="ospfRouter_6_2%eth0" mask="ospfRouter_6_2%eth0"/>
-		<AddressRange address="ospfRouter_6_2%eth1" mask="ospfRouter_6_2%eth1"/>
-		<AddressRange address="ospfRouter_6_2%eth2" mask="ospfRouter_6_2%eth2"/>
-		<AddressRange address="ospfRouter_6_2%eth3" mask="ospfRouter_6_2%eth3"/>
-		<AddressRange address="ospfRouter_6_3%eth0" mask="ospfRouter_6_3%eth0"/>
-		<AddressRange address="ospfRouter_6_3%eth1" mask="ospfRouter_6_3%eth1"/>
-		<AddressRange address="ospfRouter_6_3%eth2" mask="ospfRouter_6_3%eth2"/>
-		<AddressRange address="ospfRouter_6_3%eth3" mask="ospfRouter_6_3%eth3"/>
-		<AddressRange address="ospfRouter_6_4%eth0" mask="ospfRouter_6_4%eth0"/>
-		<AddressRange address="ospfRouter_6_4%eth1" mask="ospfRouter_6_4%eth1"/>
-		<AddressRange address="ospfRouter_6_4%eth2" mask="ospfRouter_6_4%eth2"/>
-		<AddressRange address="ospfRouter_6_4%eth3" mask="ospfRouter_6_4%eth3"/>
-		<AddressRange address="ospfRouter_6_5%eth0" mask="ospfRouter_6_5%eth0"/>
-		<AddressRange address="ospfRouter_6_5%eth1" mask="ospfRouter_6_5%eth1"/>
-		<AddressRange address="ospfRouter_6_5%eth2" mask="ospfRouter_6_5%eth2"/>
-		<AddressRange address="ospfRouter_6_5%eth3" mask="ospfRouter_6_5%eth3"/>
-		<AddressRange address="ospfRouter_6_6%eth0" mask="ospfRouter_6_6%eth0"/>
-		<AddressRange address="ospfRouter_6_6%eth1" mask="ospfRouter_6_6%eth1"/>
-		<AddressRange address="ospfRouter_6_6%eth2" mask="ospfRouter_6_6%eth2"/>
-		<AddressRange address="ospfRouter_6_6%eth3" mask="ospfRouter_6_6%eth3"/>
-		<AddressRange address="ospfRouter_7_1%eth0" mask="ospfRouter_7_1%eth0"/>
-		<AddressRange address="ospfRouter_7_1%eth1" mask="ospfRouter_7_1%eth1"/>
-		<AddressRange address="ospfRouter_7_1%eth2" mask="ospfRouter_7_1%eth2"/>
-		<AddressRange address="ospfRouter_7_1%eth3" mask="ospfRouter_7_1%eth3"/>
-		<AddressRange address="ospfRouter_7_2%eth0" mask="ospfRouter_7_2%eth0"/>
-		<AddressRange address="ospfRouter_7_2%eth1" mask="ospfRouter_7_2%eth1"/>
-		<AddressRange address="ospfRouter_7_2%eth2" mask="ospfRouter_7_2%eth2"/>
-		<AddressRange address="ospfRouter_7_2%eth3" mask="ospfRouter_7_2%eth3"/>
-		<AddressRange address="ospfRouter_7_3%eth0" mask="ospfRouter_7_3%eth0"/>
-		<AddressRange address="ospfRouter_7_3%eth1" mask="ospfRouter_7_3%eth1"/>
-		<AddressRange address="ospfRouter_7_3%eth2" mask="ospfRouter_7_3%eth2"/>
-		<AddressRange address="ospfRouter_7_3%eth3" mask="ospfRouter_7_3%eth3"/>
-		<AddressRange address="ospfRouter_7_4%eth0" mask="ospfRouter_7_4%eth0"/>
-		<AddressRange address="ospfRouter_7_4%eth1" mask="ospfRouter_7_4%eth1"/>
-		<AddressRange address="ospfRouter_7_4%eth2" mask="ospfRouter_7_4%eth2"/>
-		<AddressRange address="ospfRouter_7_4%eth3" mask="ospfRouter_7_4%eth3"/>
-		<AddressRange address="ospfRouter_7_5%eth0" mask="ospfRouter_7_5%eth0"/>
-		<AddressRange address="ospfRouter_7_5%eth1" mask="ospfRouter_7_5%eth1"/>
-		<AddressRange address="ospfRouter_7_5%eth2" mask="ospfRouter_7_5%eth2"/>
-		<AddressRange address="ospfRouter_7_5%eth3" mask="ospfRouter_7_5%eth3"/>
-		<AddressRange address="ospfRouter_7_6%eth0" mask="ospfRouter_7_6%eth0"/>
-		<AddressRange address="ospfRouter_7_6%eth1" mask="ospfRouter_7_6%eth1"/>
-		<AddressRange address="ospfRouter_7_6%eth2" mask="ospfRouter_7_6%eth2"/>
-		<AddressRange address="ospfRouter_7_6%eth3" mask="ospfRouter_7_6%eth3"/>
-		<AddressRange address="ospfRouter_8_1%eth0" mask="ospfRouter_8_1%eth0"/>
-		<AddressRange address="ospfRouter_8_1%eth1" mask="ospfRouter_8_1%eth1"/>
-		<AddressRange address="ospfRouter_8_1%eth2" mask="ospfRouter_8_1%eth2"/>
-		<AddressRange address="ospfRouter_8_1%eth3" mask="ospfRouter_8_1%eth3"/>
-		<AddressRange address="ospfRouter_8_2%eth0" mask="ospfRouter_8_2%eth0"/>
-		<AddressRange address="ospfRouter_8_2%eth1" mask="ospfRouter_8_2%eth1"/>
-		<AddressRange address="ospfRouter_8_2%eth2" mask="ospfRouter_8_2%eth2"/>
-		<AddressRange address="ospfRouter_8_2%eth3" mask="ospfRouter_8_2%eth3"/>
-		<AddressRange address="ospfRouter_8_3%eth0" mask="ospfRouter_8_3%eth0"/>
-		<AddressRange address="ospfRouter_8_3%eth1" mask="ospfRouter_8_3%eth1"/>
-		<AddressRange address="ospfRouter_8_3%eth2" mask="ospfRouter_8_3%eth2"/>
-		<AddressRange address="ospfRouter_8_3%eth3" mask="ospfRouter_8_3%eth3"/>
-		<AddressRange address="ospfRouter_8_4%eth0" mask="ospfRouter_8_4%eth0"/>
-		<AddressRange address="ospfRouter_8_4%eth1" mask="ospfRouter_8_4%eth1"/>
-		<AddressRange address="ospfRouter_8_4%eth2" mask="ospfRouter_8_4%eth2"/>
-		<AddressRange address="ospfRouter_8_4%eth3" mask="ospfRouter_8_4%eth3"/>
-		<AddressRange address="ospfRouter_8_5%eth0" mask="ospfRouter_8_5%eth0"/>
-		<AddressRange address="ospfRouter_8_5%eth1" mask="ospfRouter_8_5%eth1"/>
-		<AddressRange address="ospfRouter_8_5%eth2" mask="ospfRouter_8_5%eth2"/>
-		<AddressRange address="ospfRouter_8_5%eth3" mask="ospfRouter_8_5%eth3"/>
-		<AddressRange address="ospfRouter_8_6%eth0" mask="ospfRouter_8_6%eth0"/>
-		<AddressRange address="ospfRouter_8_6%eth1" mask="ospfRouter_8_6%eth1"/>
-		<AddressRange address="ospfRouter_8_6%eth2" mask="ospfRouter_8_6%eth2"/>
-		<AddressRange address="ospfRouter_8_6%eth3" mask="ospfRouter_8_6%eth3"/>
-		<AddressRange address="ospfRouter_9_1%eth0" mask="ospfRouter_9_1%eth0"/>
-		<AddressRange address="ospfRouter_9_1%eth1" mask="ospfRouter_9_1%eth1"/>
-		<AddressRange address="ospfRouter_9_1%eth2" mask="ospfRouter_9_1%eth2"/>
-		<AddressRange address="ospfRouter_9_1%eth3" mask="ospfRouter_9_1%eth3"/>
-		<AddressRange address="ospfRouter_9_2%eth0" mask="ospfRouter_9_2%eth0"/>
-		<AddressRange address="ospfRouter_9_2%eth1" mask="ospfRouter_9_2%eth1"/>
-		<AddressRange address="ospfRouter_9_2%eth2" mask="ospfRouter_9_2%eth2"/>
-		<AddressRange address="ospfRouter_9_2%eth3" mask="ospfRouter_9_2%eth3"/>
-		<AddressRange address="ospfRouter_9_3%eth0" mask="ospfRouter_9_3%eth0"/>
-		<AddressRange address="ospfRouter_9_3%eth1" mask="ospfRouter_9_3%eth1"/>
-		<AddressRange address="ospfRouter_9_3%eth2" mask="ospfRouter_9_3%eth2"/>
-		<AddressRange address="ospfRouter_9_3%eth3" mask="ospfRouter_9_3%eth3"/>
-		<AddressRange address="ospfRouter_9_4%eth0" mask="ospfRouter_9_4%eth0"/>
-		<AddressRange address="ospfRouter_9_4%eth1" mask="ospfRouter_9_4%eth1"/>
-		<AddressRange address="ospfRouter_9_4%eth2" mask="ospfRouter_9_4%eth2"/>
-		<AddressRange address="ospfRouter_9_4%eth3" mask="ospfRouter_9_4%eth3"/>
-		<AddressRange address="ospfRouter_9_5%eth0" mask="ospfRouter_9_5%eth0"/>
-		<AddressRange address="ospfRouter_9_5%eth1" mask="ospfRouter_9_5%eth1"/>
-		<AddressRange address="ospfRouter_9_5%eth2" mask="ospfRouter_9_5%eth2"/>
-		<AddressRange address="ospfRouter_9_5%eth3" mask="ospfRouter_9_5%eth3"/>
-		<AddressRange address="ospfRouter_9_6%eth0" mask="ospfRouter_9_6%eth0"/>
-		<AddressRange address="ospfRouter_9_6%eth1" mask="ospfRouter_9_6%eth1"/>
-		<AddressRange address="ospfRouter_9_6%eth2" mask="ospfRouter_9_6%eth2"/>
-		<AddressRange address="ospfRouter_9_6%eth3" mask="ospfRouter_9_6%eth3"/>
-		<AddressRange address="ospfRouter_10_1%eth0" mask="ospfRouter_10_1%eth0"/>
-		<AddressRange address="ospfRouter_10_1%eth1" mask="ospfRouter_10_1%eth1"/>
-		<AddressRange address="ospfRouter_10_1%eth2" mask="ospfRouter_10_1%eth2"/>
-		<AddressRange address="ospfRouter_10_1%eth3" mask="ospfRouter_10_1%eth3"/>
-		<AddressRange address="ospfRouter_10_2%eth0" mask="ospfRouter_10_2%eth0"/>
-		<AddressRange address="ospfRouter_10_2%eth1" mask="ospfRouter_10_2%eth1"/>
-		<AddressRange address="ospfRouter_10_2%eth2" mask="ospfRouter_10_2%eth2"/>
-		<AddressRange address="ospfRouter_10_2%eth3" mask="ospfRouter_10_2%eth3"/>
-		<AddressRange address="ospfRouter_10_3%eth0" mask="ospfRouter_10_3%eth0"/>
-		<AddressRange address="ospfRouter_10_3%eth1" mask="ospfRouter_10_3%eth1"/>
-		<AddressRange address="ospfRouter_10_3%eth2" mask="ospfRouter_10_3%eth2"/>
-		<AddressRange address="ospfRouter_10_3%eth3" mask="ospfRouter_10_3%eth3"/>
-		<AddressRange address="ospfRouter_10_4%eth0" mask="ospfRouter_10_4%eth0"/>
-		<AddressRange address="ospfRouter_10_4%eth1" mask="ospfRouter_10_4%eth1"/>
-		<AddressRange address="ospfRouter_10_4%eth2" mask="ospfRouter_10_4%eth2"/>
-		<AddressRange address="ospfRouter_10_4%eth3" mask="ospfRouter_10_4%eth3"/>
-		<AddressRange address="ospfRouter_10_5%eth0" mask="ospfRouter_10_5%eth0"/>
-		<AddressRange address="ospfRouter_10_5%eth1" mask="ospfRouter_10_5%eth1"/>
-		<AddressRange address="ospfRouter_10_5%eth2" mask="ospfRouter_10_5%eth2"/>
-		<AddressRange address="ospfRouter_10_5%eth3" mask="ospfRouter_10_5%eth3"/>
-		<AddressRange address="ospfRouter_10_6%eth0" mask="ospfRouter_10_6%eth0"/>
-		<AddressRange address="ospfRouter_10_6%eth1" mask="ospfRouter_10_6%eth1"/>
-		<AddressRange address="ospfRouter_10_6%eth2" mask="ospfRouter_10_6%eth2"/>
-		<AddressRange address="ospfRouter_10_6%eth3" mask="ospfRouter_10_6%eth3"/>
-		<AddressRange address="ospfRouter_11_1%eth0" mask="ospfRouter_11_1%eth0"/>
-		<AddressRange address="ospfRouter_11_1%eth1" mask="ospfRouter_11_1%eth1"/>
-		<AddressRange address="ospfRouter_11_1%eth2" mask="ospfRouter_11_1%eth2"/>
-		<AddressRange address="ospfRouter_11_1%eth3" mask="ospfRouter_11_1%eth3"/>
-		<AddressRange address="ospfRouter_11_2%eth0" mask="ospfRouter_11_2%eth0"/>
-		<AddressRange address="ospfRouter_11_2%eth1" mask="ospfRouter_11_2%eth1"/>
-		<AddressRange address="ospfRouter_11_2%eth2" mask="ospfRouter_11_2%eth2"/>
-		<AddressRange address="ospfRouter_11_2%eth3" mask="ospfRouter_11_2%eth3"/>
-		<AddressRange address="ospfRouter_11_3%eth0" mask="ospfRouter_11_3%eth0"/>
-		<AddressRange address="ospfRouter_11_3%eth1" mask="ospfRouter_11_3%eth1"/>
-		<AddressRange address="ospfRouter_11_3%eth2" mask="ospfRouter_11_3%eth2"/>
-		<AddressRange address="ospfRouter_11_3%eth3" mask="ospfRouter_11_3%eth3"/>
-		<AddressRange address="ospfRouter_11_4%eth0" mask="ospfRouter_11_4%eth0"/>
-		<AddressRange address="ospfRouter_11_4%eth1" mask="ospfRouter_11_4%eth1"/>
-		<AddressRange address="ospfRouter_11_4%eth2" mask="ospfRouter_11_4%eth2"/>
-		<AddressRange address="ospfRouter_11_4%eth3" mask="ospfRouter_11_4%eth3"/>
-		<AddressRange address="ospfRouter_11_5%eth0" mask="ospfRouter_11_5%eth0"/>
-		<AddressRange address="ospfRouter_11_5%eth1" mask="ospfRouter_11_5%eth1"/>
-		<AddressRange address="ospfRouter_11_5%eth2" mask="ospfRouter_11_5%eth2"/>
-		<AddressRange address="ospfRouter_11_5%eth3" mask="ospfRouter_11_5%eth3"/>
-		<AddressRange address="ospfRouter_11_6%eth0" mask="ospfRouter_11_6%eth0"/>
-		<AddressRange address="ospfRouter_11_6%eth1" mask="ospfRouter_11_6%eth1"/>
-		<AddressRange address="ospfRouter_11_6%eth2" mask="ospfRouter_11_6%eth2"/>
-		<AddressRange address="ospfRouter_11_6%eth3" mask="ospfRouter_11_6%eth3"/>
-	</Area>
+  	<Area id="0.0.0.0">
+  	</Area>
+	
 	<Router name="ospfRouter_1_1" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="41"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="41"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="41"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="41"/>
 	</Router>
 	<Router name="ospfRouter_1_2" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="41"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="41"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="41"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="41"/>
 	</Router>
 	<Router name="ospfRouter_1_3" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="41"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="41"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="41"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="41"/>
 	</Router>
 	<Router name="ospfRouter_1_4" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="41"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="41"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="41"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="41"/>
 	</Router>
 	<Router name="ospfRouter_1_5" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="41"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="41"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="41"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="41"/>
 	</Router>
 	<Router name="ospfRouter_1_6" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="41"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="41"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="41"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="41"/>
 	</Router>
 	<Router name="ospfRouter_2_1" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="162"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="162"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="162"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="162"/>
 	</Router>
 	<Router name="ospfRouter_2_2" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="162"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="162"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="162"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="162"/>
 	</Router>
 	<Router name="ospfRouter_2_3" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="162"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="162"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="162"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="162"/>
 	</Router>
 	<Router name="ospfRouter_2_4" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="162"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="162"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="162"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="162"/>
 	</Router>
 	<Router name="ospfRouter_2_5" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="162"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="162"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="162"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="162"/>
 	</Router>
 	<Router name="ospfRouter_2_6" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="162"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="162"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="162"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="162"/>
 	</Router>
 	<Router name="ospfRouter_3_1" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="231"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="231"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="231"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="231"/>
 	</Router>
 	<Router name="ospfRouter_3_2" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="231"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="231"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="231"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="231"/>
 	</Router>
 	<Router name="ospfRouter_3_3" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="231"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="231"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="231"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="231"/>
 	</Router>
 	<Router name="ospfRouter_3_4" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="231"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="231"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="231"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="231"/>
 	</Router>
 	<Router name="ospfRouter_3_5" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="231"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="231"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="231"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="231"/>
 	</Router>
 	<Router name="ospfRouter_3_6" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="231"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="231"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="231"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="231"/>
 	</Router>
 	<Router name="ospfRouter_4_1" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="226"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="226"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="226"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="226"/>
 	</Router>
 	<Router name="ospfRouter_4_2" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="226"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="226"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="226"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="226"/>
 	</Router>
 	<Router name="ospfRouter_4_3" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="226"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="226"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="226"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="226"/>
 	</Router>
 	<Router name="ospfRouter_4_4" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="226"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="226"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="226"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="226"/>
 	</Router>
 	<Router name="ospfRouter_4_5" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="226"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="226"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="226"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="226"/>
 	</Router>
 	<Router name="ospfRouter_4_6" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="226"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="226"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="226"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="226"/>
 	</Router>
 	<Router name="ospfRouter_5_1" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="150"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="150"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="150"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="150"/>
 	</Router>
 	<Router name="ospfRouter_5_2" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="150"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="150"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="150"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="150"/>
 	</Router>
 	<Router name="ospfRouter_5_3" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="150"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="150"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="150"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="150"/>
 	</Router>
 	<Router name="ospfRouter_5_4" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="150"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="150"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="150"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="150"/>
 	</Router>
 	<Router name="ospfRouter_5_5" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="150"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="150"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="150"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="150"/>
 	</Router>
 	<Router name="ospfRouter_5_6" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="150"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="150"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="150"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="150"/>
 	</Router>
 	<Router name="ospfRouter_6_1" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="26"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="26"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="26"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="26"/>
 	</Router>
 	<Router name="ospfRouter_6_2" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="26"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="26"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="26"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="26"/>
 	</Router>
 	<Router name="ospfRouter_6_3" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="26"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="26"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="26"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="26"/>
 	</Router>
 	<Router name="ospfRouter_6_4" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="26"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="26"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="26"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="26"/>
 	</Router>
 	<Router name="ospfRouter_6_5" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="26"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="26"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="26"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="26"/>
 	</Router>
 	<Router name="ospfRouter_6_6" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="26"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="26"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="26"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="26"/>
 	</Router>
 	<Router name="ospfRouter_7_1" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="106"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="106"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="106"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="106"/>
 	</Router>
 	<Router name="ospfRouter_7_2" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="106"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="106"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="106"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="106"/>
 	</Router>
 	<Router name="ospfRouter_7_3" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="106"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="106"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="106"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="106"/>
 	</Router>
 	<Router name="ospfRouter_7_4" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="106"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="106"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="106"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="106"/>
 	</Router>
 	<Router name="ospfRouter_7_5" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="106"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="106"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="106"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="106"/>
 	</Router>
 	<Router name="ospfRouter_7_6" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="106"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="106"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="106"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="106"/>
 	</Router>
 	<Router name="ospfRouter_8_1" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="205"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="205"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="205"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="205"/>
 	</Router>
 	<Router name="ospfRouter_8_2" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="205"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="205"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="205"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="205"/>
 	</Router>
 	<Router name="ospfRouter_8_3" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="205"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="205"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="205"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="205"/>
 	</Router>
 	<Router name="ospfRouter_8_4" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="205"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="205"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="205"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="205"/>
 	</Router>
 	<Router name="ospfRouter_8_5" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="205"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="205"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="205"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="205"/>
 	</Router>
 	<Router name="ospfRouter_8_6" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="205"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="205"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="205"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="205"/>
 	</Router>
 	<Router name="ospfRouter_9_1" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="238"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="238"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="238"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="238"/>
 	</Router>
 	<Router name="ospfRouter_9_2" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="238"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="238"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="238"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="238"/>
 	</Router>
 	<Router name="ospfRouter_9_3" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="238"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="238"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="238"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="238"/>
 	</Router>
 	<Router name="ospfRouter_9_4" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="238"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="238"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="238"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="238"/>
 	</Router>
 	<Router name="ospfRouter_9_5" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="238"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="238"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="238"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="238"/>
 	</Router>
 	<Router name="ospfRouter_9_6" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="238"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="238"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="238"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="238"/>
 	</Router>
 	<Router name="ospfRouter_10_1" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="196"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="196"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="196"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="196"/>
 	</Router>
 	<Router name="ospfRouter_10_2" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="196"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="196"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="196"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="196"/>
 	</Router>
 	<Router name="ospfRouter_10_3" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="196"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="196"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="196"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="196"/>
 	</Router>
 	<Router name="ospfRouter_10_4" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="196"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="196"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="196"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="196"/>
 	</Router>
 	<Router name="ospfRouter_10_5" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="196"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="196"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="196"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="196"/>
 	</Router>
 	<Router name="ospfRouter_10_6" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="196"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="196"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="196"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="196"/>
 	</Router>
 	<Router name="ospfRouter_11_1" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="92"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="92"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="92"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="92"/>
 	</Router>
 	<Router name="ospfRouter_11_2" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="92"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="92"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="92"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="92"/>
 	</Router>
 	<Router name="ospfRouter_11_3" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="92"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="92"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="92"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="92"/>
 	</Router>
 	<Router name="ospfRouter_11_4" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="92"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="92"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="92"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="92"/>
 	</Router>
 	<Router name="ospfRouter_11_5" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="92"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="92"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="92"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="92"/>
 	</Router>
 	<Router name="ospfRouter_11_6" RFC1583Compatible="true">
-		<BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
-		<BroadcastInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="92"/>
-		<BroadcastInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="92"/>
+		<PointToPointInterface ifName="eth0" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth1" areaID="0.0.0.0" interfaceOutputCost="134"/>
+		<PointToPointInterface ifName="eth2" areaID="0.0.0.0" interfaceOutputCost="92"/>
+		<PointToPointInterface ifName="eth3" areaID="0.0.0.0" interfaceOutputCost="92"/>
 	</Router>
 </OSPFASConfig>
