@@ -99,6 +99,7 @@ def changeOspfv2Common(experiment_name: str, hop: str):
     print('-------writing .h file-------')
     file_write = open("/home/sqsq/Desktop/sat-ospf/inet/src/inet/routing/ospfv2/router/Ospfv2Common.h", "w")
     file_write.writelines(lines)
+    file_write.close()
     time.sleep(10)
     
 
@@ -124,6 +125,8 @@ if __name__ == '__main__':
                     header: 'config', 'hop', 'module', 'simtime', 'delay'
     before running, check:
         SEND_ICMP, PRINT_IVP4_DROP_PACKET and RECORD_CSV in Ospfv2Common.h
+        configs in omnetpp.ini, send_interval and deliverySrcIDs in NEDGenerator.py
+        experiment_names and hops in this file
     """
     
     cmds = ["opp_run -m -u Cmdenv -c " + i + " --cmdenv-express-mode=true -n " + 
