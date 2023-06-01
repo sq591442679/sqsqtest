@@ -38,68 +38,67 @@ def getParameters(experiment_name: str):
 def changeOspfv2Common(experiment_name: str, hop: str):
     LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE, LOAD_BALANCE = getParameters(experiment_name)
 
-    with open("/home/sqsq/Desktop/sat-ospf/inet/src/inet/routing/ospfv2/router/Ospfv2Common.h", "r+") as f:
-        lines = f.readlines()
-        # print(lines[50])
+    file_read = open("/home/sqsq/Desktop/sat-ospf/inet/src/inet/routing/ospfv2/router/Ospfv2Common.h", "r")
+    lines = file_read.readlines()
+    print('-------reading .h file -------')
+    file_read.close()
+    time.sleep(10)
 
-        if hop == 'OSPF':
-            if "SQSQ_CONVERGENCY_TIME" in lines[46]:
-                lines[46] = "#define SQSQ_CONVERGENCY_TIME                  %f\n" % float(SIMULATION_END_TIME + 50)
-            else:
-                raise Exception('')   
-            if "SQSQ_HOP" in lines[47]:
-                lines[47] = "#define SQSQ_HOP                               0\n"
-            else:
-                raise Exception('')  
-            if "IS_OSPF" in lines[64]:
-                lines[64] = "#define IS_OSPF                                true\n"  
-            else:
-                raise Exception('')                   
-        else:
-            if "SQSQ_CONVERGENCY_TIME" in lines[46]:
-                lines[46] = "#define SQSQ_CONVERGENCY_TIME                  %f\n" % float(WARMUP_PERIOD)
-            else:
-                raise Exception('')
-            if "SQSQ_HOP" in lines[47]:
-                lines[47] = "#define SQSQ_HOP                               %s\n" % hop
-            else:
-                raise Exception('') 
-            if "IS_OSPF" in lines[64]:
-                lines[64] = "#define IS_OSPF                                false\n"  
-            else:
-                raise Exception('')   
-
-        if "EXPERIMENT_NAME" in lines[48]:
-            lines[48] = "#define EXPERIMENT_NAME                        \"%s\"\n" % experiment_name
-        else:
-            raise Exception('')           
-        if "LOOP_AVOIDANCE" in lines[56]:
-            lines[56] = "#define LOOP_AVOIDANCE                         %s\n" % LOOP_AVOIDANCE
-        else:
-            raise Exception('')
-        if "REQUEST_SHOULD_KNOWN_RANGE" in lines[59]:
-            lines[59] = "#define REQUEST_SHOULD_KNOWN_RANGE             %s\n" % REQUEST_SHOULD_KNOWN_RANGE
+    if hop == 'OSPF':
+        if "SQSQ_CONVERGENCY_TIME" in lines[46]:
+            lines[46] = "#define SQSQ_CONVERGENCY_TIME                  %f\n" % float(SIMULATION_END_TIME + 50)
         else:
             raise Exception('')   
-        if "LSR_RANGE" in lines[60]:
-            lines[60] = "#define LSR_RANGE                              SQSQ_HOP\n"
+        if "SQSQ_HOP" in lines[47]:
+            lines[47] = "#define SQSQ_HOP                               0\n"
         else:
-            raise Exception('')   
-        if "LOAD_BALANCE" in lines[62]:
-            lines[62] = "#define LOAD_BALANCE                           %s\n" % LOAD_BALANCE
+            raise Exception('')  
+        if "IS_OSPF" in lines[64]:
+            lines[64] = "#define IS_OSPF                                true\n"  
         else:
-            raise Exception('')        
-        if "RECORD_CSV" in lines[66]:
-            lines[66] = "#define RECORD_CSV                             true\n"
+            raise Exception('')                   
+    else:
+        if "SQSQ_CONVERGENCY_TIME" in lines[46]:
+            lines[46] = "#define SQSQ_CONVERGENCY_TIME                  %f\n" % float(WARMUP_PERIOD)
         else:
             raise Exception('')
-        
-        f.seek(0)
-        print('-----------waiting-----------------')
-        time.sleep(10)
-        f.writelines(lines)
-        time.sleep(10)
-    f.close()
+        if "SQSQ_HOP" in lines[47]:
+            lines[47] = "#define SQSQ_HOP                               %s\n" % hop
+        else:
+            raise Exception('') 
+        if "IS_OSPF" in lines[64]:
+            lines[64] = "#define IS_OSPF                                false\n"  
+        else:
+            raise Exception('')   
+
+    if "EXPERIMENT_NAME" in lines[48]:
+        lines[48] = "#define EXPERIMENT_NAME                        \"%s\"\n" % experiment_name
+    else:
+        raise Exception('')           
+    if "LOOP_AVOIDANCE" in lines[56]:
+        lines[56] = "#define LOOP_AVOIDANCE                         %s\n" % LOOP_AVOIDANCE
+    else:
+        raise Exception('')
+    if "REQUEST_SHOULD_KNOWN_RANGE" in lines[59]:
+        lines[59] = "#define REQUEST_SHOULD_KNOWN_RANGE             %s\n" % REQUEST_SHOULD_KNOWN_RANGE
+    else:
+        raise Exception('')   
+    if "LSR_RANGE" in lines[60]:
+        lines[60] = "#define LSR_RANGE                              SQSQ_HOP\n"
+    else:
+        raise Exception('')   
+    if "LOAD_BALANCE" in lines[62]:
+        lines[62] = "#define LOAD_BALANCE                           %s\n" % LOAD_BALANCE
+    else:
+        raise Exception('')        
+    if "RECORD_CSV" in lines[66]:
+        lines[66] = "#define RECORD_CSV                             true\n"
+    else:
+        raise Exception('')
+    
+    print('-------writing .h file-------')
+    file_write = open("/home/sqsq/Desktop/sat-ospf/inet/src/inet/routing/ospfv2/router/Ospfv2Common.h", "w")
+    file_write.writelines(lines)
     time.sleep(10)
     
 
