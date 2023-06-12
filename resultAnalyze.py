@@ -1,10 +1,11 @@
 import pandas
 import matplotlib.pyplot
+import numpy
 from NEDGenerator import  deliverySrcIDs,deliveryDestID, SIMULATION_DURATION_TIME, send_interval
 from command import arg_names, hops, parent_folder_names
 
 
-markers = ['.', '^', 's', 'x']
+markers = ['.', '^', 's', 'x', 'o', 's', 'h']
 expected_total_num_packets = 1 / float(send_interval) * len(deliverySrcIDs) * SIMULATION_DURATION_TIME
 
 
@@ -25,6 +26,8 @@ def cookDropPacketRaw(folder_name:str, hop):
 
         print(config_name, hop, no_entry_count, stub_cnt, loop_cnt, queue_cnt, total, file=f, sep=',')
 
+    return total
+
 
 def cookSuccessPacketRaw(folder_name:str, hop):
     with open(folder_name + 'successPacketCooked.csv', 'w') as f:
@@ -39,6 +42,8 @@ def cookSuccessPacketRaw(folder_name:str, hop):
                     & (df['delay'] > 0)]['delay']
         avg_eed = df_eed.sum() / df_eed.shape[0]
         print(config_name, hop, success_count, avg_eed, file=f, sep=',')
+
+    return success_count
 
 
 def drawDropRatioPie(folder_name: str):
@@ -150,8 +155,10 @@ if __name__ == '__main__':
         for hop in hops:
             for config_name in arg_names:
                 folder_name = parent_folder_name + hop + '/' + config_name + '/'
-                cookDropPacketRaw(folder_name, hop)
-                cookSuccessPacketRaw(folder_name, hop)
+                total_drop = cookDropPacketRaw(folder_name, hop)
+                total_success = cookSuccessPacketRaw(folder_name, hop)
+                if total_drop + total_success < 0.85 * expected_total_num_packets:
+                    print('----------drop & success not match in', folder_name, 'drop:', total_drop, 'success:', total_success, '----------')
 
     marker_index = 0
     fig, ax = matplotlib.pyplot.subplots()
@@ -197,7 +204,7 @@ if __name__ == '__main__':
     ax.set_xlabel('Avg. Control Overhead(MBps)')
     ax.set_ylabel('Avg. Packet Loss Rate(%)')
     ax.set_ylim(bottom=0)
-    ax.legend()
+    ax.legend(prop={'size': 8})
     fig.savefig('./results/overhead and PDR.png', dpi=300)
     matplotlib.pyplot.close()
 
@@ -235,11 +242,16 @@ if __name__ == '__main__':
         for i in range(len(avg_delays)):
             print(parent_folder_name, experiment_names[i], "'s EED:", avg_delays[i])
             ax.annotate(experiment_names[i], (avg_control_overheads[i], avg_delays[i]))
+    
+    ideal_x = numpy.linspace(0, 1, 100)
+    ideal_y = numpy.full_like(ideal_x, 33.5)
+    ax.plot(ideal_x, ideal_y, linestyle='--')
     ax.set_title('Avg. End to End Delay & Control Overhead, link failure rate = 0.1')
     ax.set_xlabel('Avg. Control Overhead(MBps)')
     ax.set_ylabel('Avg. End to End Delay(ms)')
     ax.set_ylim(bottom=0)
-    matplotlib.pyplot.legend()
+    ax.set_xlim(right=0.6)
+    matplotlib.pyplot.legend(prop={'size': 8})
     fig.savefig('./results/overhead and EED.png', dpi=300)
     matplotlib.pyplot.close()
 

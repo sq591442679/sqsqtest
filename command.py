@@ -12,10 +12,10 @@ test_names = [str(i) for i in range(1, NUM_OF_TESTS + 1)]
 # test_names = [str(i) for i in range(1, 11)]
 arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 
-hops = [str(i) for i in range(0, 6)]
-# hops = []
-experiment_names = ['withoutDD-withLoopPrevention-withoutLoadBalance', 'withoutDD-withoutLoopPrevention-withoutLoadBalance', 'withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
-# experiment_names = ['withDD-withLoopPrevention-withLoadBalance', 'withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
+hops = [str(i) for i in range(0, 5)]
+# hops = ['4']
+# experiment_names = ['withoutDD-withLoopPrevention-withoutLoadBalance', 'withoutDD-withoutLoopPrevention-withoutLoadBalance', 'withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
+experiment_names = ['withDD-withLoopPrevention-withLoadBalance-0.05', 'withDD-withLoopPrevention-withLoadBalance-0.07','withDD-withLoopPrevention-withLoadBalance-0.1', 'withDD-withLoopPrevention-withLoadBalance-0.2', 'withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
 # experiment_names = ['withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
 parent_folder_names = ['./results/' + experiment_name + '/' for experiment_name in experiment_names]
 
@@ -24,6 +24,7 @@ def getParameters(experiment_name: str):
     REQUEST_SHOULD_KNOWN_RANGE = 'false'
     LOOP_AVOIDANCE = 'false'
     LOAD_BALANCE = 'false'
+    LOAD_SCALE = '1.0'
 
     if 'withDD' in experiment_name:
         REQUEST_SHOULD_KNOWN_RANGE = 'true'
@@ -31,12 +32,14 @@ def getParameters(experiment_name: str):
         LOOP_AVOIDANCE = 'true'
     if 'withLoadBalance' in experiment_name:
         LOAD_BALANCE = 'true'
+        if (len(experiment_name.split('-')) == 4):
+            LOAD_SCALE = experiment_name.split('-')[-1]
 
-    return LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE, LOAD_BALANCE
+    return LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE, LOAD_BALANCE, LOAD_SCALE
 
 
 def changeOspfv2Common(experiment_name: str, hop: str):
-    LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE, LOAD_BALANCE = getParameters(experiment_name)
+    LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE, LOAD_BALANCE, LOAD_SCALE = getParameters(experiment_name)
 
     file_read = open("/home/sqsq/Desktop/sat-ospf/inet/src/inet/routing/ospfv2/router/Ospfv2Common.h", "r")
     lines = file_read.readlines()
@@ -95,6 +98,8 @@ def changeOspfv2Common(experiment_name: str, hop: str):
         lines[66] = "#define RECORD_CSV                             true\n"
     else:
         raise Exception('')
+    if "LOAD_SCALE" in lines[69]:
+        lines[69] = "#define LOAD_SCALE                             %s\n" % LOAD_SCALE
     
     print('-------writing .h file-------')
     file_write = open("/home/sqsq/Desktop/sat-ospf/inet/src/inet/routing/ospfv2/router/Ospfv2Common.h", "w")
