@@ -99,7 +99,7 @@ def drawDropRatioPie(folder_name: str):
         matplotlib.pyplot.close()
 
 
-def getAvgPacketDeliveryRate(folder_name: str) -> float:
+def getAvgPacketDeliveryRate(folder_name: str, expected_total_num_packets: int) -> float:
     df = pandas.DataFrame()
 
     for config_name in arg_names:
@@ -180,7 +180,7 @@ if __name__ == '__main__':
             drawDropRatioPie(folder_name)
             experiment_name = hop
             experiment_names.append(experiment_name)
-            avg_packet_delivery_failure_rates.append((1 - getAvgPacketDeliveryRate(folder_name)) * 100)
+            avg_packet_delivery_failure_rates.append((1 - getAvgPacketDeliveryRate(folder_name, expected_total_num_packets)) * 100)
             avg_control_overheads.append(getAvgLSUOverhead(folder_name) / 1e6)
 
         # ax2.plot(avg_control_overheads, avg_packet_delivery_failure_rates, marker=markers[marker_index])
