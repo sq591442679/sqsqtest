@@ -9,11 +9,11 @@ from resultAnalyze import getAvgDelay, getAvgLSUOverhead, getAvgPacketDeliveryRa
 
 def drawEEDUnderLightLoad():
     plt.rcParams['font.sans-serif'] = ['Times New Roman']
-    plt.rcParams['axes.titlesize'] = 15
-    plt.rcParams['axes.labelsize'] = 15
-    plt.rcParams['xtick.labelsize'] = 15
-    plt.rcParams['ytick.labelsize'] = 15
-    plt.rcParams['legend.fontsize'] = 15
+    plt.rcParams['axes.titlesize'] = 20
+    plt.rcParams['axes.labelsize'] = 20
+    plt.rcParams['xtick.labelsize'] = 20
+    plt.rcParams['ytick.labelsize'] = 20
+    plt.rcParams['legend.fontsize'] = 20
     fig, ax = plt.subplots()
 
     overhead = []
@@ -25,14 +25,14 @@ def drawEEDUnderLightLoad():
             overhead.append(getAvgLSUOverhead(folder_name) / 1e6)
             delay.append(getAvgDelay(folder_name) * 1e3)
 
-    ax.plot(overhead, delay, label='with loop prevention', marker='o')
+    ax.plot(overhead, delay, label='with loop prevention', marker='o', linewidth=2.0)
     for i in range(len(delay)):
         if hops[i].isnumeric():
             ax.text(overhead[i], delay[i] - 5, hops[i],
-                ha='right', va='top', fontdict={'family': 'Times New Roman', 'size': 15})
+                ha='right', va='top', fontdict={'family': 'Times New Roman', 'size': 20})
         else:
             ax.text(overhead[i], delay[i] - 5, hops[i],
-                ha='center', va='top', fontdict={'family': 'Times New Roman', 'size': 15})
+                ha='center', va='top', fontdict={'family': 'Times New Roman', 'size': 20})
 
 
     overhead = []
@@ -55,14 +55,14 @@ def drawEEDUnderLightLoad():
             delay.append(getAvgDelay(folder_name) * 1e3)
 
     ax.plot(overhead, delay, 
-            label='without loop prevention', marker='x', linestyle='--')
+            label='without loop prevention', marker='x', linestyle='--', linewidth=2.0)
     for i in range(len(delay)):
         if hops[i].isnumeric():
             ax.text(overhead[i], delay[i] - 5, hops[i],
-                ha='left', va='bottom', fontdict={'family': 'Times New Roman', 'size': 15})
+                ha='left', va='bottom', fontdict={'family': 'Times New Roman', 'size': 20})
         else:
             ax.text(overhead[i], delay[i] - 5, hops[i],
-                ha='center', va='bottom', fontdict={'family': 'Times New Roman', 'size': 15})
+                ha='center', va='bottom', fontdict={'family': 'Times New Roman', 'size': 20})
     
     # ax.set_title('Avg. End to End Delay & Control Overhead \nunder Light Load, Link Failure Rate = 10%')
     ax.set_xlabel('Avg. Control Overhead(MBps)')
@@ -70,17 +70,22 @@ def drawEEDUnderLightLoad():
     ax.set_ylim(bottom=0, top=1000)
     ax.set_xlim(right=0.48)
     plt.legend()
+    plt.yticks(rotation=90)
+    plt.grid()
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    plt.tight_layout()
     fig.savefig('./results/overhead and EED under light load.pdf', dpi=300, format='pdf')
     plt.close()
 
 
 def drawPDRUnderLightLoad():
     plt.rcParams['font.sans-serif'] = ['Times New Roman']
-    plt.rcParams['axes.titlesize'] = 15
-    plt.rcParams['axes.labelsize'] = 15
-    plt.rcParams['xtick.labelsize'] = 15
-    plt.rcParams['ytick.labelsize'] = 15
-    plt.rcParams['legend.fontsize'] = 15
+    plt.rcParams['axes.titlesize'] = 20
+    plt.rcParams['axes.labelsize'] = 20
+    plt.rcParams['xtick.labelsize'] = 20
+    plt.rcParams['ytick.labelsize'] = 20
+    plt.rcParams['legend.fontsize'] = 20
     fig, ax = plt.subplots()
 
 
@@ -93,10 +98,10 @@ def drawPDRUnderLightLoad():
         overhead.append(getAvgLSUOverhead(folder_name) / 1e6)
         ratio.append((1 - getAvgPacketDeliveryRate(folder_name, 10000)) * 100)
 
-    ax.plot(overhead, ratio, label='with loop prevention', marker='o')
+    ax.plot(overhead, ratio, label='with loop prevention', marker='o', linewidth=2.0)
     for i in range(len(ratio)):
         ax.text(overhead[i], ratio[i], hops[i],
-            ha='right', va='top', fontdict={'family': 'Times New Roman', 'size': 15})
+            ha='right', va='top', fontdict={'family': 'Times New Roman', 'size': 20})
 
 
     # light load, without loop prevention
@@ -120,14 +125,14 @@ def drawPDRUnderLightLoad():
             ratio.append((1 - getAvgPacketDeliveryRate(folder_name, 10000)) * 100)
 
     ax.plot(overhead, ratio, 
-            label='without loop prevention', marker='x', linestyle='--')
+            label='without loop prevention', marker='x', linestyle='--', linewidth=2.0)
     for i in range(len(ratio)):
         if hops[i].isnumeric():
             ax.text(overhead[i], ratio[i], hops[i],
-                ha='left', va='bottom', fontdict={'family': 'Times New Roman', 'size': 15})
+                ha='left', va='bottom', fontdict={'family': 'Times New Roman', 'size': 20})
         else:
             ax.text(overhead[i], ratio[i], hops[i],
-                ha='center', va='bottom', fontdict={'family': 'Times New Roman', 'size': 15})
+                ha='center', va='bottom', fontdict={'family': 'Times New Roman', 'size': 20})
     
 
     # ax.set_title('Avg. Packet Delivery Ratio & Control Overhead \nunder Light Load, Link Failure Rate = 10%')
@@ -136,17 +141,22 @@ def drawPDRUnderLightLoad():
     ax.set_ylim(bottom=0, top=3)
     ax.set_xlim(right=0.48)
     plt.legend()
+    plt.yticks(rotation=90)
+    plt.grid()
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    plt.tight_layout()
     fig.savefig('./results/overhead and PDR under light load.pdf', dpi=300, format='pdf')
     plt.close()
 
 
 def drawEEDUnderHeavyLoad():
     plt.rcParams['font.sans-serif'] = ['Times New Roman']
-    plt.rcParams['axes.titlesize'] = 15
-    plt.rcParams['axes.labelsize'] = 15
-    plt.rcParams['xtick.labelsize'] = 15
-    plt.rcParams['ytick.labelsize'] = 15
-    plt.rcParams['legend.fontsize'] = 15
+    plt.rcParams['axes.titlesize'] = 20
+    plt.rcParams['axes.labelsize'] = 20
+    plt.rcParams['xtick.labelsize'] = 20
+    plt.rcParams['ytick.labelsize'] = 20
+    plt.rcParams['legend.fontsize'] = 18
     fig, ax = plt.subplots()
 
     overhead = []
@@ -157,11 +167,10 @@ def drawEEDUnderHeavyLoad():
         overhead.append(getAvgLSUOverhead(folder_name) / 1e6)
         delay.append(getAvgDelay(folder_name) * 1e3)
 
-    ax.plot(overhead, delay, 
-            label='with load balance, threshold=0.05', marker='o')
+    ax.plot(overhead, delay, label='with load balance, threshold=0.05', marker='o', linewidth=2.0)
     for i in range(len(delay)):
         ax.text(overhead[i], delay[i] - 5, hops[i],
-            ha='right', va='top', fontdict={'family': 'Times New Roman', 'size': 15})
+            ha='right', va='top', fontdict={'family': 'Times New Roman', 'size': 20})
 
 
     overhead = []
@@ -172,11 +181,10 @@ def drawEEDUnderHeavyLoad():
         overhead.append(getAvgLSUOverhead(folder_name) / 1e6)
         delay.append(getAvgDelay(folder_name) * 1e3)
 
-    ax.plot(overhead, delay, 
-            label='with load balance, threshold=0.2', marker='x', linestyle='dotted')
+    ax.plot(overhead, delay, label='with load balance, threshold=0.2', marker='x', linestyle='dotted', linewidth=2.0)
     for i in range(len(delay)):
         ax.text(overhead[i], delay[i] - 5, hops[i],
-            ha='left', va='bottom', fontdict={'family': 'Times New Roman', 'size': 15})
+            ha='left', va='bottom', fontdict={'family': 'Times New Roman', 'size': 20})
     
 
     overhead = []
@@ -198,20 +206,19 @@ def drawEEDUnderHeavyLoad():
             overhead.append(getAvgLSUOverhead(folder_name) / 1e6)
             delay.append(getAvgDelay(folder_name) * 1e3)
 
-    ax.plot(overhead, delay, 
-            label='without load balance', marker='^', linestyle='--')
+    ax.plot(overhead, delay, label='without load balance', marker='^', linestyle='--', linewidth=2.0)
     for i in range(len(delay)):
         if hops[i].isnumeric():
             ax.text(overhead[i], delay[i] - 5, hops[i],
-                ha='left', va='bottom', fontdict={'family': 'Times New Roman', 'size': 15})
+                ha='left', va='bottom', fontdict={'family': 'Times New Roman', 'size': 20})
         else:
             ax.text(overhead[i], delay[i] - 5, hops[i],
-                ha='center', va='bottom', fontdict={'family': 'Times New Roman', 'size': 15})
+                ha='center', va='bottom', fontdict={'family': 'Times New Roman', 'size': 20})
         
     
     ideal_x = numpy.linspace(-1, 1, 1000)
     ideal_y = numpy.full_like(ideal_x, 33.5)
-    ax.plot(ideal_x, ideal_y, linestyle='-.', label='ideal delay')
+    ax.plot(ideal_x, ideal_y, linestyle='-.', label='ideal delay', linewidth=2.0)
         
     
     # ax.set_title('Avg. End to End Delay & Control Overhead \nunder Heavy Load, Link Failure Rate = 10%')
@@ -220,17 +227,22 @@ def drawEEDUnderHeavyLoad():
     ax.set_ylim(bottom=0, top=1500)
     ax.set_xlim(left=-0.02, right=0.48)
     plt.legend(loc='center right')
+    plt.yticks(rotation=90)
+    plt.grid()
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    plt.tight_layout()
     fig.savefig('./results/overhead and EED under heavy load.pdf', dpi=300, format='pdf')
     plt.close()
 
 
 def drawPDRUnderHeavyLoad():
     plt.rcParams['font.sans-serif'] = ['Times New Roman']
-    plt.rcParams['axes.titlesize'] = 15
-    plt.rcParams['axes.labelsize'] = 15
-    plt.rcParams['xtick.labelsize'] = 15
-    plt.rcParams['ytick.labelsize'] = 15
-    plt.rcParams['legend.fontsize'] = 15
+    plt.rcParams['axes.titlesize'] = 20
+    plt.rcParams['axes.labelsize'] = 20
+    plt.rcParams['xtick.labelsize'] = 20
+    plt.rcParams['ytick.labelsize'] = 20
+    plt.rcParams['legend.fontsize'] = 18
     fig, ax = plt.subplots()
 
     overhead = []
@@ -241,11 +253,10 @@ def drawPDRUnderHeavyLoad():
         overhead.append(getAvgLSUOverhead(folder_name) / 1e6)
         ratio.append((1 - getAvgPacketDeliveryRate(folder_name, 200000)) * 100)
 
-    ax.plot(overhead, ratio, 
-            label='with load balance, threshold=0.05', marker='o')
+    ax.plot(overhead, ratio, label='with load balance, threshold=0.05', marker='o', linewidth=2.0)
     for i in range(len(ratio)):
         ax.text(overhead[i], ratio[i] - 0.1, hops[i],
-            ha='right', va='top', fontdict={'family': 'Times New Roman', 'size': 15})
+            ha='right', va='top', fontdict={'family': 'Times New Roman', 'size': 20})
 
 
     overhead = []
@@ -256,11 +267,10 @@ def drawPDRUnderHeavyLoad():
         overhead.append(getAvgLSUOverhead(folder_name) / 1e6)
         ratio.append((1 - getAvgPacketDeliveryRate(folder_name, 200000)) * 100)
 
-    ax.plot(overhead, ratio, 
-            label='with load balance, threshold=0.2', marker='x', linestyle='--')
+    ax.plot(overhead, ratio, label='with load balance, threshold=0.2', marker='x', linestyle='--', linewidth=2.0)
     for i in range(len(ratio)):
         ax.text(overhead[i], ratio[i], hops[i],
-            ha='left', va='bottom', fontdict={'family': 'Times New Roman', 'size': 15})
+            ha='left', va='bottom', fontdict={'family': 'Times New Roman', 'size': 20})
     
 
     overhead = []
@@ -282,15 +292,14 @@ def drawPDRUnderHeavyLoad():
             overhead.append(getAvgLSUOverhead(folder_name) / 1e6)
             ratio.append((1 - getAvgPacketDeliveryRate(folder_name, 200000)) * 100)
 
-    ax.plot(overhead, ratio, 
-            label='without load balance', marker='^', linestyle='dotted')
+    ax.plot(overhead, ratio, label='without load balance', marker='^', linestyle='dotted', linewidth=2.0)
     for i in range(len(ratio)):
         if hops[i].isnumeric():
             ax.text(overhead[i], ratio[i], hops[i],
-                ha='left', va='bottom', fontdict={'family': 'Times New Roman', 'size': 15})
+                ha='left', va='bottom', fontdict={'family': 'Times New Roman', 'size': 20})
         else:
             ax.text(overhead[i], ratio[i], hops[i],
-                ha='center', va='bottom', fontdict={'family': 'Times New Roman', 'size': 15})
+                ha='center', va='bottom', fontdict={'family': 'Times New Roman', 'size': 20})
         
     
     # ideal_x = numpy.linspace(-1, 1, 1000)
@@ -303,7 +312,12 @@ def drawPDRUnderHeavyLoad():
     ax.set_ylabel('Avg. Packet Loss Ratio(%)')
     ax.set_ylim(top=52)
     ax.set_xlim(left=-0.02, right=0.48)
-    plt.legend()
+    plt.legend(bbox_to_anchor=(0.6, 0.6))
+    plt.yticks(rotation=90)
+    plt.grid()
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    plt.tight_layout()
     fig.savefig('./results/overhead and PDR under heavy load.pdf', dpi=300, format='pdf')
     plt.close()
 
