@@ -7,15 +7,17 @@ from multiprocessing import Process
 
 from NEDGenerator import NUM_OF_TESTS, WARMUP_PERIOD, SIMULATION_END_TIME
 
-fr_names = ["10"]
-test_names = [str(i) for i in range(1, NUM_OF_TESTS + 1)]
+# fr_names = ["00", "05", "10", "15", "20", "25", "30"]
+fr_names=["00"]
+test_names = [str(i) for i in range(1, 2)]
 # test_names = [str(i) for i in range(1, 11)]
 arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 
-hops = [str(i) for i in range(0, 5)]
-# hops = ['4']
-# experiment_names = ['withoutDD-withLoopPrevention-withoutLoadBalance', 'withoutDD-withoutLoopPrevention-withoutLoadBalance', 'withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
-experiment_names = ['withDD-withLoopPrevention-withLoadBalance-0.05', 'withDD-withLoopPrevention-withLoadBalance-0.07','withDD-withLoopPrevention-withLoadBalance-0.1', 'withDD-withLoopPrevention-withLoadBalance-0.2', 'withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
+# hops = [str(i) for i in range(0, 5)]
+hops = ['15']
+experiment_names = ['ELB']
+# experiment_names = ['withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
+# experiment_names = ['withDD-withLoopPrevention-withLoadBalance-0.05', 'withDD-withLoopPrevention-withLoadBalance-0.07','withDD-withLoopPrevention-withLoadBalance-0.1', 'withDD-withLoopPrevention-withLoadBalance-0.2', 'withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
 # experiment_names = ['withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
 parent_folder_names = ['./results/' + experiment_name + '/' for experiment_name in experiment_names]
 
@@ -25,6 +27,7 @@ def getParameters(experiment_name: str):
     LOOP_AVOIDANCE = 'false'
     LOAD_BALANCE = 'false'
     LOAD_SCALE = '1.0'
+    ELB = 'false'
 
     if 'withDD' in experiment_name:
         REQUEST_SHOULD_KNOWN_RANGE = 'true'
@@ -34,12 +37,16 @@ def getParameters(experiment_name: str):
         LOAD_BALANCE = 'true'
         if (len(experiment_name.split('-')) == 4):
             LOAD_SCALE = experiment_name.split('-')[-1]
+    if 'ELB' in experiment_name:
+        REQUEST_SHOULD_KNOWN_RANGE = 'true'
+        LOAD_BALANCE = 'false'
+        ELB = 'true'
 
-    return LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE, LOAD_BALANCE, LOAD_SCALE
+    return LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE, LOAD_BALANCE, LOAD_SCALE, ELB
 
 
 def changeOspfv2Common(experiment_name: str, hop: str):
-    LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE, LOAD_BALANCE, LOAD_SCALE = getParameters(experiment_name)
+    LOOP_AVOIDANCE, REQUEST_SHOULD_KNOWN_RANGE, LOAD_BALANCE, LOAD_SCALE, ELB = getParameters(experiment_name)
 
     file_read = open("/home/sqsq/Desktop/sat-ospf/inet/src/inet/routing/ospfv2/router/Ospfv2Common.h", "r")
     lines = file_read.readlines()
@@ -100,6 +107,12 @@ def changeOspfv2Common(experiment_name: str, hop: str):
         raise Exception('')
     if "LOAD_SCALE" in lines[69]:
         lines[69] = "#define LOAD_SCALE                             %s\n" % LOAD_SCALE
+    else:
+        raise Exception('')
+    if "ELB" in lines[72]:
+        lines[72] = "#define ELB                                    %s\n" % ELB
+    else:
+        raise Exception('')
     
     print('-------writing .h file-------')
     file_write = open("/home/sqsq/Desktop/sat-ospf/inet/src/inet/routing/ospfv2/router/Ospfv2Common.h", "w")
@@ -171,7 +184,7 @@ if __name__ == '__main__':
                 with open(parent_dir + '/queueDropPacketRaw.csv', 'w') as f:
                     print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', 'isQueue', file=f, sep=',')
                 with open(parent_dir + '/controlOverhead.csv', 'w') as f:
-                    print('config', 'hop', 'module', 'helloOverhead', 'DDOverhead', 'LSROverhead', 'LSUOverhead', 'LSACKOverhead', 'total', file=f, sep=',')
+                    print('config', 'hop', 'module', 'helloOverhead', 'DDOverhead', 'LSROverhead', 'LSUOverhead', 'LSACKOverhead', 'ELBOverhead', 'total', file=f, sep=',')
                 with open(parent_dir + '/successPacketRaw.csv', 'w') as f:
                     print('config', 'hop', 'module', 'simtime', 'delay', file=f, sep=',')
     

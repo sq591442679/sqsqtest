@@ -161,11 +161,11 @@ class ScenarioEvent:
 
 allISLSet = set()
 
-# send_interval = "0.002"
-# deliverySrcIDs = [SatelliteID(6, 5), SatelliteID(7, 5), SatelliteID(8, 5), SatelliteID(9, 5)]
+send_interval = "0.002"
+deliverySrcIDs = [SatelliteID(6, 5), SatelliteID(7, 5), SatelliteID(8, 5), SatelliteID(9, 5)]
 
-send_interval = "0.01"
-deliverySrcIDs = [SatelliteID(9, 3)]
+# send_interval = "0.01"
+# deliverySrcIDs = [SatelliteID(9, 3)]
 
 deliveryDestID = SatelliteID(5, 5)
 
@@ -546,12 +546,12 @@ def run():
     # buildNetworkConfigFile()
     # buildASConfigFile()
 
-    link_failure_rate_array = [0.1]
+    link_failure_rate_array = [0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3]
     
     # for i in range(1, NUM_OF_TESTS + 1):
-    #     os.mkdir('./scenarios/test%d' % i)
-    #     for fr in link_failure_rate_array:
-    #         buildScenarioFile(fr, './scenarios/test%d/sqsqScenario%s.xml' % (i, "{:.3f}".format(fr)))
+        # os.mkdir('./scenarios/test%d' % i)
+        # for fr in link_failure_rate_array:
+            # buildScenarioFile(fr, './scenarios/test%d/sqsqScenario%s.xml' % (i, "{:.3f}".format(fr)))
 
     buildIniFile(link_failure_rate_array)
 
