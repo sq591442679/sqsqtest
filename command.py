@@ -8,14 +8,14 @@ from multiprocessing import Process
 from NEDGenerator import NUM_OF_TESTS, WARMUP_PERIOD, SIMULATION_END_TIME
 
 # fr_names = ["00", "05", "10", "15", "20", "25", "30"]
-fr_names=["00"]
-test_names = [str(i) for i in range(1, 2)]
+fr_names=["10"]
+test_names = [str(i) for i in range(1, NUM_OF_TESTS + 1)]
 # test_names = [str(i) for i in range(1, 11)]
 arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 
 # hops = [str(i) for i in range(0, 5)]
-hops = ['15']
-experiment_names = ['ELB']
+hops = [str(i) for i in range(6, 15)]
+experiment_names = ['withoutDD-withLoopPrevention-withoutLoadBalance']
 # experiment_names = ['withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
 # experiment_names = ['withDD-withLoopPrevention-withLoadBalance-0.05', 'withDD-withLoopPrevention-withLoadBalance-0.07','withDD-withLoopPrevention-withLoadBalance-0.1', 'withDD-withLoopPrevention-withLoadBalance-0.2', 'withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
 # experiment_names = ['withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
