@@ -7,18 +7,20 @@ from multiprocessing import Process
 
 from NEDGenerator import NUM_OF_TESTS, WARMUP_PERIOD, SIMULATION_END_TIME
 
-# fr_names = ["00", "05", "10", "15", "20", "25", "30"]
-fr_names=["10"]
+# fr_names = ["00", "05", "10", "15", "20"]
+fr_names=["05", "15"]
 test_names = [str(i) for i in range(1, NUM_OF_TESTS + 1)]
 # test_names = [str(i) for i in range(1, 11)]
 arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 
-# hops = [str(i) for i in range(0, 5)]
-hops = [str(i) for i in range(6, 15)]
-experiment_names = ['withoutDD-withLoopPrevention-withoutLoadBalance']
-# experiment_names = ['withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
-# experiment_names = ['withDD-withLoopPrevention-withLoadBalance-0.05', 'withDD-withLoopPrevention-withLoadBalance-0.07','withDD-withLoopPrevention-withLoadBalance-0.1', 'withDD-withLoopPrevention-withLoadBalance-0.2', 'withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
-# experiment_names = ['withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
+hops = [str(i) for i in range(5, 8)]
+# hops = ['15']
+# experiment_names = ['ELB']  # test ELB
+# hops = []
+# experiment_names = ['withDD-withoutLoopPrevention-withoutLoadBalance']  # test OSPF
+# experiment_names = ['withDD-withLoopPrevention-withLoadBalance-0.05', 'withDD-withLoopPrevention-withoutLoadBalance']
+# experiment_names = ['withDD-withLoopPrevention-withLoadBalance-0.05', 'withDD-withLoopPrevention-withLoadBalance-0.2', 'withDD-withLoopPrevention-withoutLoadBalance']
+experiment_names = ['withDD-withLoopPrevention-withoutLoadBalance']
 parent_folder_names = ['./results/' + experiment_name + '/' for experiment_name in experiment_names]
 
 
@@ -146,11 +148,7 @@ if __name__ == '__main__':
         configs in omnetpp.ini, send_interval and deliverySrcIDs in NEDGenerator.py
         experiment_names and hops in this file
     """
-    
-    cmds = ["opp_run -m -u Cmdenv -c " + i + " --cmdenv-express-mode=true -n " + 
-            "../..:../../../showcases:../../../src:../../../tests/validation:../../../tests/networks:../../../tutorials  " + 
-            "--image-path=../../../images -l ../../../src/INET omnetpp.ini" 
-            for i in arg_names]
+
 
     # for parent_folder_name in parent_folder_names:
     #     for hop in hops
@@ -176,24 +174,30 @@ if __name__ == '__main__':
             if result.returncode != 0:
                 raise Exception('')
 
-            for config in arg_names:
-                parent_dir = './results/' + experiment_name + '/' + hop + '/' + config 
-                os.mkdir(parent_dir)
-                with open(parent_dir + '/dropPacketRaw.csv', 'w') as f:
-                    print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', 'isQueue', file=f, sep=',')
-                with open(parent_dir + '/queueDropPacketRaw.csv', 'w') as f:
-                    print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', 'isQueue', file=f, sep=',')
-                with open(parent_dir + '/controlOverhead.csv', 'w') as f:
-                    print('config', 'hop', 'module', 'helloOverhead', 'DDOverhead', 'LSROverhead', 'LSUOverhead', 'LSACKOverhead', 'ELBOverhead', 'total', file=f, sep=',')
-                with open(parent_dir + '/successPacketRaw.csv', 'w') as f:
-                    print('config', 'hop', 'module', 'simtime', 'delay', file=f, sep=',')
-    
-            for cmd in cmds:
-                process = Process(target=execute, args=(cmd,))
-                process.start()
-                processes.append(process)
+            for fr in fr_names:
+                for config in ['fail' + fr + '_test' + j for j in test_names]:
+                    parent_dir = './results/' + experiment_name + '/' + hop + '/' + config 
+                    os.mkdir(parent_dir)
+                    with open(parent_dir + '/dropPacketRaw.csv', 'w') as f:
+                        print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', 'isQueue', file=f, sep=',')
+                    with open(parent_dir + '/queueDropPacketRaw.csv', 'w') as f:
+                        print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', 'isQueue', file=f, sep=',')
+                    with open(parent_dir + '/controlOverhead.csv', 'w') as f:
+                        print('config', 'hop', 'module', 'helloOverhead', 'DDOverhead', 'LSROverhead', 'LSUOverhead', 'LSACKOverhead', 'ELBOverhead', 'total', file=f, sep=',')
+                    with open(parent_dir + '/successPacketRaw.csv', 'w') as f:
+                        print('config', 'hop', 'module', 'simtime', 'delay', file=f, sep=',')
 
-            for process in processes:
-                process.join()
+                cmds = ["opp_run -m -u Cmdenv -c " + i + " --cmdenv-express-mode=true -n " + 
+                "../..:../../../showcases:../../../src:../../../tests/validation:../../../tests/networks:../../../tutorials  " + 
+                "--image-path=../../../images -l ../../../src/INET omnetpp.ini" 
+                for i in ['fail' + fr + '_test' + j for j in test_names]]
+    
+                for cmd in cmds:
+                    process = Process(target=execute, args=(cmd,))
+                    process.start()
+                    processes.append(process)
+
+                for process in processes:
+                    process.join()
 
     print('-------------------END----------------------')
