@@ -161,11 +161,11 @@ class ScenarioEvent:
 
 allISLSet = set()
 
-# send_interval = "0.002"
-# deliverySrcIDs = [SatelliteID(6, 5), SatelliteID(7, 5), SatelliteID(8, 5), SatelliteID(9, 5)]
+send_interval = "0.002"
+deliverySrcIDs = [SatelliteID(6, 5), SatelliteID(7, 5), SatelliteID(8, 5), SatelliteID(9, 5)]
 
-send_interval = "0.01"
-deliverySrcIDs = [SatelliteID(9, 3)]
+# send_interval = "0.01"
+# deliverySrcIDs = [SatelliteID(9, 3)]
 
 deliveryDestID = SatelliteID(5, 5)
 
