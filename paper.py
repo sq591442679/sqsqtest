@@ -108,17 +108,17 @@ def drawEEDUnderLightLoad():
                 delay.append(getAvgDelay(folder_name, arg_names))
         if i == 0:
             ax.plot(overhead, delay, label='%d%%, LoFi(n, 1)' % int(fr), color='#ff7f0e', 
-                    marker='o', linestyle='--', linewidth=1.5, markersize=10)
+                    marker='o', linestyle='--', linewidth=1.5, markersize=10, clip_on=False)
         else:
             ax.plot(overhead, delay, label='%d%%, LoFi(n, 1)' % int(fr), color='#ff7f0e', 
-                    marker='o', markerfacecolor='white', linestyle='--', linewidth=1.5, markersize=10)
+                    marker='o', markerfacecolor='white', linestyle='--', linewidth=1.5, markersize=10, clip_on=False)
         
         print(overhead, delay)
         for j in range(len(delay)):
             if i == 0:
                 if hops[j] == '1':
-                    ax.text(overhead[j], delay[j] - 0.4, hops[j],
-                        ha='right', va='top', fontdict={'size': 23})
+                    ax.text(overhead[j] + 0.004, delay[j] + 0.2, hops[j],
+                        ha='center', va='bottom', fontdict={'size': 23})
                 else:
                     ax.text(overhead[j], delay[j] - 0.4, hops[j],
                         ha='center', va='top', fontdict={'size': 23})
@@ -136,20 +136,20 @@ def drawEEDUnderLightLoad():
         overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
         delay.append(getAvgDelay(folder_name, arg_names))
         if i == 0:
-            ax.plot(overhead, delay, color='#d62728', marker='^', linewidth=2.5, markersize=10)
-            ax.text(overhead[0] + 0.02, delay[0], '%d%%, OPSPF' % int(fr),
+            ax.plot(overhead, delay, color='#d62728', marker='^', linewidth=2.5, markersize=10, clip_on=False)
+            ax.text(overhead[0] + 0.02, delay[0], '%d%%, OPSPF' % int(fr), color='#d62728',
                         ha='left', va='center', fontdict={'size': 23})
         else:
-            ax.plot(overhead, delay, color='#d62728', marker='^', markerfacecolor='white', linewidth=2.5, markersize=10)
-            ax.text(overhead[0], delay[0] - 1, '%d%%,\nOPSPF' % int(fr),
-                        ha='center', va='top', fontdict={'size': 23})
+            ax.plot(overhead, delay, color='#d62728', marker='^', markerfacecolor='white', linewidth=2.5, markersize=10, clip_on=False)
+            ax.text(overhead[0] + 0.02, delay[0] - 0.8, '%d%%,\nOPSPF' % int(fr), color='#d62728',
+                        ha='right', va='top', fontdict={'size': 23})
 
     
     # ax.set_title('Avg. End-to-end delay & Control overhead \nunder Light Load, Link Failure Rate = 10%')
     ax.set_xlabel('Control overhead (MBps)')
     ax.set_ylabel('End-to-end delay (ms)')
-    ax.set_ylim(bottom=65, top=89)
-    ax.set_xlim(right=0.65)
+    ax.set_ylim(bottom=65, top=90)
+    ax.set_xlim(left=0, right=0.6)
     plt.legend(borderpad=0.1, labelspacing=0.02)
     plt.grid()
     # ax.spines['right'].set_visible(False)
@@ -197,15 +197,18 @@ def drawPDRUnderLightLoad():
                 overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
                 ratio.append(getAvgPacketLossRatio(folder_name, arg_names, 10000))
         if i == 0:
-            ax.plot(overhead, ratio, label='%d%%, LoFi(n, 1)' % int(fr), color='#ff7f0e', 
+            ax.plot(overhead, ratio, label='%d%%, LoFi(n, 1)' % int(fr), color='#ff7f0e', clip_on=False,
                     marker='o', linestyle='--', linewidth=1.5, markersize=10)
         else:
-            ax.plot(overhead, ratio, label='%d%%, LoFi(n, 1)' % int(fr), color='#ff7f0e', 
+            ax.plot(overhead, ratio, label='%d%%, LoFi(n, 1)' % int(fr), color='#ff7f0e', clip_on=False,
                     marker='o', markerfacecolor='white', linestyle='--', linewidth=1.5, markersize=10)
         for j in range(len(ratio)):
             if i == 1 and hops[j] == '1':
-                ax.text(overhead[j], ratio[j], hops[j],
-                    ha='left', va='center', fontdict={'size': 23})
+                ax.text(overhead[j] + 0.01, ratio[j] + 0.01, hops[j],
+                    ha='left', va='top', fontdict={'size': 23})
+            elif i == 1 and hops[j] == '7':
+                ax.text(overhead[j] + 0.01, ratio[j] + 0.01, hops[j],
+                    ha='right', va='bottom', fontdict={'size': 23})
             else:
                 ax.text(overhead[j], ratio[j], hops[j],
                     ha='left', va='bottom', fontdict={'size': 23})
@@ -221,24 +224,25 @@ def drawPDRUnderLightLoad():
         ratio.append(getAvgPacketLossRatio(folder_name, arg_names, 10000))
         if i == 0:
             ax.plot(overhead, ratio, color='#d62728', marker='^', linewidth=2.5, markersize=10)
-            ax.text(overhead[0] + 0.02, ratio[0], '%d%%, OPSPF' % int(fr),
+            ax.text(overhead[0] + 0.02, ratio[0], '%d%%, OPSPF' % int(fr), color='#d62728',
                         ha='left', va='center', fontdict={'size': 23})
         else:
             ax.plot(overhead, ratio, color='#d62728', marker='^', markerfacecolor='white', linewidth=2.5, markersize=10)
-            ax.text(overhead[0], ratio[0] + 0.02, '%d%%,\nOPSPF' % int(fr),
+            ax.text(overhead[0] - 0.035, ratio[0] + 0.02, '%d%%,\nOPSPF' % int(fr), color='#d62728',
                         ha='center', va='bottom', fontdict={'size': 23})
     
 
     # ax.set_title('Avg. Packet Delivery Ratio & Control overhead \nunder Light Load, Link Failure Rate = 10%')
     ax.set_xlabel('Control overhead (MBps)')
     ax.set_ylabel('Packet loss ratio (%)')
-    ax.set_ylim(bottom=0, top=2.1)
-    ax.set_xlim(right=0.65)
+    ax.set_ylim(bottom=0, top=2)
+    ax.set_xlim(left=0, right=0.6)
     plt.legend(borderpad=0.1, labelspacing=0.02)
     plt.grid()
     # ax.spines['right'].set_visible(False)
     # ax.spines['top'].set_visible(False)
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6], ['0', '0.1', '0.2', '0.3', '0.4', '0.5', '0.6'])
+    plt.yticks([0.0, 0.5, 1.0, 1.5, 2.0], ['0', '0.5', '1.0', '1.5', '2.0'])
     plt.tight_layout()
     fig.savefig('./results/overhead and PDR under light load.pdf', dpi=300, format='pdf')
     plt.close()
@@ -258,61 +262,37 @@ def drawEEDUnderHeavyLoad():
     overhead = []
     delay = []
     hops = [str(i) for i in range(1, 8)]
-    # hops.append('ELB')
     for hop in hops:
-        if hop.isnumeric():
-            folder_name = root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/' + hop + '/'
-            overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
-            delay.append(getAvgDelay(folder_name, arg_names))
+        folder_name = root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/' + hop + '/'
+        overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
+        delay.append(getAvgDelay(folder_name, arg_names))
             
     ax.plot(overhead, delay, label="LoFi(n, 0.05)", color='#ff7f0e', 
-            marker='o', linestyle='--', linewidth=1.5, markersize=10)
+            marker='o', linestyle='--', linewidth=1.5, markersize=10, clip_on=False)
     for i in range(len(delay)):
-        if hops[i].isnumeric():
-            ax.text(overhead[i], delay[i] - 20, hops[i],
+        if hops[i] == '7':
+            ax.text(overhead[i], delay[i] - 30, hops[i],
                 ha='right', va='top', fontdict={'size': 23})
         else:
-            ax.text(overhead[i], delay[i] - 20, hops[i],
-                ha='right', va='bottom', fontdict={'size': 23})
-
-
-    # overhead = []
-    # delay = []
-    # hops = [str(i) for i in range(0, 5)]
-    # for hop in hops:
-    #     folder_name = root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.2/' + hop + '/'
-    #     overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
-    #     delay.append(getAvgDelay(folder_name, arg_names))
-
-    # ax.plot(overhead, delay, label="load balance, $\delta$=0.2", marker='X', linestyle='--', linewidth=2.5, markersize=10)
-    # for i in range(len(delay)):
-    #     ax.text(overhead[i], delay[i] - 5, hops[i],
-    #         ha='left', va='bottom', fontdict={'size': 23})
+            ax.text(overhead[i], delay[i] - 30, hops[i],
+                ha='center', va='top', fontdict={'size': 23})
     
 
     overhead = []
     delay = []
     hops = [str(i) for i in range(1, 8)]
-    # hops.append('OSPFL')
-    # hops.append('OPSPF')
     for hop in hops:
-        if hop.isnumeric():
-            folder_name = root_dir + 'heavy_load/withDD-withLoopPrevention-withoutLoadBalance/' + hop + '/'
-            overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
-            delay.append(getAvgDelay(folder_name, arg_names))
-        elif hop == 'OSPFL':
-            folder_name = root_dir + 'heavy_load/withDD-withoutLoopPrevention-withoutLoadBalance/OSPF/'
-            overhead.append(getAvgControlOverhead(folder_name, arg_names, True))
-            delay.append(getAvgDelay(folder_name, arg_names))
-        elif hop == 'OPSPF':
-            folder_name = root_dir + 'heavy_load/withDD-withoutLoopPrevention-withoutLoadBalance/OSPF/'
-            overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
-            delay.append(getAvgDelay(folder_name, arg_names))
+        folder_name = root_dir + 'heavy_load/withDD-withLoopPrevention-withoutLoadBalance/' + hop + '/'
+        overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
+        delay.append(getAvgDelay(folder_name, arg_names))
 
     ax.plot(overhead, delay, label='LoFi(n, 1)', color='#ff7f0e', 
-            marker='o', markerfacecolor='white', linestyle='--', linewidth=1.5, markersize=10)
+            marker='o', markerfacecolor='white', linestyle='--', linewidth=1.5, markersize=10, clip_on=False)
     for i in range(len(delay)):
-        if hops[i] == '2':
+        if hops[i] == '1':
+            ax.text(overhead[i] + 0.002, delay[i], hops[i],
+                ha='center', va='bottom', fontdict={'size': 23})
+        elif hops[i] == '2':
             ax.text(overhead[i], delay[i], hops[i],
                 ha='left', va='bottom', fontdict={'size': 23})
         else:
@@ -325,8 +305,8 @@ def drawEEDUnderHeavyLoad():
     folder_name = root_dir + 'heavy_load/withDD-withoutLoopPrevention-withoutLoadBalance/OSPF/'
     overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
     delay.append(getAvgDelay(folder_name, arg_names))
-    ax.plot(overhead, delay, color='#2ca02c', marker='^', linewidth=2.5, markersize=10)
-    ax.text(overhead[0], delay[0] - 5, 'OPSPF',
+    ax.plot(overhead, delay, color='#d62728', marker='^', linewidth=2.5, markersize=10)
+    ax.text(overhead[0], delay[0] - 5, 'OPSPF', color='#d62728',
                 ha='left', va='bottom', fontdict={'size': 23})
 
 
@@ -337,29 +317,25 @@ def drawEEDUnderHeavyLoad():
     overhead.append(getAvgControlOverhead(folder_name, arg_names, True))
     delay.append(getAvgDelay(folder_name, arg_names))   
     print(overhead, delay)
-    ax2 = fig.add_axes([0.5, 0.43, 0.2, 0.23])
-    ax2.plot(overhead, delay, color='#d62728', marker='s', markersize=10)
-    ax2.text(overhead[0], delay[0] + 10, 'ELB',
+    ax2 = fig.add_axes([0.56, 0.42, 0.25, 0.25])
+    ax2.plot(overhead, delay, color='#2ca02c', marker='s', markersize=10)
+    ax2.text(overhead[0], delay[0] + 10, 'ELB', color='#2ca02c',
                 ha='center', va='bottom', fontdict={'size': 23})
     ax2.tick_params(axis='both', labelsize=20)
-    
-    # ideal_x = numpy.linspace(-1, 1, 1000)
-    # ideal_y = numpy.full_like(ideal_x, 33.5)
-    # ax.plot(ideal_x, ideal_y, linestyle='-.', label='ideal delay', linewidth=2.5, markersize=10)
         
     
     # ax.set_title('Avg. End-to-end delay & Control overhead \nunder Heavy Load, Link Failure Rate = 10%')
     ax.set_xlabel('Control overhead (MBps)')
     ax.set_ylabel('End-to-end delay (ms)')
-    ax.set_ylim(bottom=0, top=1560)
-    ax.set_xlim(left=-0.01)
+    ax.set_ylim(bottom=0, top=1500)
+    ax.set_xlim(left=0, right=0.7)
     lines = []
     labels = []
     for _ax in fig.axes:
         axLine, axLabel = _ax.get_legend_handles_labels()
         lines.extend(axLine)
         labels.extend(axLabel)
-    fig.legend(lines, labels, borderpad=0.1, labelspacing=0.02, loc=(0.55, 0.82))
+    fig.legend(lines, labels, borderpad=0.1, labelspacing=0.02, loc=(0.52, 0.81))
     ax.grid(True)
     ax.set_xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7])
     ax.set_xticklabels(['0', '0.1', '0.2', '0.3', '0.4', '0.5', '0.6', '0.7'])
@@ -367,12 +343,12 @@ def drawEEDUnderHeavyLoad():
     ax.set_yticklabels([str(i) for i in [0, 250, 500, 750, 1000, 1250, 1500]])
 
     ax2.grid(True)
-    ax2.set_xlim(left=0.94, right=1.02)
-    ax2.set_ylim(top=780)
-    ax2.set_xticks([0.95, 1.00])
-    ax2.set_xticklabels(['0.95', '1'])
-    ax2.set_yticks([700, 750])
-    ax2.set_yticklabels(['700', '750'])
+    ax2.set_xlim(left=0.95, right=1.05)
+    ax2.set_ylim(bottom=700, top=800)
+    ax2.set_xticks([0.95, 1.00, 1.05])
+    ax2.set_xticklabels(['0.95', '1', '1.05'])
+    ax2.set_yticks([700, 750, 800])
+    ax2.set_yticklabels(['700', '750', '800'])
 
     plt.tight_layout()
     fig.savefig('./results/overhead and EED under heavy load.pdf', dpi=300, format='pdf')
@@ -399,54 +375,34 @@ def drawPDRUnderHeavyLoad():
         ratio.append(getAvgPacketLossRatio(folder_name, arg_names, 200000))
         overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
 
+    print(overhead, ratio)
     ax.plot(overhead, ratio, label="LoFi(n, 0.05)", color='#ff7f0e', 
-            marker='o', linestyle='--', linewidth=1.5, markersize=10)
+            marker='o', linestyle='--', linewidth=1.5, markersize=10, clip_on=False)
     for i in range(len(ratio)):
-        if hops[i].isnumeric():
+        if hops[i] != '7':
             ax.text(overhead[i], ratio[i] - 0.1, hops[i],
-                ha='right', va='bottom', fontdict={'size': 23})
+                ha='center', va='bottom', fontdict={'size': 23})
         else:
             ax.text(overhead[i], ratio[i] - 0.1, hops[i],
-                ha='right', va='center', fontdict={'size': 23})
+                ha='right', va='bottom', fontdict={'size': 23})
 
-
-    # overhead = []
-    # ratio = []
-    # hops = [str(i) for i in range(0, 5)]
-    # for hop in hops:
-    #     folder_name = root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.2/' + hop + '/'
-    #     ratio.append(getAvgPacketLossRatio(folder_name, arg_names, 200000))
-    #     overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
-
-    # ax.plot(overhead, ratio, label="load balance, $\delta$=0.2", marker='X', linestyle='--', linewidth=2.5, markersize=10)
-    # for i in range(len(ratio)):
-    #     ax.text(overhead[i], ratio[i], hops[i],
-    #         ha='left', va='bottom', fontdict={'size': 23})
-    
 
     overhead = []
     ratio = []
     hops = [str(i) for i in range(1, 8)]
-    # hops.append('OSPFL')
-    # hops.append('OPSPF')
     for hop in hops:
-        if hop.isnumeric():
-            folder_name = root_dir + 'heavy_load/withDD-withLoopPrevention-withoutLoadBalance/' + hop + '/'
-            ratio.append(getAvgPacketLossRatio(folder_name, arg_names, 200000))
-            overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
-        elif hop == 'OSPFL':
-            folder_name = root_dir + 'heavy_load/withDD-withoutLoopPrevention-withoutLoadBalance/OSPF/'
-            ratio.append(getAvgPacketLossRatio(folder_name, arg_names, 200000))
-            overhead.append(getAvgControlOverhead(folder_name, arg_names, True))
-        elif hop == 'OPSPF':
-            folder_name = root_dir + 'heavy_load/withDD-withoutLoopPrevention-withoutLoadBalance/OSPF/'
-            ratio.append(getAvgPacketLossRatio(folder_name, arg_names, 200000))
-            overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
+        folder_name = root_dir + 'heavy_load/withDD-withLoopPrevention-withoutLoadBalance/' + hop + '/'
+        ratio.append(getAvgPacketLossRatio(folder_name, arg_names, 200000))
+        overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
 
     ax.plot(overhead, ratio, label='LoFi(n, 1)', color='#ff7f0e', 
-            marker='o', markerfacecolor='white', linestyle='--', linewidth=1.5, markersize=10)
+            marker='o', markerfacecolor='white', linestyle='--', linewidth=1.5, markersize=10, clip_on=False)
+    print(overhead, ratio)
     for i in range(len(ratio)):
-        if hops[i] == '2':
+        if hops[i] == '1':
+            ax.text(overhead[i] + 0.002, ratio[i], hops[i],
+                ha='center', va='bottom', fontdict={'size': 23})
+        elif hops[i] == '2':
             ax.text(overhead[i], ratio[i], hops[i],
                 ha='left', va='bottom', fontdict={'size': 23})
         else:
@@ -458,20 +414,21 @@ def drawPDRUnderHeavyLoad():
     folder_name = root_dir + 'heavy_load/withDD-withoutLoopPrevention-withoutLoadBalance/OSPF/'
     ratio.append(getAvgPacketLossRatio(folder_name, arg_names, 200000))
     overhead.append(getAvgControlOverhead(folder_name, arg_names, False))
-    ax.plot(overhead, ratio, color='#2ca02c', marker='^', linewidth=2.5, markersize=10)
-    ax.text(overhead[0], ratio[0], 'OPSPF',
+    print(overhead, ratio)
+    ax.plot(overhead, ratio, color='#d62728', marker='^', linewidth=2.5, markersize=10)
+    ax.text(overhead[0], ratio[0], 'OPSPF', color='#d62728',
                 ha='left', va='bottom', fontdict={'size': 23})
     
+
     overhead = []
     ratio = []
     folder_name = root_dir + 'heavy_load/ELB/15/'
-
     overhead.append(getAvgControlOverhead(folder_name, arg_names, True))
     ratio.append(getAvgPacketLossRatio(folder_name, arg_names, 200000))   
     print(overhead, ratio)
-    ax2 = fig.add_axes([0.5, 0.45, 0.2, 0.2])
-    ax2.plot(overhead, ratio, color='#d62728', marker='s', markersize=10)
-    ax2.text(overhead[0], ratio[0] + 0.1, 'ELB',
+    ax2 = fig.add_axes([0.5, 0.37, 0.25, 0.25])
+    ax2.plot(overhead, ratio, color='#2ca02c', marker='s', markersize=10)
+    ax2.text(overhead[0], ratio[0] + 0.1, 'ELB', color='#2ca02c',
                 ha='center', va='bottom', fontdict={'size': 23})
     ax2.tick_params(axis='both', labelsize=20)
     
@@ -479,26 +436,26 @@ def drawPDRUnderHeavyLoad():
     # ax.set_title('Avg. Packet Delivery Ratio & Control overhead \nunder Heavy Load, Link Failure Rate = 10%')
     ax.set_xlabel('Control overhead (MBps)')
     ax.set_ylabel('Packet loss ratio (%)')
-    ax.set_ylim(bottom=-1, top=48)
-    ax.set_xlim(left=-0.01)
+    ax.set_ylim(bottom=0, top=50)
+    ax.set_xlim(left=0, right=0.7)
     lines = []
     labels = []
     for _ax in fig.axes:
         axLine, axLabel = _ax.get_legend_handles_labels()
         lines.extend(axLine)
         labels.extend(axLabel)
-    fig.legend(lines, labels, borderpad=0.1, labelspacing=0.02, loc=(0.55, 0.82))
+    fig.legend(lines, labels, borderpad=0.1, labelspacing=0.02, loc=(0.52, 0.8))
     ax.grid(True)
     ax.set_xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7])
     ax.set_xticklabels(['0', '0.1', '0.2', '0.3', '0.4', '0.5', '0.6', '0.7'])
 
     ax2.grid(True)
-    ax2.set_xlim(left=0.94, right=1.02)
-    # ax2.set_ylim(top=790)
-    ax2.set_xticks([0.95, 1.00])
-    ax2.set_xticklabels(['0.95', '1'])
-    # ax2.set_yticks([700, 750])
-    # ax2.set_yticklabels(['700', '750'])
+    ax2.set_xlim(left=0.95, right=1.05)
+    ax2.set_ylim(bottom=17, top=19)
+    ax2.set_xticks([0.95, 1.00, 1.05])
+    ax2.set_xticklabels(['0.95', '1', '1.05'])
+    ax2.set_yticks([17, 18, 19])
+    ax2.set_yticklabels(['17', '18', '19'])
     
     plt.tight_layout()
     fig.savefig('./results/overhead and PDR under heavy load.pdf', dpi=300, format='pdf')
@@ -609,7 +566,7 @@ def drawLightLoadOverheadunderDifferentFailureRate():
 
         for fr in fr_names:
             arg_names = ["fail" + fr + "_test" + j for j in test_names]
-            overhead_list.append(getAvgControlOverhead(folder_names[i], arg_names, False))
+            overhead_list.append(getAvgControlOverhead(folder_names[i], arg_names, True))
 
         x = [int(j) for j in fr_names]
         ax.plot(x, overhead_list, label=experiment_names[i], marker=markers[i], linestyle=linestyles[i], linewidth=3, markersize=10)
@@ -624,11 +581,11 @@ def drawLightLoadOverheadunderDifferentFailureRate():
 
 
 def drawHeavyLoadPDRUnderDifferentFailureRate():
-    plt.rcParams['axes.titlesize'] = 42
-    plt.rcParams['axes.labelsize'] = 42
-    plt.rcParams['xtick.labelsize'] = 42
-    plt.rcParams['ytick.labelsize'] = 42
-    plt.rcParams['legend.fontsize'] = 40
+    plt.rcParams['axes.titlesize'] = 60
+    plt.rcParams['axes.labelsize'] = 60
+    plt.rcParams['xtick.labelsize'] = 60
+    plt.rcParams['ytick.labelsize'] = 60
+    plt.rcParams['legend.fontsize'] = 46
     fig, ax = plt.subplots()
 
     fr_names = ["00", "05", "10", "15", "20"]
@@ -639,7 +596,7 @@ def drawHeavyLoadPDRUnderDifferentFailureRate():
     folder_names.append(root_dir + 'heavy_load/ELB/15/')
 
     experiment_names = ['LoFi(2, 0.05)', 'LoFi(4, 0.05)', 'ELB']
-    hatches = ['++', '///', '\\\\\\', '']
+    hatches = ['+', '//', '\\\\', '']
 
     total_width, num = 0.7, 3
     width = total_width / num
@@ -656,14 +613,16 @@ def drawHeavyLoadPDRUnderDifferentFailureRate():
                 color='white', edgecolor=plt.rcParams['axes.prop_cycle'].by_key()['color'][i])
     
     ax.set_xlabel('Link failure rate (%)')
-    ax.set_ylabel('Packet loss rate (%)')
+    ax.set_ylabel('Packet loss ratio')
     ax.set_ylim(top=25)
     ax.set_xticks([0, 1, 2, 3, 4])
     ax.set_xticklabels([str(i * 5) for i in [0, 1, 2, 3, 4]])
-    legend = ax.legend(borderpad=0.1, labelspacing=0.02, ncol=3, columnspacing=1, handletextpad=0.2)
-    plt.grid()
+    ax.set_yticks([0, 5, 10, 15, 20, 25])
+    ax.set_yticklabels(['0', '5%', '10%', '15%', '20%', '25%'])
+    legend = ax.legend(borderpad=0.1, labelspacing=0.02, ncol=3, columnspacing=1, handletextpad=0.2, loc='upper left')
+    plt.grid(axis='y')
 
-    width, height = 16, 9
+    width, height = 20, 9
     fig.set_size_inches(width, height)
     plt.tight_layout()
     fig.savefig('./results/PDR on different fr under heavy load.pdf', dpi=300, format='pdf')
@@ -671,11 +630,11 @@ def drawHeavyLoadPDRUnderDifferentFailureRate():
 
 
 def drawHeavyLoadEEDUnderDifferentFailureRate():
-    plt.rcParams['axes.titlesize'] = 42
-    plt.rcParams['axes.labelsize'] = 42
-    plt.rcParams['xtick.labelsize'] = 42
-    plt.rcParams['ytick.labelsize'] = 42
-    plt.rcParams['legend.fontsize'] = 40
+    plt.rcParams['axes.titlesize'] = 60
+    plt.rcParams['axes.labelsize'] = 60
+    plt.rcParams['xtick.labelsize'] = 60
+    plt.rcParams['ytick.labelsize'] = 60
+    plt.rcParams['legend.fontsize'] = 46
     fig, ax = plt.subplots()
 
     fr_names = ["00", "05", "10", "15", "20"]
@@ -686,7 +645,7 @@ def drawHeavyLoadEEDUnderDifferentFailureRate():
     folder_names.append(root_dir + 'heavy_load/ELB/15/')
 
     experiment_names = ['LoFi(2, 0.05)', 'LoFi(4, 0.05)', 'ELB']
-    hatches = ['++', '///', '\\\\\\', '']
+    hatches = ['+', '//', '\\\\', '']
 
     total_width, num = 0.7, 3
     width = total_width / num
@@ -703,14 +662,16 @@ def drawHeavyLoadEEDUnderDifferentFailureRate():
                 color='white', edgecolor=plt.rcParams['axes.prop_cycle'].by_key()['color'][i])
     
     ax.set_xlabel('Link failure rate (%)')
-    ax.set_ylabel('End-to-end delay (ms)')
-    ax.set_ylim(bottom=0, top=1070)
+    ax.set_ylabel('Delay (ms)')
+    ax.set_ylim(bottom=0, top=1000)
+    ax.set_yticks([0, 250, 500, 750, 1000])
+    ax.set_yticklabels(['0', '250', '500', '750', '1000'])
     ax.set_xticks([0, 1, 2, 3, 4])
     ax.set_xticklabels([str(i * 5) for i in [0, 1, 2, 3, 4]])
     legend = ax.legend(borderpad=0.1, labelspacing=0.02, ncol=3, columnspacing=1, handletextpad=0.2)
-    plt.grid()
+    plt.grid(axis='y')
 
-    width, height = 16, 9
+    width, height = 20, 9
     fig.set_size_inches(width, height)
 
     plt.tight_layout()
@@ -719,11 +680,11 @@ def drawHeavyLoadEEDUnderDifferentFailureRate():
 
 
 def drawHeavyLoadOverheadunderDifferentFailureRate():
-    plt.rcParams['axes.titlesize'] = 42
-    plt.rcParams['axes.labelsize'] = 42
-    plt.rcParams['xtick.labelsize'] = 42
-    plt.rcParams['ytick.labelsize'] = 42
-    plt.rcParams['legend.fontsize'] = 40
+    plt.rcParams['axes.titlesize'] = 60
+    plt.rcParams['axes.labelsize'] = 60
+    plt.rcParams['xtick.labelsize'] = 60
+    plt.rcParams['ytick.labelsize'] = 60
+    plt.rcParams['legend.fontsize'] = 46
     fig, ax = plt.subplots()
 
     fr_names = ["00", "05", "10", "15", "20"]
@@ -734,7 +695,7 @@ def drawHeavyLoadOverheadunderDifferentFailureRate():
     folder_names.append(root_dir + 'heavy_load/ELB/15/')
 
     experiment_names = ['LoFi(2, 0.05)', 'LoFi(4, 0.05)', 'ELB']
-    hatches = ['++', '///', '\\\\\\', '']
+    hatches = ['+', '//', '\\\\', '']
 
     total_width, num = 0.7, 3
     width = total_width / num
@@ -746,21 +707,21 @@ def drawHeavyLoadOverheadunderDifferentFailureRate():
         overhead = []
         for fr in fr_names:
             arg_names = ['fail' + fr + '_test' + str(j) for j in range(1, NUM_OF_TESTS + 1)]
-            overhead.append(getAvgControlOverhead(folder_names[i], arg_names, False))
+            overhead.append(getAvgControlOverhead(folder_names[i], arg_names, True))
         plt.bar(x + i * (width + 0.05), overhead, width=width, label=experiment_names[i], hatch=hatches[i], linewidth=4,
                 color='white', edgecolor=plt.rcParams['axes.prop_cycle'].by_key()['color'][i])
     
     ax.set_xlabel('Link failure rate (%)')
-    ax.set_ylabel('Control Overhead (MBps)')
-    ax.set_ylim(top=1.6)
+    ax.set_ylabel('Control Overhead')
+    ax.set_ylim(top=1.5)
     ax.set_yticks([0, 0.5, 1.0, 1.5])
-    ax.set_yticklabels([str(i) for i in [0, 0.5, 1.0, 1.5]])
+    ax.set_yticklabels([str(i) + 'MBps' for i in [0, 0.5, 1.0, 1.5]])
     ax.set_xticks([0, 1, 2, 3, 4])
     ax.set_xticklabels([str(i * 5) for i in [0, 1, 2, 3, 4]])
     legend = ax.legend(borderpad=0.1, labelspacing=0.02, ncol=3, columnspacing=1, handletextpad=0.2)
-    plt.grid()
+    plt.grid(axis='y')
 
-    width, height = 16, 9
+    width, height = 20, 9
     fig.set_size_inches(width, height)
     plt.tight_layout()
     fig.savefig('./results/Overhead on different fr under heavy load.pdf', dpi=300, format='pdf')
@@ -778,8 +739,8 @@ if __name__ == '__main__':
     # drawLightLoadEEDUnderDifferentFailureRate()
     # drawLightLoadOverheadunderDifferentFailureRate()
 
-    drawHeavyLoadPDRUnderDifferentFailureRate()
-    drawHeavyLoadEEDUnderDifferentFailureRate()
+    # drawHeavyLoadPDRUnderDifferentFailureRate()
+    # drawHeavyLoadEEDUnderDifferentFailureRate()
     drawHeavyLoadOverheadunderDifferentFailureRate()
 
     pass
