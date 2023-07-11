@@ -590,12 +590,12 @@ def drawHeavyLoadPDRUnderDifferentFailureRate():
 
     fr_names = ["00", "05", "10", "15", "20"]
     folder_names = []
-    folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/2/')
-    # folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/3/')
     folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/4/')
+    # folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/3/')
+    folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.2/4/')
     folder_names.append(root_dir + 'heavy_load/ELB/15/')
 
-    experiment_names = ['LoFi(2, 0.05)', 'LoFi(4, 0.05)', 'ELB']
+    experiment_names = ['LoFi(4, 0.05)', 'LoFi(4, 0.2)', 'ELB']
     hatches = ['+', '//', '\\\\', '']
 
     total_width, num = 0.7, 3
@@ -639,12 +639,12 @@ def drawHeavyLoadEEDUnderDifferentFailureRate():
 
     fr_names = ["00", "05", "10", "15", "20"]
     folder_names = []
-    folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/2/')
-    # folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/3/')
     folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/4/')
+    # folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/3/')
+    folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.2/4/')
     folder_names.append(root_dir + 'heavy_load/ELB/15/')
 
-    experiment_names = ['LoFi(2, 0.05)', 'LoFi(4, 0.05)', 'ELB']
+    experiment_names = ['LoFi(4, 0.05)', 'LoFi(4, 0.2)', 'ELB']
     hatches = ['+', '//', '\\\\', '']
 
     total_width, num = 0.7, 3
@@ -689,12 +689,12 @@ def drawHeavyLoadOverheadunderDifferentFailureRate():
 
     fr_names = ["00", "05", "10", "15", "20"]
     folder_names = []
-    folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/2/')
-    # folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/3/')
     folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/4/')
+    # folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.05/3/')
+    folder_names.append(root_dir + 'heavy_load/withDD-withLoopPrevention-withLoadBalance-0.2/4/')
     folder_names.append(root_dir + 'heavy_load/ELB/15/')
 
-    experiment_names = ['LoFi(2, 0.05)', 'LoFi(4, 0.05)', 'ELB']
+    experiment_names = ['LoFi(4, 0.05)', 'LoFi(4, 0.2)', 'ELB']
     hatches = ['+', '//', '\\\\', '']
 
     total_width, num = 0.7, 3
@@ -739,8 +739,8 @@ if __name__ == '__main__':
     # drawLightLoadEEDUnderDifferentFailureRate()
     # drawLightLoadOverheadunderDifferentFailureRate()
 
-    # drawHeavyLoadPDRUnderDifferentFailureRate()
-    # drawHeavyLoadEEDUnderDifferentFailureRate()
+    drawHeavyLoadPDRUnderDifferentFailureRate()
+    drawHeavyLoadEEDUnderDifferentFailureRate()
     drawHeavyLoadOverheadunderDifferentFailureRate()
 
     pass
