@@ -4,6 +4,7 @@ import xml.dom.minidom
 import numpy
 import os
 import shutil
+from typing import List, Dict, Tuple, Set
 
 X = 11  # 行 即每个轨道上的卫星数量
 Y = 6  # 列 即轨道数
@@ -86,15 +87,44 @@ class SatelliteID:
                 raise Exception("self and param are not neighbors!")
 
 
+class Ipv4Address:
+    def __init__(self, ip1: int, ip2: int, ip3: int, ip4: int) -> None:
+        self.ip1 = ip1
+        self.ip2 = ip2
+        self.ip3 = ip3
+        self.ip4 = ip4
+
+    def getNeighboringInterfaceIPAddress(self):
+        if self.ip4 == 1:
+            return Ipv4Address(self.ip1, self.ip2, self.ip3, 2)
+        else:
+            return Ipv4Address(self.ip1, self.ip2, self.ip3, 1)
+        
+    def __str__(self) -> str:
+        return "%d.%d.%d.%d" % (self.ip1, self.ip2, self.ip3, self.ip4)
+    
+    def __hash__(self) -> int:
+        return hash((self.ip1, self.ip2, self.ip3, self.ip4))
+    
+    def __eq__(self, other) -> bool:
+        return isinstance(other, Ipv4Address) and self.ip1 == other.ip1 \
+            and self.ip2 == other.ip2 and self.ip3 == other.ip3 and self.ip4 == other.ip4
+    
+    def __lt__(self, other):
+        return (self.ip1, self.ip2, self.ip3, self.ip4) < (other.ip1, other.ip2, other.ip3, other.ip4)
+        
+
+
 class DirectionalInterSatelliteLink:
     """
     单向的星间链路
     """
 
-    def __init__(self, srcSatelliteID: SatelliteID, destSatelliteID: SatelliteID):
+    def __init__(self, srcSatelliteID: SatelliteID, destSatelliteID: SatelliteID, interfaceIPAddr: Ipv4Address):
         self.srcSatelliteID = srcSatelliteID
         self.destSatelliteID = destSatelliteID
         self.delay = 0x3f3f3f3f
+        self.interfaceIPAddr = interfaceIPAddr
         self.failureTimeArray = []  # 记录该链路分别在哪些时间故障，每次故障的持续时间是LINK_DISCONNECT_DURATION
         if srcSatelliteID.getDirectionOfNeighbor(destSatelliteID) == 0 or \
                 srcSatelliteID.getDirectionOfNeighbor(destSatelliteID) == 1:
@@ -121,7 +151,7 @@ class DirectionalInterSatelliteLink:
         return hash((self.srcSatelliteID.x, self.srcSatelliteID.y, self.destSatelliteID.x, self.destSatelliteID.y))
 
     def generateBackwardLink(self):
-        return DirectionalInterSatelliteLink(self.destSatelliteID, self.srcSatelliteID)
+        return DirectionalInterSatelliteLink(self.destSatelliteID, self.srcSatelliteID, self.interfaceIPAddr.getNeighboringInterfaceIPAddress())
 
 
 class ScenarioEvent:
@@ -159,7 +189,7 @@ class ScenarioEvent:
         return hash({self.link, self.beginTime, self.eventType})
 
 
-allISLSet = set()
+allISLSet: Set[DirectionalInterSatelliteLink] = set()
 
 # send_interval = "0.002"
 # deliverySrcIDs = [SatelliteID(6, 5), SatelliteID(7, 5), SatelliteID(8, 5), SatelliteID(9, 5)]
@@ -202,15 +232,18 @@ def generateISLDelay():
 
 def generateLinks():
     # 生成连接
+    cnt = 0
     for x in range(1, X + 1):
         for y in range(1, Y + 1):
             # ethg[0~3]分别对应上下左右
             if ISLDelay[x] < 1:  # 轨间链路存在
-                allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(x, rescale(y + 1, Y))))
-                allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(x, rescale(y + 1, Y)), SatelliteID(x, y)))
+                allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(x, rescale(y + 1, Y)), Ipv4Address(192, 168, cnt, 1)))
+                allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(x, rescale(y + 1, Y)), SatelliteID(x, y), Ipv4Address(192, 168, cnt, 2)))
                 # 与其右边的建立双向连接
-            allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(rescale(x + 1, X), y)))
-            allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(rescale(x + 1, X), y), SatelliteID(x, y)))
+            cnt += 1
+            allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(rescale(x + 1, X), y), Ipv4Address(192, 168, cnt, 1)))
+            allISLSet.add(DirectionalInterSatelliteLink(SatelliteID(rescale(x + 1, X), y), SatelliteID(x, y), Ipv4Address(192, 168, cnt, 2)))
+            cnt += 1
             # 与其下边的建立双向连接
 
 
@@ -286,62 +319,75 @@ def buildNetworkConfigFile():
     生成网络配置文件，配置各个网络的地址
     :return: void
     """
-    network_by_router_id = {}
+    interface_address_by_router_id: Dict[Tuple[int, int], List[Ipv4Address]] = {}  # router id -> ip addresses of its interfaces, order by up 
     for x in range(1, X + 1):
         for y in range(1, Y + 1):
-            network_by_router_id[(x, y)] = {}
+            interface_address_by_router_id[(x, y)] = []
+    router_id_by_interface_address: Dict[Ipv4Address, Tuple[int, int]] = {}
 
     root = et.Element('config')
-    cnt = 0
     for x in range(1, X + 1):
         for y in range(1, Y + 1):
-            if DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(x, rescale(y + 1, Y))) in allISLSet:
-                # 描述与其右边的路由器之间的网络
-                cnt += 1
-                et.SubElement(root, 'interface', attrib={
-                    'among': 'ospfRouter_%d_%d ospfRouter_%d_%d' % (x, y, x, rescale(y + 1, Y)),
-                    'address': '192.168.%d.x' % cnt,
-                    'netmask': '255.255.255.0'
-                })
-                network_by_router_id[(x, y)][3] = cnt
-                network_by_router_id[x, rescale(y + 1, Y)][2] = cnt
-                # print('{Ipv4Address(192, 168, %d, 0), std::make_pair(Ipv4Address(0, 0, %d, %d), Ipv4Address(0, 0, %d, %d))},' 
-                #       % (cnt, x, y, x, rescale(y + 1, Y)))
-
-            # 描述与其下边的路由器之间的网络
-            cnt += 1
-            et.SubElement(root, 'interface', attrib={
-                'among': 'ospfRouter_%d_%d ospfRouter_%d_%d' % (x, y, rescale(x + 1, X), y),
-                'address': '192.168.%d.x' % cnt,
-                'netmask': '255.255.255.0'
-            })
-            network_by_router_id[(x, y)][1] = cnt
-            network_by_router_id[rescale(x + 1, X), y][0] = cnt
-            # print('{Ipv4Address(192, 168, %d, 0), std::make_pair(Ipv4Address(0, 0, %d, %d), Ipv4Address(0, 0, %d, %d))},' 
-            #           % (cnt, x, y, rescale(x + 1, X), y))
+            link_list = [
+                DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(rescale(x - 1, X), y), Ipv4Address(0, 0, 0, 0)),  # upper neighbor
+                DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(rescale(x + 1, X), y), Ipv4Address(0, 0, 0, 0)),  # lower neighbor
+                DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(x, rescale(y - 1, Y)), Ipv4Address(0, 0, 0, 0)),  # left neighbor
+                DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(x, rescale(y + 1, Y)), Ipv4Address(0, 0, 0, 0))  # right neighbor
+            ]
+            for link in link_list:
+                from_x, from_y, to_x, to_y = link.srcSatelliteID.x, link.srcSatelliteID.y, link.destSatelliteID.x, link.destSatelliteID.y
+                
+                if link in allISLSet:
+                    interfaceAddr = Ipv4Address(0, 0, 0, 0)
+                    for tmp_link in allISLSet:
+                        if tmp_link.__eq__(link):
+                            interfaceAddr = tmp_link.interfaceIPAddr
+                    et.SubElement(root, 'interface', attrib={
+                        'host': 'ospfRouter_%d_%d' % (from_x, from_y),
+                        'towards': 'ospfRouter_%d_%d' % (to_x, to_y),
+                        'address': interfaceAddr.__str__(),
+                        'netmask': '255.255.255.0'
+                    })
+                    interface_address_by_router_id[(x, y)].append(interfaceAddr)
+                    router_id_by_interface_address[interfaceAddr] = (x, y)
+                
             
     xml_str = et.tostring(root, encoding='utf-8')
     xml_pretty_str = xml.dom.minidom.parseString(xml_str).toprettyxml()
     with open('./sqsqNetworkConfig.xml', 'w') as f:
         f.write(xml_pretty_str)
 
-    # router_id_by_ip_address = {}
-    # print('--------------------------------')
-    # for x in range(1, X + 1):
-    #     for y in range(1, Y + 1):
-    #         print(
-    #             '{Ipv4Address(0, 0, %d, %d), {Ipv4Address(192, 168, %d, 2), Ipv4Address(192, '
-    #             '168, %d, 1), Ipv4Address(192, 168, %d, 2), Ipv4Address(192, 168, %d, 1)}},'
-    #             % (x, y, network_by_router_id[(x, y)][0], network_by_router_id[(x, y)][1],
-    #                 network_by_router_id[(x, y)][2],
-    #                 network_by_router_id[(x, y)][3]))
-    #         router_id_by_ip_address['Ipv4Address(192, 168, %d, 2)' % network_by_router_id[(x, y)][0]] = 'Ipv4Address(0, 0, %d, %d)' % (x, y)
-    #         router_id_by_ip_address['Ipv4Address(192, 168, %d, 1)' % network_by_router_id[(x, y)][1]] = 'Ipv4Address(0, 0, %d, %d)' % (x, y)
-    #         router_id_by_ip_address['Ipv4Address(192, 168, %d, 2)' % network_by_router_id[(x, y)][2]] = 'Ipv4Address(0, 0, %d, %d)' % (x, y)
-    #         router_id_by_ip_address['Ipv4Address(192, 168, %d, 1)' % network_by_router_id[(x, y)][3]] = 'Ipv4Address(0, 0, %d, %d)' % (x, y)
-    # print('--------------------------------')
-    # for key in router_id_by_ip_address.keys():
-    #     print('{%s, %s},' % (key, router_id_by_ip_address[key]))
+
+    print('--------------------------------')
+    for x in range(1, X + 1):
+        for y in range(1, Y + 1):
+            print(
+                '{Ipv4Address(0, 0, %d, %d), {Ipv4Address(%d, %d, %d, %d), Ipv4Address(%d, '
+                '%d, %d, %d), Ipv4Address(%d, %d, %d, %d), Ipv4Address(%d, %d, %d, %d)}},'
+                % (x, y, 
+                    interface_address_by_router_id[(x, y)][0].ip1, 
+                    interface_address_by_router_id[(x, y)][0].ip2,
+                    interface_address_by_router_id[(x, y)][0].ip3,
+                    interface_address_by_router_id[(x, y)][0].ip4,
+                    interface_address_by_router_id[(x, y)][1].ip1, 
+                    interface_address_by_router_id[(x, y)][1].ip2,
+                    interface_address_by_router_id[(x, y)][1].ip3,
+                    interface_address_by_router_id[(x, y)][1].ip4,
+                    interface_address_by_router_id[(x, y)][2].ip1, 
+                    interface_address_by_router_id[(x, y)][2].ip2,
+                    interface_address_by_router_id[(x, y)][2].ip3,
+                    interface_address_by_router_id[(x, y)][2].ip4,
+                    interface_address_by_router_id[(x, y)][3].ip1, 
+                    interface_address_by_router_id[(x, y)][3].ip2,
+                    interface_address_by_router_id[(x, y)][3].ip3,
+                    interface_address_by_router_id[(x, y)][3].ip4))
+
+
+    print('--------------------------------')
+    sorted_router_id_by_interface_address = sorted(router_id_by_interface_address)
+    for key in sorted_router_id_by_interface_address:
+        print('{Ipv4Address(%d, %d, %d, %d), Ipv4Address(0, 0, %d, %d)},' % 
+              (key.ip1, key.ip2, key.ip3, key.ip4, router_id_by_interface_address[key][0], router_id_by_interface_address[key][1]))
 
 
 def buildASConfigFile(by_hop=False):
@@ -543,7 +589,7 @@ def run():
     generateISLDelay()
     generateLinks()
     # buildNEDFile()
-    # buildNetworkConfigFile()
+    buildNetworkConfigFile()
     # buildASConfigFile()
 
     link_failure_rate_array = [0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3]
