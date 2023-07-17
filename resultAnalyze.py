@@ -31,7 +31,7 @@ def cookDropPacketRaw(folder_name:str, hop):
 
 def cookSuccessPacketRaw(folder_name:str, hop):
     with open(folder_name + 'successPacketCooked.csv', 'w') as f:
-        print(folder_name)
+        # print(folder_name)
         print('config', 'hop', 'successCnt', 'avgDelay', file=f, sep=',')
         df = pandas.read_csv(folder_name + 'successPacketRaw.csv')
 
@@ -153,12 +153,15 @@ if __name__ == '__main__':
                 hops.remove('OSPF')
         
         for hop in hops:
+            total = 0
             for config_name in arg_names:
                 folder_name = parent_folder_name + hop + '/' + config_name + '/'
                 total_drop = cookDropPacketRaw(folder_name, hop)
                 total_success = cookSuccessPacketRaw(folder_name, hop)
+                total += total_success
                 if total_drop + total_success < 0.85 * expected_total_num_packets:
                     print('----------drop & success not match in', folder_name, 'drop:', total_drop, 'success:', total_success, '----------')
+            print(parent_folder_name + hop, "\'s loss ratio:", (1 - total / (expected_total_num_packets * len(arg_names))) * 100, '\%')
 
     # marker_index = 0
     # fig, ax = matplotlib.pyplot.subplots()

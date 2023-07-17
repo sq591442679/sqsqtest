@@ -343,7 +343,7 @@ def buildNetworkConfigFile():
                         if tmp_link.__eq__(link):
                             interfaceAddr = tmp_link.interfaceIPAddr
                     et.SubElement(root, 'interface', attrib={
-                        'host': 'ospfRouter_%d_%d' % (from_x, from_y),
+                        'hosts': 'ospfRouter_%d_%d' % (from_x, from_y),
                         'towards': 'ospfRouter_%d_%d' % (to_x, to_y),
                         'address': interfaceAddr.__str__(),
                         'netmask': '255.255.255.0'

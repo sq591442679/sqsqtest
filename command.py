@@ -17,10 +17,10 @@ hops = [str(i) for i in range(0, 5)]
 # hops = ['15']
 # experiment_names = ['ELB']  # test ELB
 # hops = []
-# experiment_names = ['withDD-withoutLoopPrevention-withoutLoadBalance']  # test OSPF
+experiment_names = ['withDD-withoutLoopPrevention-withoutLoadBalance']  # test OSPF
 # experiment_names = ['withDD-withLoopPrevention-withLoadBalance-0.05', 'withDD-withLoopPrevention-withoutLoadBalance']
 # experiment_names = ['withDD-withLoopPrevention-withLoadBalance-0.05', 'withDD-withLoopPrevention-withLoadBalance-0.2', 'withDD-withLoopPrevention-withoutLoadBalance']
-experiment_names = ['withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
+# experiment_names = ['withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
 parent_folder_names = ['./results/' + experiment_name + '/' for experiment_name in experiment_names]
 
 
