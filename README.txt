@@ -1,0 +1,1 @@
+run NEDGENERATOR.py to generate ned files and channel.xml
