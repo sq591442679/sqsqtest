@@ -7,16 +7,16 @@ from multiprocessing import Process
 
 from NEDGenerator import NUM_OF_TESTS, WARMUP_PERIOD, SIMULATION_END_TIME
 
-# fr_names = ["00", "05", "10", "15", "20"]
-fr_names=["10"]
+fr_names = ["00", "05", "10", "15", "20"]
+# fr_names=["10"]
 test_names = [str(i) for i in range(1, NUM_OF_TESTS + 1)]
 # test_names = [str(i) for i in range(1, 11)]
 arg_names = ["fail" + i + "_test" + j for i in fr_names for j in test_names]
 
-hops = [str(i) for i in range(0, 5)]
+# hops = [str(i) for i in range(0, 5)]
 # hops = ['15']
 experiment_names = ['ELB']  # test ELB
-hops = []
+hops = ['10']
 # experiment_names = ['withDD-withoutLoopPrevention-withoutLoadBalance']  # test OSPF
 # experiment_names = ['withDD-withLoopPrevention-withoutLoadBalance', 'withDD-withoutLoopPrevention-withoutLoadBalance']
 # experiment_names = ['withDD-withLoopPrevention-withLoadBalance-0.05', 'withDD-withLoopPrevention-withLoadBalance-0.2', 'withDD-withLoopPrevention-withoutLoadBalance']
@@ -125,7 +125,10 @@ def changeOspfv2Common(experiment_name: str, hop: str):
 
 
 def execute(command: str) -> None:
-    subprocess.run("source ~/omnetpp-6.0/setenv; " + command + "; ", shell=True)
+    with open('output.txt', 'w') as f:
+        subprocess.run(f"/bin/bash -c 'source ~/omnetpp-6.0/setenv; {command};' ", 
+                       shell=True,
+                       stdout=f)
 
 
 if __name__ == '__main__':
@@ -177,7 +180,8 @@ if __name__ == '__main__':
             for fr in fr_names:
                 for config in ['fail' + fr + '_test' + j for j in test_names]:
                     parent_dir = './results/' + experiment_name + '/' + hop + '/' + config 
-                    os.mkdir(parent_dir)
+                    if not os.path.exists(parent_dir):
+                        os.mkdir(parent_dir)
                     with open(parent_dir + '/dropPacketRaw.csv', 'w') as f:
                         print('config', 'hop', 'module', 'simtime', 'isNoEntry', 'isStub', 'isLoop', 'isQueue', file=f, sep=',')
                     with open(parent_dir + '/queueDropPacketRaw.csv', 'w') as f:

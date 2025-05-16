@@ -1,0 +1,1144 @@
+Environment for 'omnetpp-6.0' in directory '/home/sqsq/omnetpp-6.0' is ready.
+OMNeT++ Discrete Event Simulation  (C) 1992-2022 Andras Varga, OpenSim Ltd.
+Version: 6.0, build: 220413-71d8fab425, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from ../..:  190
+Loading NED files from ../../../showcases:  75
+Loading NED files from ../../../src:  1166
+Loading NED files from ../../../tests/validation:  5
+Loading NED files from ../../../tests/networks:  6
+Loading NED files from ../../../tutorials:  20
+
+Preparing for running configuration fail20_test1, run #0...
+Assigned runID=fail20_test1-0-20250412-00:58:10-1670743
+Setting up network "Network"...
+Initializing...
+
+<!> Error: Failed to find address prefix (using 192.168.1.3 with specified bits 255.255.255.255) and netmask (length from 24 bits to 24 bits) for interface Network.ospfRouter_1_1.eth2 and 1 other interface(s). Please refine your parameters and try again! -- in module (inet::Ipv4NetworkConfigurator) Network.configurator (id=2), during network initialization
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_1.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-19 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_1.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-19 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_1.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-01 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_1.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-01 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_1.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F2 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_1.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F2 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_1.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-02 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_1.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-02 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_1.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-1B changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_1.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-1B changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_1.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-03 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_1.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-03 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_1.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F4 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_1.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F4 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_1.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-04 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_1.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-04 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_2.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-1D changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_2.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-1D changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_2.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-05 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_2.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-05 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_2.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F6 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_2.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F6 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_2.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-06 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_2.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-06 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_2.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-1F changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_2.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-1F changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_2.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-07 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_2.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-07 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_2.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F8 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_2.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F8 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_2.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-08 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_2.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-08 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_3.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-21 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_3.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-21 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_3.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-09 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_3.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-09 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_3.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-FA changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_3.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-FA changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_3.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-0A changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_3.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-0A changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_3.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-23 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_3.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-23 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_3.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-0B changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_3.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-0B changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_3.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-FC changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_3.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-FC changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_3.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-0C changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_3.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-0C changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_4.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-25 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_4.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-25 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_4.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-0D changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_4.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-0D changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_4.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-FE changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_4.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-FE changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_4.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-0E changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_4.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-0E changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_4.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-27 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_4.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-27 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_4.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-0F changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_4.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-0F changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_4.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-00 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_4.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-00 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_4.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-10 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_4.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-10 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_5.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-29 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_5.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-29 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_5.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-11 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_5.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-11 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_5.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-02 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_5.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-02 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_5.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-12 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_5.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-12 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_5.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-2B changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_5.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-2B changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_5.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-13 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_5.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-13 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_5.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-04 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_5.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-04 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_5.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-14 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_5.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-14 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_6.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-2D changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_6.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-2D changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_6.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-15 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_6.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-15 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_6.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-06 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_6.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-06 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_6.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-16 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_6.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-16 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_6.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-2F changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_6.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-2F changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_6.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-17 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_6.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-17 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_6.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-08 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_6.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-08 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_6.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-18 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_1_6.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-18 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_1.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-31 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_1.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-31 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_1.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-1A changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_1.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-1A changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_1.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-33 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_1.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-33 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_1.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-1C changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_1.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-1C changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_2.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-35 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_2.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-35 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_2.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-1E changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_2.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-1E changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_2.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-37 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_2.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-37 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_2.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-20 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_2.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-20 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_3.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-39 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_3.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-39 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_3.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-22 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_3.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-22 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_3.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-3B changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_3.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-3B changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_3.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-24 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_3.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-24 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_4.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-3D changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_4.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-3D changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_4.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-26 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_4.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-26 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_4.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-3F changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_4.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-3F changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_4.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-28 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_4.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-28 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_5.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-41 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_5.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-41 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_5.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-2A changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_5.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-2A changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_5.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-43 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_5.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-43 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_5.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-2C changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_5.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-2C changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_6.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-45 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_6.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-45 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_6.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-2E changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_6.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-2E changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_6.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-47 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_6.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-47 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_6.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-30 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_2_6.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-30 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_1.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-49 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_1.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-49 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_1.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-32 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_1.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-32 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_1.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-4B changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_1.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-4B changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_1.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-34 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_1.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-34 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_2.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-4D changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_2.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-4D changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_2.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-36 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_2.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-36 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_2.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-4F changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_2.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-4F changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_2.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-38 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_2.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-38 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_3.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-51 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_3.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-51 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_3.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-3A changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_3.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-3A changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_3.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-53 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_3.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-53 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_3.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-3C changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_3.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-3C changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_4.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-55 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_4.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-55 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_4.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-3E changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_4.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-3E changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_4.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-57 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_4.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-57 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_4.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-40 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_4.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-40 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_5.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-59 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_5.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-59 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_5.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-42 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_5.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-42 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_5.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-5B changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_5.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-5B changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_5.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-44 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_5.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-44 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_6.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-5D changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_6.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-5D changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_6.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-46 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_6.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-46 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_6.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-5F changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_6.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-5F changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_6.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-48 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_3_6.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-48 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_1.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-61 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_1.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-61 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_1.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-4A changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_1.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-4A changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_1.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-63 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_1.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-63 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_1.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-4C changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_1.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-4C changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_2.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-65 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_2.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-65 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_2.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-4E changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_2.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-4E changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_2.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-67 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_2.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-67 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_2.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-50 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_2.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-50 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_3.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-69 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_3.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-69 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_3.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-52 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_3.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-52 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_3.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-6B changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_3.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-6B changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_3.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-54 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_3.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-54 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_4.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-6D changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_4.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-6D changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_4.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-56 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_4.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-56 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_4.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-6F changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_4.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-6F changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_4.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-58 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_4.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-58 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_5.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-71 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_5.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-71 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_5.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-5A changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_5.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-5A changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_5.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-73 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_5.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-73 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_5.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-5C changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_5.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-5C changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_6.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-75 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_6.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-75 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_6.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-5E changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_6.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-5E changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_6.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-77 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_6.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-77 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_6.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-60 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_4_6.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-60 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_1.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-79 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_1.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-79 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_1.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-62 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_1.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-62 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_1.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-7B changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_1.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-7B changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_1.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-64 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_1.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-64 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_2.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-7D changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_2.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-7D changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_2.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-66 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_2.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-66 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_2.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-7F changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_2.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-7F changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_2.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-68 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_2.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-68 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_3.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-81 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_3.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-81 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_3.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-6A changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_3.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-6A changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_3.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-83 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_3.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-83 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_3.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-6C changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_3.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-6C changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_4.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-85 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_4.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-85 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_4.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-6E changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_4.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-6E changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_4.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-87 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_4.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-87 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_4.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-70 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_4.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-70 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_5.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-89 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_5.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-89 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_5.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-72 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_5.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-72 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_5.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-8B changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_5.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-8B changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_5.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-74 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_5.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-74 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_6.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-8D changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_6.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-8D changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_6.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-76 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_6.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-76 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_6.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-8F changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_6.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-8F changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_6.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-78 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_5_6.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-78 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_1.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-91 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_1.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-91 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_1.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-7A changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_1.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-7A changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_1.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-93 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_1.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-93 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_1.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-7C changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_1.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-7C changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_2.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-95 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_2.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-95 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_2.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-7E changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_2.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-7E changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_2.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-97 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_2.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-97 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_2.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-80 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_2.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-80 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_3.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-99 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_3.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-99 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_3.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-82 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_3.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-82 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_3.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-9B changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_3.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-9B changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_3.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-84 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_3.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-84 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_4.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-9D changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_4.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-9D changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_4.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-86 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_4.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-86 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_4.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-9F changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_4.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-9F changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_4.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-88 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_4.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-88 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_5.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A1 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_5.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A1 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_5.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-8A changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_5.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-8A changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_5.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A3 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_5.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A3 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_5.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-8C changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_5.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-8C changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_6.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A5 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_6.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A5 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_6.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-8E changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_6.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-8E changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_6.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A7 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_6.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A7 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_6.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-90 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_6_6.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-90 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_1.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A9 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_1.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A9 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_1.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-92 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_1.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-92 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_1.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-AB changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_1.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-AB changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_1.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-94 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_1.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-94 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_2.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-AD changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_2.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-AD changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_2.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-96 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_2.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-96 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_2.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-AF changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_2.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-AF changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_2.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-98 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_2.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-98 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_3.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B1 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_3.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B1 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_3.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-9A changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_3.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-9A changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_3.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B3 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_3.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B3 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_3.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-9C changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_3.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-9C changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_4.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B5 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_4.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B5 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_4.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-9E changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_4.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-9E changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_4.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B7 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_4.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B7 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_4.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A0 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_4.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A0 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_5.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B9 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_5.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B9 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_5.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A2 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_5.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A2 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_5.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-BB changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_5.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-BB changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_5.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A4 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_5.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A4 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_6.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-BD changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_6.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-BD changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_6.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A6 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_6.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A6 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_6.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-BF changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_6.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-BF changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_6.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A8 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_7_6.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-A8 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_1.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C1 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_1.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C1 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_1.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-AA changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_1.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-AA changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_1.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C3 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_1.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C3 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_1.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-AC changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_1.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-AC changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_2.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C5 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_2.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C5 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_2.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-AE changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_2.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-AE changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_2.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C7 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_2.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C7 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_2.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B0 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_2.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B0 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_3.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C9 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_3.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C9 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_3.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B2 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_3.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B2 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_3.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-CB changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_3.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-CB changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_3.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B4 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_3.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B4 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_4.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-CD changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_4.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-CD changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_4.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B6 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_4.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B6 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_4.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-CF changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_4.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-CF changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_4.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B8 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_4.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-B8 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_5.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D1 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_5.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D1 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_5.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-BA changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_5.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-BA changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_5.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D3 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_5.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D3 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_5.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-BC changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_5.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-BC changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_6.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D5 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_6.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D5 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_6.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-BE changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_6.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-BE changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_6.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D7 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_6.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D7 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_6.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C0 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_8_6.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C0 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_1.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D9 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_1.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D9 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_1.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C2 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_1.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C2 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_1.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-DB changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_1.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-DB changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_1.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C4 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_1.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C4 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_2.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-DD changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_2.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-DD changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_2.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C6 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_2.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C6 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_2.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-DF changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_2.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-DF changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_2.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C8 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_2.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-C8 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_3.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E1 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_3.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E1 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_3.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-CA changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_3.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-CA changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_3.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E3 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_3.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E3 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_3.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-CC changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_3.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-CC changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_4.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E5 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_4.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E5 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_4.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-CE changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_4.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-CE changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_4.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E7 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_4.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E7 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_4.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D0 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_4.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D0 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_5.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E9 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_5.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E9 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_5.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D2 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_5.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D2 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_5.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-EB changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_5.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-EB changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_5.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D4 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_5.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D4 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_6.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-ED changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_6.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-ED changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_6.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D6 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_6.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D6 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_6.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-EF changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_6.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-EF changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_6.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D8 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_9_6.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-D8 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_1.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F1 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_1.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F1 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_1.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-DA changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_1.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-DA changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_1.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F3 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_1.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F3 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_1.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-DC changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_1.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-DC changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_2.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F5 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_2.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F5 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_2.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-DE changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_2.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-DE changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_2.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F7 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_2.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F7 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_2.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E0 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_2.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E0 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_3.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F9 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_3.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F9 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_3.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E2 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_3.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E2 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_3.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-FB changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_3.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-FB changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_3.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E4 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_3.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E4 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_4.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-FD changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_4.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-FD changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_4.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E6 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_4.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E6 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_4.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-FF changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_4.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-FF changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_4.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E8 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_4.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-E8 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_5.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-01 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_5.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-01 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_5.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-EA changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_5.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-EA changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_5.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-03 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_5.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-03 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_5.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-EC changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_5.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-EC changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_6.ipv4.routingTable: interfaceStateChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-05 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_6.ipv4.routingTable: interfaceConfigChanged eth0 ID:101 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-05 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_6.ipv4.routingTable: interfaceStateChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-EE changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_6.ipv4.routingTable: interfaceConfigChanged eth1 ID:102 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-EE changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_6.ipv4.routingTable: interfaceStateChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-07 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_11_6.ipv4.routingTable: interfaceConfigChanged eth2 ID:103 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-01-07 changed field: 10
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_6.ipv4.routingTable: interfaceStateChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F0 changed field: 0
+[INFO]	 
+[INFO]	** Signal at T=0 to Network.ospfRouter_10_6.ipv4.routingTable: interfaceConfigChanged eth3 ID:104 MTU:1500 UP BROADCAST NOCARRIER MULTICAST macAddr:0A-AA-00-00-00-F0 changed field: 10
+[INFO]	 
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+[INFO]	Clear all sockets
+
+End.

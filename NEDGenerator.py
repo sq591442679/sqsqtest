@@ -14,7 +14,7 @@ SIMULATION_DURATION_TIME = SIMULATION_END_TIME - WARMUP_PERIOD
 LINK_DOWN_DURATION = 5  # 链路故障的持续时间 单位秒
 LINK_DISCONNECT_TYPE = 0
 LINK_RECONNECT_TYPE = 1
-NUM_OF_TESTS = 50  # for each link failure rate, run NUM_OF_TESTS times
+NUM_OF_TESTS = 1  # for each link failure rate, run NUM_OF_TESTS times
 
 H = 780000  # 轨道高度780千米
 R = 6371004  # 地球半径6371.004千米
@@ -193,11 +193,11 @@ class ScenarioEvent:
 
 allISLSet: Set[DirectionalInterSatelliteLink] = set()
 
-# send_interval = "0.002"
-# deliverySrcIDs = [SatelliteID(6, 5), SatelliteID(7, 5), SatelliteID(8, 5), SatelliteID(9, 5)]
+send_interval = "0.002"
+deliverySrcIDs = [SatelliteID(6, 5), SatelliteID(7, 5), SatelliteID(8, 5), SatelliteID(9, 5)]
 
-send_interval = "0.01"
-deliverySrcIDs = [SatelliteID(9, 3)]
+# send_interval = "0.01"
+# deliverySrcIDs = [SatelliteID(9, 3)]
 
 deliveryDestID = SatelliteID(5, 5)
 
@@ -250,6 +250,9 @@ def generateLinks():
 
 
 def buildNEDFile():
+    with open('./channel.xml', 'w') as f:
+        print('', file=f)
+
     with open('./sqsqtest.ned', 'w') as f:
         dependency = [
             'package inet.examples.ospfv2.sqsqtest;',
@@ -301,82 +304,82 @@ def buildNEDFile():
                 print("\t\t}", file=f)
 
         # 生成连接
-        # print('\tconnections:', file=f)
-        # f2 = open('channel.xml', 'a')
-        # for x in range(1, X + 1):
-        #     for y in range(1, Y + 1):
-        #         # ethg[0~3]分别对应上下左右
-        #         if ISLDelay[x] < 1:  # 轨间链路存在
-        #             print("\t\tospfRouter_%d_%d.ethg[%d] <--> ISL%d <--> ospfRouter_%d_%d.ethg[%d];" % (
-        #                 x, y, 3, x, x, rescale(y + 1, Y), 2), file=f)
-        #             src_module = f"ospfRouter_{x}_{y}"
-        #             dest_module = f"ospfRouter_{x}_{rescale(y + 1, Y)}"
-        #             src_gate = "ethg[3]"
-        #             dest_gate = "ethg[2]"
-        #             print(f"<SatToSat src-module='{src_module}' src-gate='{src_gate}' dest-module='{dest_module}' dest-gate='{dest_gate}' "
-        #                   f"channel-type='masterNodes.OsgEarthNet.SatToSat_10Mbps' link-info='inter-orbit' />",
-        #                   file=f2)
-        #             # 与其右边的建立双向连接
-        #         print("\t\tospfRouter_%d_%d.ethg[%d] <--> ISL0 <--> ospfRouter_%d_%d.ethg[%d];" % (
-        #             x, y, 1, rescale(x + 1, X), y, 0), file=f)
-        #         src_module = f"ospfRouter_{x}_{y}"
-        #         dest_module = f"ospfRouter_{rescale(x + 1, X)}_{y}"
-        #         src_gate = "ethg[1]"
-        #         dest_gate = "ethg[0]"
-        #         print(f"<SatToSat src-module='{src_module}' src-gate='{src_gate}' dest-module='{dest_module}' dest-gate='{dest_gate}' "
-        #               f"channel-type='masterNodes.OsgEarthNet.SatToSat_10Mbps' link-info='intra-orbit' />",
-        #               file=f2)
-        #         # 与其下边的建立双向连接
-        # f2.close()
-
-        # 生成连接
         print('\tconnections:', file=f)
         f2 = open('channel.xml', 'a')
         for x in range(1, X + 1):
             for y in range(1, Y + 1):
+                # ethg[0~3]分别对应上下左右
+                if ISLDelay[x] < 1:  # 轨间链路存在
+                    print("\t\tospfRouter_%d_%d.ethg[%d] <--> ISL%d <--> ospfRouter_%d_%d.ethg[%d];" % (
+                        x, y, 3, x, x, rescale(y + 1, Y), 2), file=f)
+                    src_module = f"ospfRouter_{x}_{y}"
+                    dest_module = f"ospfRouter_{x}_{rescale(y + 1, Y)}"
+                    src_gate = "ethg[3]"
+                    dest_gate = "ethg[2]"
+                    print(f"<SatToSat src-module='{src_module}' src-gate='{src_gate}' dest-module='{dest_module}' dest-gate='{dest_gate}' "
+                          f"channel-type='masterNodes.OsgEarthNet.SatToSat_10Mbps' link-info='inter-orbit' />",
+                          file=f2)
+                    # 与其右边的建立双向连接
+                print("\t\tospfRouter_%d_%d.ethg[%d] <--> ISL0 <--> ospfRouter_%d_%d.ethg[%d];" % (
+                    x, y, 1, rescale(x + 1, X), y, 0), file=f)
                 src_module = f"ospfRouter_{x}_{y}"
                 dest_module = f"ospfRouter_{rescale(x + 1, X)}_{y}"
-                
-                if src_module not in router_eth_cnt.keys():
-                    router_eth_cnt[src_module] = 0
-                if dest_module not in router_eth_cnt.keys():
-                    router_eth_cnt[dest_module] = 0
-
-                src_gate = f"ethg[{router_eth_cnt[src_module]}]"
-                dest_gate = f"ethg[{router_eth_cnt[dest_module]}]"
-                router_eth_cnt[src_module] += 1
-                router_eth_cnt[dest_module] += 1
-
-                print(f"\t\t{src_module}.{src_gate} <--> ISL0 <--> {dest_module}.{dest_gate};", file=f)
-                
+                src_gate = "ethg[1]"
+                dest_gate = "ethg[0]"
                 print(f"<SatToSat src-module='{src_module}' src-gate='{src_gate}' dest-module='{dest_module}' dest-gate='{dest_gate}' "
                       f"channel-type='masterNodes.OsgEarthNet.SatToSat_10Mbps' link-info='intra-orbit' />",
                       file=f2)
                 # 与其下边的建立双向连接
-
-        for x in range(1, X + 1):
-            for y in range(1, Y + 1):
-                if ISLDelay[x] < 1:  # 轨间链路存在
-                    src_module = f"ospfRouter_{x}_{y}"
-                    dest_module = f"ospfRouter_{rescale(x + 1, X)}_{y}"
-                    
-                    if src_module not in router_eth_cnt.keys():
-                        router_eth_cnt[src_module] = 0
-                    if dest_module not in router_eth_cnt.keys():
-                        router_eth_cnt[dest_module] = 0
-
-                    src_gate = f"ethg[{router_eth_cnt[src_module]}]"
-                    dest_gate = f"ethg[{router_eth_cnt[dest_module]}]"
-                    router_eth_cnt[src_module] += 1
-                    router_eth_cnt[dest_module] += 1
-
-                    print(f"\t\t{src_module}.{src_gate} <--> ISL{x} <--> {dest_module}.{dest_gate};", file=f)
-
-                    print(f"<SatToSat src-module='{src_module}' src-gate='{src_gate}' dest-module='{dest_module}' dest-gate='{dest_gate}' "
-                            f"channel-type='masterNodes.OsgEarthNet.SatToSat_10Mbps' link-info='inter-orbit' />",
-                            file=f2)
-                    # 与其右边的建立双向连接
         f2.close()
+
+        # 生成连接
+        # print('\tconnections:', file=f)
+        # f2 = open('channel.xml', 'a')
+        # for x in range(1, X + 1):
+        #     for y in range(1, Y + 1):
+        #         src_module = f"ospfRouter_{x}_{y}"
+        #         dest_module = f"ospfRouter_{rescale(x + 1, X)}_{y}"
+                
+        #         if src_module not in router_eth_cnt.keys():
+        #             router_eth_cnt[src_module] = 0
+        #         if dest_module not in router_eth_cnt.keys():
+        #             router_eth_cnt[dest_module] = 0
+
+        #         src_gate = f"ethg[{router_eth_cnt[src_module]}]"
+        #         dest_gate = f"ethg[{router_eth_cnt[dest_module]}]"
+        #         router_eth_cnt[src_module] += 1
+        #         router_eth_cnt[dest_module] += 1
+
+        #         print(f"\t\t{src_module}.{src_gate} <--> ISL0 <--> {dest_module}.{dest_gate};", file=f)
+                
+        #         print(f"<SatToSat src-module='{src_module}' src-gate='{src_gate}' dest-module='{dest_module}' dest-gate='{dest_gate}' "
+        #               f"channel-type='masterNodes.OsgEarthNet.SatToSat_10Mbps' link-info='intra-orbit' />",
+        #               file=f2)
+        #         # 与其下边的建立双向连接
+
+        # for x in range(1, X + 1):
+        #     for y in range(1, Y + 1):
+        #         if ISLDelay[x] < 1:  # 轨间链路存在
+        #             src_module = f"ospfRouter_{x}_{y}"
+        #             dest_module = f"ospfRouter_{rescale(x + 1, X)}_{y}"
+                    
+        #             if src_module not in router_eth_cnt.keys():
+        #                 router_eth_cnt[src_module] = 0
+        #             if dest_module not in router_eth_cnt.keys():
+        #                 router_eth_cnt[dest_module] = 0
+
+        #             src_gate = f"ethg[{router_eth_cnt[src_module]}]"
+        #             dest_gate = f"ethg[{router_eth_cnt[dest_module]}]"
+        #             router_eth_cnt[src_module] += 1
+        #             router_eth_cnt[dest_module] += 1
+
+        #             print(f"\t\t{src_module}.{src_gate} <--> ISL{x} <--> {dest_module}.{dest_gate};", file=f)
+
+        #             print(f"<SatToSat src-module='{src_module}' src-gate='{src_gate}' dest-module='{dest_module}' dest-gate='{dest_gate}' "
+        #                     f"channel-type='masterNodes.OsgEarthNet.SatToSat_10Mbps' link-info='inter-orbit' />",
+        #                     file=f2)
+        #             # 与其右边的建立双向连接
+        # f2.close()
 
         print('}', file=f)
 
@@ -401,7 +404,7 @@ def buildNetworkConfigFile():
                 DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(x, rescale(y - 1, Y)), Ipv4Address(0, 0, 0, 0)),  # left neighbor
                 DirectionalInterSatelliteLink(SatelliteID(x, y), SatelliteID(x, rescale(y + 1, Y)), Ipv4Address(0, 0, 0, 0))  # right neighbor
             ]
-            for link in link_list:
+            for i, link in enumerate(link_list):
                 from_x, from_y, to_x, to_y = link.srcSatelliteID.x, link.srcSatelliteID.y, link.destSatelliteID.x, link.destSatelliteID.y
                 
                 if link in allISLSet:
@@ -411,6 +414,7 @@ def buildNetworkConfigFile():
                             interfaceAddr = tmp_link.interfaceIPAddr
                     et.SubElement(root, 'interface', attrib={
                         'hosts': 'ospfRouter_%d_%d' % (from_x, from_y),
+                        # 'names': f'eth{i}',
                         'towards': 'ospfRouter_%d_%d' % (to_x, to_y),
                         'address': interfaceAddr.__str__(),
                         'netmask': '255.255.255.0'
